@@ -1,0 +1,750 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		042FC6571B963FE500549A4B /* tiff_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042FC64B1B963FE500549A4B /* tiff_ios.framework */; };
+		042FC6D31B96421E00549A4B /* tiff-ios-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 042FC69E1B96421E00549A4B /* tiff-ios-Prefix.pch */; };
+		042FC6D51B96453E00549A4B /* tiff_ios.h in Headers */ = {isa = PBXBuildFile; fileRef = 042FC6D41B96453E00549A4B /* tiff_ios.h */; };
+		0472B51B1C03590500496B87 /* tiff-ios-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 0472B51A1C03590500496B87 /* tiff-ios-Bridging-Header.h */; };
+		04AB919E1BF29F9A00894999 /* TIFFTestUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AB919D1BF29F9A00894999 /* TIFFTestUtils.m */; };
+		04B60F961E37A9BC00E73068 /* deflate.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04B60F801E37A9BB00E73068 /* deflate.tiff */; };
+		04B60F971E37A9BC00E73068 /* float32.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04B60F811E37A9BB00E73068 /* float32.tiff */; };
+		04B60F981E37A9BC00E73068 /* float64.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04B60F821E37A9BB00E73068 /* float64.tiff */; };
+		04B60F991E37A9BC00E73068 /* initial.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04B60F831E37A9BB00E73068 /* initial.tiff */; };
+		04B60F9A1E37A9BC00E73068 /* int32.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04B60F841E37A9BB00E73068 /* int32.tiff */; };
+		04B60F9B1E37A9BC00E73068 /* interleave.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04B60F851E37A9BB00E73068 /* interleave.tiff */; };
+		04B60F9C1E37A9BC00E73068 /* lzw.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04B60F861E37A9BB00E73068 /* lzw.tiff */; };
+		04B60F9D1E37A9BC00E73068 /* overviews.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04B60F871E37A9BB00E73068 /* overviews.tiff */; };
+		04B60F9E1E37A9BC00E73068 /* packbits.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04B60F881E37A9BB00E73068 /* packbits.tiff */; };
+		04B60FA01E37A9BC00E73068 /* rgb.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04B60F8A1E37A9BB00E73068 /* rgb.tiff */; };
+		04B60FA11E37A9BC00E73068 /* small.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04B60F8B1E37A9BB00E73068 /* small.tiff */; };
+		04B60FA21E37A9BC00E73068 /* stripped.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04B60F8C1E37A9BB00E73068 /* stripped.tiff */; };
+		04B60FA31E37A9BC00E73068 /* TIFFReadTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B60F8E1E37A9BB00E73068 /* TIFFReadTest.m */; };
+		04B60FA41E37A9BC00E73068 /* TIFFTestConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B60F901E37A9BB00E73068 /* TIFFTestConstants.m */; };
+		04B60FA51E37A9BC00E73068 /* TIFFWriteTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B60F921E37A9BB00E73068 /* TIFFWriteTest.m */; };
+		04B60FA61E37A9BC00E73068 /* tiled.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04B60F931E37A9BB00E73068 /* tiled.tiff */; };
+		04B60FA71E37A9BC00E73068 /* tiledplanar.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04B60F941E37A9BB00E73068 /* tiledplanar.tiff */; };
+		04B60FA81E37A9BC00E73068 /* uint32.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04B60F951E37A9BB00E73068 /* uint32.tiff */; };
+		04B60FBE1E37AC3100E73068 /* TIFFFieldTagTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B60FAC1E37AC3100E73068 /* TIFFFieldTagTypes.h */; };
+		04B60FBF1E37AC3100E73068 /* TIFFFieldTagTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B60FAD1E37AC3100E73068 /* TIFFFieldTagTypes.m */; };
+		04B60FC01E37AC3100E73068 /* TIFFFieldTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B60FAE1E37AC3100E73068 /* TIFFFieldTypes.h */; };
+		04B60FC11E37AC3100E73068 /* TIFFFieldTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B60FAF1E37AC3100E73068 /* TIFFFieldTypes.m */; };
+		04B60FC21E37AC3100E73068 /* TIFFFileDirectory.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B60FB01E37AC3100E73068 /* TIFFFileDirectory.h */; };
+		04B60FC31E37AC3100E73068 /* TIFFFileDirectory.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B60FB11E37AC3100E73068 /* TIFFFileDirectory.m */; };
+		04B60FC41E37AC3100E73068 /* TIFFFileDirectoryEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B60FB21E37AC3100E73068 /* TIFFFileDirectoryEntry.h */; };
+		04B60FC51E37AC3100E73068 /* TIFFFileDirectoryEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B60FB31E37AC3100E73068 /* TIFFFileDirectoryEntry.m */; };
+		04B60FC61E37AC3100E73068 /* TIFFImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B60FB41E37AC3100E73068 /* TIFFImage.h */; };
+		04B60FC71E37AC3100E73068 /* TIFFImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B60FB51E37AC3100E73068 /* TIFFImage.m */; };
+		04B60FC81E37AC3100E73068 /* TIFFImageWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B60FB61E37AC3100E73068 /* TIFFImageWindow.h */; };
+		04B60FC91E37AC3100E73068 /* TIFFImageWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B60FB71E37AC3100E73068 /* TIFFImageWindow.m */; };
+		04B60FCA1E37AC3100E73068 /* TIFFRasters.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B60FB81E37AC3100E73068 /* TIFFRasters.h */; };
+		04B60FCB1E37AC3100E73068 /* TIFFRasters.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B60FB91E37AC3100E73068 /* TIFFRasters.m */; };
+		04B60FCC1E37AC3100E73068 /* TIFFReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B60FBA1E37AC3100E73068 /* TIFFReader.h */; };
+		04B60FCD1E37AC3100E73068 /* TIFFReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B60FBB1E37AC3100E73068 /* TIFFReader.m */; };
+		04B60FCE1E37AC3100E73068 /* TIFFWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B60FBC1E37AC3100E73068 /* TIFFWriter.h */; };
+		04B60FCF1E37AC3100E73068 /* TIFFWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B60FBD1E37AC3100E73068 /* TIFFWriter.m */; };
+		04B60FFA1E37AD1000E73068 /* TIFFCompressionDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B60FF01E37AD1000E73068 /* TIFFCompressionDecoder.h */; };
+		04B60FFB1E37AD1000E73068 /* TIFFCompressionEncoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B60FF11E37AD1000E73068 /* TIFFCompressionEncoder.h */; };
+		04B60FFC1E37AD1000E73068 /* TIFFDeflateCompression.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B60FF21E37AD1000E73068 /* TIFFDeflateCompression.h */; };
+		04B60FFD1E37AD1000E73068 /* TIFFDeflateCompression.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B60FF31E37AD1000E73068 /* TIFFDeflateCompression.m */; };
+		04B60FFE1E37AD1000E73068 /* TIFFLZWCompression.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B60FF41E37AD1000E73068 /* TIFFLZWCompression.h */; };
+		04B60FFF1E37AD1000E73068 /* TIFFLZWCompression.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B60FF51E37AD1000E73068 /* TIFFLZWCompression.m */; };
+		04B610001E37AD1000E73068 /* TIFFPackbitsCompression.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B60FF61E37AD1000E73068 /* TIFFPackbitsCompression.h */; };
+		04B610011E37AD1000E73068 /* TIFFPackbitsCompression.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B60FF71E37AD1000E73068 /* TIFFPackbitsCompression.m */; };
+		04B610021E37AD1000E73068 /* TIFFRawCompression.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B60FF81E37AD1000E73068 /* TIFFRawCompression.h */; };
+		04B610031E37AD1000E73068 /* TIFFRawCompression.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B60FF91E37AD1000E73068 /* TIFFRawCompression.m */; };
+		04B6100A1E37AD5600E73068 /* TIFFByteReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B610041E37AD5600E73068 /* TIFFByteReader.h */; };
+		04B6100B1E37AD5600E73068 /* TIFFByteReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B610051E37AD5600E73068 /* TIFFByteReader.m */; };
+		04B6100C1E37AD5600E73068 /* TIFFByteWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B610061E37AD5600E73068 /* TIFFByteWriter.h */; };
+		04B6100D1E37AD5600E73068 /* TIFFByteWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B610071E37AD5600E73068 /* TIFFByteWriter.m */; };
+		04B6100E1E37AD5600E73068 /* TIFFIOUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B610081E37AD5600E73068 /* TIFFIOUtils.h */; };
+		04B6100F1E37AD5600E73068 /* TIFFIOUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B610091E37AD5600E73068 /* TIFFIOUtils.m */; };
+		04B610121E37AD6E00E73068 /* TIFFConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B610101E37AD6E00E73068 /* TIFFConstants.h */; };
+		04B610131E37AD6E00E73068 /* TIFFConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B610111E37AD6E00E73068 /* TIFFConstants.m */; };
+		2070766DA1441D591ED0B917 /* libPods-tiff-iosTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6C74346D60042A2C0D62889 /* libPods-tiff-iosTests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		042FC6581B963FE500549A4B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 042FC6421B963FE500549A4B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 042FC64A1B963FE500549A4B;
+			remoteInfo = "tiff-ios";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		042FC64B1B963FE500549A4B /* tiff_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = tiff_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		042FC64F1B963FE500549A4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		042FC6561B963FE500549A4B /* tiff_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tiff_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		042FC65C1B963FE500549A4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		042FC69E1B96421E00549A4B /* tiff-ios-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "tiff-ios-Prefix.pch"; sourceTree = "<group>"; };
+		042FC6D41B96453E00549A4B /* tiff_ios.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tiff_ios.h; sourceTree = "<group>"; };
+		0472B51A1C03590500496B87 /* tiff-ios-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "tiff-ios-Bridging-Header.h"; sourceTree = "<group>"; };
+		04AB919C1BF29F9A00894999 /* TIFFTestUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIFFTestUtils.h; sourceTree = "<group>"; };
+		04AB919D1BF29F9A00894999 /* TIFFTestUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIFFTestUtils.m; sourceTree = "<group>"; };
+		04B60F801E37A9BB00E73068 /* deflate.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = deflate.tiff; sourceTree = "<group>"; };
+		04B60F811E37A9BB00E73068 /* float32.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = float32.tiff; sourceTree = "<group>"; };
+		04B60F821E37A9BB00E73068 /* float64.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = float64.tiff; sourceTree = "<group>"; };
+		04B60F831E37A9BB00E73068 /* initial.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = initial.tiff; sourceTree = "<group>"; };
+		04B60F841E37A9BB00E73068 /* int32.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = int32.tiff; sourceTree = "<group>"; };
+		04B60F851E37A9BB00E73068 /* interleave.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = interleave.tiff; sourceTree = "<group>"; };
+		04B60F861E37A9BB00E73068 /* lzw.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = lzw.tiff; sourceTree = "<group>"; };
+		04B60F871E37A9BB00E73068 /* overviews.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = overviews.tiff; sourceTree = "<group>"; };
+		04B60F881E37A9BB00E73068 /* packbits.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = packbits.tiff; sourceTree = "<group>"; };
+		04B60F8A1E37A9BB00E73068 /* rgb.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = rgb.tiff; sourceTree = "<group>"; };
+		04B60F8B1E37A9BB00E73068 /* small.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = small.tiff; sourceTree = "<group>"; };
+		04B60F8C1E37A9BB00E73068 /* stripped.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = stripped.tiff; sourceTree = "<group>"; };
+		04B60F8D1E37A9BB00E73068 /* TIFFReadTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIFFReadTest.h; sourceTree = "<group>"; };
+		04B60F8E1E37A9BB00E73068 /* TIFFReadTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIFFReadTest.m; sourceTree = "<group>"; };
+		04B60F8F1E37A9BB00E73068 /* TIFFTestConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIFFTestConstants.h; sourceTree = "<group>"; };
+		04B60F901E37A9BB00E73068 /* TIFFTestConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIFFTestConstants.m; sourceTree = "<group>"; };
+		04B60F911E37A9BB00E73068 /* TIFFWriteTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIFFWriteTest.h; sourceTree = "<group>"; };
+		04B60F921E37A9BB00E73068 /* TIFFWriteTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIFFWriteTest.m; sourceTree = "<group>"; };
+		04B60F931E37A9BB00E73068 /* tiled.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = tiled.tiff; sourceTree = "<group>"; };
+		04B60F941E37A9BB00E73068 /* tiledplanar.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = tiledplanar.tiff; sourceTree = "<group>"; };
+		04B60F951E37A9BB00E73068 /* uint32.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = uint32.tiff; sourceTree = "<group>"; };
+		04B60FAC1E37AC3100E73068 /* TIFFFieldTagTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIFFFieldTagTypes.h; sourceTree = "<group>"; };
+		04B60FAD1E37AC3100E73068 /* TIFFFieldTagTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIFFFieldTagTypes.m; sourceTree = "<group>"; };
+		04B60FAE1E37AC3100E73068 /* TIFFFieldTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIFFFieldTypes.h; sourceTree = "<group>"; };
+		04B60FAF1E37AC3100E73068 /* TIFFFieldTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIFFFieldTypes.m; sourceTree = "<group>"; };
+		04B60FB01E37AC3100E73068 /* TIFFFileDirectory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIFFFileDirectory.h; sourceTree = "<group>"; };
+		04B60FB11E37AC3100E73068 /* TIFFFileDirectory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIFFFileDirectory.m; sourceTree = "<group>"; };
+		04B60FB21E37AC3100E73068 /* TIFFFileDirectoryEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIFFFileDirectoryEntry.h; sourceTree = "<group>"; };
+		04B60FB31E37AC3100E73068 /* TIFFFileDirectoryEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIFFFileDirectoryEntry.m; sourceTree = "<group>"; };
+		04B60FB41E37AC3100E73068 /* TIFFImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIFFImage.h; sourceTree = "<group>"; };
+		04B60FB51E37AC3100E73068 /* TIFFImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIFFImage.m; sourceTree = "<group>"; };
+		04B60FB61E37AC3100E73068 /* TIFFImageWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIFFImageWindow.h; sourceTree = "<group>"; };
+		04B60FB71E37AC3100E73068 /* TIFFImageWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIFFImageWindow.m; sourceTree = "<group>"; };
+		04B60FB81E37AC3100E73068 /* TIFFRasters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIFFRasters.h; sourceTree = "<group>"; };
+		04B60FB91E37AC3100E73068 /* TIFFRasters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIFFRasters.m; sourceTree = "<group>"; };
+		04B60FBA1E37AC3100E73068 /* TIFFReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIFFReader.h; sourceTree = "<group>"; };
+		04B60FBB1E37AC3100E73068 /* TIFFReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIFFReader.m; sourceTree = "<group>"; };
+		04B60FBC1E37AC3100E73068 /* TIFFWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIFFWriter.h; sourceTree = "<group>"; };
+		04B60FBD1E37AC3100E73068 /* TIFFWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIFFWriter.m; sourceTree = "<group>"; };
+		04B60FF01E37AD1000E73068 /* TIFFCompressionDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIFFCompressionDecoder.h; sourceTree = "<group>"; };
+		04B60FF11E37AD1000E73068 /* TIFFCompressionEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIFFCompressionEncoder.h; sourceTree = "<group>"; };
+		04B60FF21E37AD1000E73068 /* TIFFDeflateCompression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIFFDeflateCompression.h; sourceTree = "<group>"; };
+		04B60FF31E37AD1000E73068 /* TIFFDeflateCompression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIFFDeflateCompression.m; sourceTree = "<group>"; };
+		04B60FF41E37AD1000E73068 /* TIFFLZWCompression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIFFLZWCompression.h; sourceTree = "<group>"; };
+		04B60FF51E37AD1000E73068 /* TIFFLZWCompression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIFFLZWCompression.m; sourceTree = "<group>"; };
+		04B60FF61E37AD1000E73068 /* TIFFPackbitsCompression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIFFPackbitsCompression.h; sourceTree = "<group>"; };
+		04B60FF71E37AD1000E73068 /* TIFFPackbitsCompression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIFFPackbitsCompression.m; sourceTree = "<group>"; };
+		04B60FF81E37AD1000E73068 /* TIFFRawCompression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIFFRawCompression.h; sourceTree = "<group>"; };
+		04B60FF91E37AD1000E73068 /* TIFFRawCompression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIFFRawCompression.m; sourceTree = "<group>"; };
+		04B610041E37AD5600E73068 /* TIFFByteReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIFFByteReader.h; sourceTree = "<group>"; };
+		04B610051E37AD5600E73068 /* TIFFByteReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIFFByteReader.m; sourceTree = "<group>"; };
+		04B610061E37AD5600E73068 /* TIFFByteWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIFFByteWriter.h; sourceTree = "<group>"; };
+		04B610071E37AD5600E73068 /* TIFFByteWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIFFByteWriter.m; sourceTree = "<group>"; };
+		04B610081E37AD5600E73068 /* TIFFIOUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIFFIOUtils.h; sourceTree = "<group>"; };
+		04B610091E37AD5600E73068 /* TIFFIOUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIFFIOUtils.m; sourceTree = "<group>"; };
+		04B610101E37AD6E00E73068 /* TIFFConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIFFConstants.h; sourceTree = "<group>"; };
+		04B610111E37AD6E00E73068 /* TIFFConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIFFConstants.m; sourceTree = "<group>"; };
+		73029AF16F858F06EBCEC53C /* Pods-tiff-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tiff-iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-tiff-iosTests/Pods-tiff-iosTests.release.xcconfig"; sourceTree = "<group>"; };
+		C6C74346D60042A2C0D62889 /* libPods-tiff-iosTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tiff-iosTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDCFC787E85937478095557C /* Pods-tiff-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tiff-iosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tiff-iosTests/Pods-tiff-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		042FC6471B963FE500549A4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		042FC6531B963FE500549A4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				042FC6571B963FE500549A4B /* tiff_ios.framework in Frameworks */,
+				2070766DA1441D591ED0B917 /* libPods-tiff-iosTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		042FC6411B963FE500549A4B = {
+			isa = PBXGroup;
+			children = (
+				042FC64D1B963FE500549A4B /* tiff-ios */,
+				042FC65A1B963FE500549A4B /* tiff-iosTests */,
+				042FC64C1B963FE500549A4B /* Products */,
+				CFB29A09175C66468AB70ABB /* Pods */,
+				BF3CA5D617C2909C4DF1D765 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		042FC64C1B963FE500549A4B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				042FC64B1B963FE500549A4B /* tiff_ios.framework */,
+				042FC6561B963FE500549A4B /* tiff_iosTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		042FC64D1B963FE500549A4B /* tiff-ios */ = {
+			isa = PBXGroup;
+			children = (
+				042FC6D41B96453E00549A4B /* tiff_ios.h */,
+				04B60FA91E37AB9600E73068 /* compression */,
+				04B60FAA1E37ABB200E73068 /* io */,
+				04B60FAB1E37ABBC00E73068 /* util */,
+				04B60FAC1E37AC3100E73068 /* TIFFFieldTagTypes.h */,
+				04B60FAD1E37AC3100E73068 /* TIFFFieldTagTypes.m */,
+				04B60FAE1E37AC3100E73068 /* TIFFFieldTypes.h */,
+				04B60FAF1E37AC3100E73068 /* TIFFFieldTypes.m */,
+				04B60FB01E37AC3100E73068 /* TIFFFileDirectory.h */,
+				04B60FB11E37AC3100E73068 /* TIFFFileDirectory.m */,
+				04B60FB21E37AC3100E73068 /* TIFFFileDirectoryEntry.h */,
+				04B60FB31E37AC3100E73068 /* TIFFFileDirectoryEntry.m */,
+				04B60FB41E37AC3100E73068 /* TIFFImage.h */,
+				04B60FB51E37AC3100E73068 /* TIFFImage.m */,
+				04B60FB61E37AC3100E73068 /* TIFFImageWindow.h */,
+				04B60FB71E37AC3100E73068 /* TIFFImageWindow.m */,
+				04B60FB81E37AC3100E73068 /* TIFFRasters.h */,
+				04B60FB91E37AC3100E73068 /* TIFFRasters.m */,
+				04B60FBA1E37AC3100E73068 /* TIFFReader.h */,
+				04B60FBB1E37AC3100E73068 /* TIFFReader.m */,
+				04B60FBC1E37AC3100E73068 /* TIFFWriter.h */,
+				04B60FBD1E37AC3100E73068 /* TIFFWriter.m */,
+				042FC69E1B96421E00549A4B /* tiff-ios-Prefix.pch */,
+				042FC64E1B963FE500549A4B /* Supporting Files */,
+				0472B51A1C03590500496B87 /* tiff-ios-Bridging-Header.h */,
+			);
+			path = "tiff-ios";
+			sourceTree = "<group>";
+		};
+		042FC64E1B963FE500549A4B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				042FC64F1B963FE500549A4B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		042FC65A1B963FE500549A4B /* tiff-iosTests */ = {
+			isa = PBXGroup;
+			children = (
+				042FC65B1B963FE500549A4B /* Supporting Files */,
+				04B60F8D1E37A9BB00E73068 /* TIFFReadTest.h */,
+				04B60F8E1E37A9BB00E73068 /* TIFFReadTest.m */,
+				04B60F911E37A9BB00E73068 /* TIFFWriteTest.h */,
+				04B60F921E37A9BB00E73068 /* TIFFWriteTest.m */,
+				04AB919C1BF29F9A00894999 /* TIFFTestUtils.h */,
+				04AB919D1BF29F9A00894999 /* TIFFTestUtils.m */,
+				04B60F8F1E37A9BB00E73068 /* TIFFTestConstants.h */,
+				04B60F901E37A9BB00E73068 /* TIFFTestConstants.m */,
+				04B60F801E37A9BB00E73068 /* deflate.tiff */,
+				04B60F811E37A9BB00E73068 /* float32.tiff */,
+				04B60F821E37A9BB00E73068 /* float64.tiff */,
+				04B60F831E37A9BB00E73068 /* initial.tiff */,
+				04B60F841E37A9BB00E73068 /* int32.tiff */,
+				04B60F851E37A9BB00E73068 /* interleave.tiff */,
+				04B60F861E37A9BB00E73068 /* lzw.tiff */,
+				04B60F871E37A9BB00E73068 /* overviews.tiff */,
+				04B60F881E37A9BB00E73068 /* packbits.tiff */,
+				04B60F8A1E37A9BB00E73068 /* rgb.tiff */,
+				04B60F8B1E37A9BB00E73068 /* small.tiff */,
+				04B60F8C1E37A9BB00E73068 /* stripped.tiff */,
+				04B60F931E37A9BB00E73068 /* tiled.tiff */,
+				04B60F941E37A9BB00E73068 /* tiledplanar.tiff */,
+				04B60F951E37A9BB00E73068 /* uint32.tiff */,
+			);
+			path = "tiff-iosTests";
+			sourceTree = "<group>";
+		};
+		042FC65B1B963FE500549A4B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				042FC65C1B963FE500549A4B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		04B60FA91E37AB9600E73068 /* compression */ = {
+			isa = PBXGroup;
+			children = (
+				04B60FF01E37AD1000E73068 /* TIFFCompressionDecoder.h */,
+				04B60FF11E37AD1000E73068 /* TIFFCompressionEncoder.h */,
+				04B60FF21E37AD1000E73068 /* TIFFDeflateCompression.h */,
+				04B60FF31E37AD1000E73068 /* TIFFDeflateCompression.m */,
+				04B60FF41E37AD1000E73068 /* TIFFLZWCompression.h */,
+				04B60FF51E37AD1000E73068 /* TIFFLZWCompression.m */,
+				04B60FF61E37AD1000E73068 /* TIFFPackbitsCompression.h */,
+				04B60FF71E37AD1000E73068 /* TIFFPackbitsCompression.m */,
+				04B60FF81E37AD1000E73068 /* TIFFRawCompression.h */,
+				04B60FF91E37AD1000E73068 /* TIFFRawCompression.m */,
+			);
+			path = compression;
+			sourceTree = "<group>";
+		};
+		04B60FAA1E37ABB200E73068 /* io */ = {
+			isa = PBXGroup;
+			children = (
+				04B610041E37AD5600E73068 /* TIFFByteReader.h */,
+				04B610051E37AD5600E73068 /* TIFFByteReader.m */,
+				04B610061E37AD5600E73068 /* TIFFByteWriter.h */,
+				04B610071E37AD5600E73068 /* TIFFByteWriter.m */,
+				04B610081E37AD5600E73068 /* TIFFIOUtils.h */,
+				04B610091E37AD5600E73068 /* TIFFIOUtils.m */,
+			);
+			path = io;
+			sourceTree = "<group>";
+		};
+		04B60FAB1E37ABBC00E73068 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				04B610101E37AD6E00E73068 /* TIFFConstants.h */,
+				04B610111E37AD6E00E73068 /* TIFFConstants.m */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+		BF3CA5D617C2909C4DF1D765 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C6C74346D60042A2C0D62889 /* libPods-tiff-iosTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CFB29A09175C66468AB70ABB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EDCFC787E85937478095557C /* Pods-tiff-iosTests.debug.xcconfig */,
+				73029AF16F858F06EBCEC53C /* Pods-tiff-iosTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		042FC6481B963FE500549A4B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04B60FFE1E37AD1000E73068 /* TIFFLZWCompression.h in Headers */,
+				0472B51B1C03590500496B87 /* tiff-ios-Bridging-Header.h in Headers */,
+				04B60FC01E37AC3100E73068 /* TIFFFieldTypes.h in Headers */,
+				042FC6D51B96453E00549A4B /* tiff_ios.h in Headers */,
+				04B60FC41E37AC3100E73068 /* TIFFFileDirectoryEntry.h in Headers */,
+				04B60FCE1E37AC3100E73068 /* TIFFWriter.h in Headers */,
+				04B60FFB1E37AD1000E73068 /* TIFFCompressionEncoder.h in Headers */,
+				04B610121E37AD6E00E73068 /* TIFFConstants.h in Headers */,
+				04B60FC21E37AC3100E73068 /* TIFFFileDirectory.h in Headers */,
+				04B60FC61E37AC3100E73068 /* TIFFImage.h in Headers */,
+				042FC6D31B96421E00549A4B /* tiff-ios-Prefix.pch in Headers */,
+				04B60FC81E37AC3100E73068 /* TIFFImageWindow.h in Headers */,
+				04B6100A1E37AD5600E73068 /* TIFFByteReader.h in Headers */,
+				04B60FFC1E37AD1000E73068 /* TIFFDeflateCompression.h in Headers */,
+				04B610021E37AD1000E73068 /* TIFFRawCompression.h in Headers */,
+				04B6100E1E37AD5600E73068 /* TIFFIOUtils.h in Headers */,
+				04B610001E37AD1000E73068 /* TIFFPackbitsCompression.h in Headers */,
+				04B60FCA1E37AC3100E73068 /* TIFFRasters.h in Headers */,
+				04B6100C1E37AD5600E73068 /* TIFFByteWriter.h in Headers */,
+				04B60FCC1E37AC3100E73068 /* TIFFReader.h in Headers */,
+				04B60FBE1E37AC3100E73068 /* TIFFFieldTagTypes.h in Headers */,
+				04B60FFA1E37AD1000E73068 /* TIFFCompressionDecoder.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		042FC64A1B963FE500549A4B /* tiff-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 042FC6611B963FE500549A4B /* Build configuration list for PBXNativeTarget "tiff-ios" */;
+			buildPhases = (
+				042FC6461B963FE500549A4B /* Sources */,
+				042FC6471B963FE500549A4B /* Frameworks */,
+				042FC6481B963FE500549A4B /* Headers */,
+				042FC6491B963FE500549A4B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "tiff-ios";
+			productName = "tiff-ios";
+			productReference = 042FC64B1B963FE500549A4B /* tiff_ios.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		042FC6551B963FE500549A4B /* tiff-iosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 042FC6641B963FE500549A4B /* Build configuration list for PBXNativeTarget "tiff-iosTests" */;
+			buildPhases = (
+				7D2BC4984CC05321935A80F4 /* [CP] Check Pods Manifest.lock */,
+				042FC6521B963FE500549A4B /* Sources */,
+				042FC6531B963FE500549A4B /* Frameworks */,
+				042FC6541B963FE500549A4B /* Resources */,
+				25882F809999754782A74C98 /* [CP] Embed Pods Frameworks */,
+				B7BCB37CCE8E9CB5F821133F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				042FC6591B963FE500549A4B /* PBXTargetDependency */,
+			);
+			name = "tiff-iosTests";
+			productName = "tiff-iosTests";
+			productReference = 042FC6561B963FE500549A4B /* tiff_iosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		042FC6421B963FE500549A4B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = NGA;
+				TargetAttributes = {
+					042FC64A1B963FE500549A4B = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					042FC6551B963FE500549A4B = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
+			};
+			buildConfigurationList = 042FC6451B963FE500549A4B /* Build configuration list for PBXProject "tiff-ios" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 042FC6411B963FE500549A4B;
+			productRefGroup = 042FC64C1B963FE500549A4B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				042FC64A1B963FE500549A4B /* tiff-ios */,
+				042FC6551B963FE500549A4B /* tiff-iosTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		042FC6491B963FE500549A4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		042FC6541B963FE500549A4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04B60FA21E37A9BC00E73068 /* stripped.tiff in Resources */,
+				04B60F9C1E37A9BC00E73068 /* lzw.tiff in Resources */,
+				04B60FA61E37A9BC00E73068 /* tiled.tiff in Resources */,
+				04B60F981E37A9BC00E73068 /* float64.tiff in Resources */,
+				04B60F9E1E37A9BC00E73068 /* packbits.tiff in Resources */,
+				04B60FA01E37A9BC00E73068 /* rgb.tiff in Resources */,
+				04B60FA81E37A9BC00E73068 /* uint32.tiff in Resources */,
+				04B60F991E37A9BC00E73068 /* initial.tiff in Resources */,
+				04B60F971E37A9BC00E73068 /* float32.tiff in Resources */,
+				04B60F9B1E37A9BC00E73068 /* interleave.tiff in Resources */,
+				04B60F961E37A9BC00E73068 /* deflate.tiff in Resources */,
+				04B60F9A1E37A9BC00E73068 /* int32.tiff in Resources */,
+				04B60FA11E37A9BC00E73068 /* small.tiff in Resources */,
+				04B60F9D1E37A9BC00E73068 /* overviews.tiff in Resources */,
+				04B60FA71E37A9BC00E73068 /* tiledplanar.tiff in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		25882F809999754782A74C98 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tiff-iosTests/Pods-tiff-iosTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D2BC4984CC05321935A80F4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B7BCB37CCE8E9CB5F821133F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tiff-iosTests/Pods-tiff-iosTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		042FC6461B963FE500549A4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04B610011E37AD1000E73068 /* TIFFPackbitsCompression.m in Sources */,
+				04B6100D1E37AD5600E73068 /* TIFFByteWriter.m in Sources */,
+				04B60FC31E37AC3100E73068 /* TIFFFileDirectory.m in Sources */,
+				04B60FCB1E37AC3100E73068 /* TIFFRasters.m in Sources */,
+				04B610031E37AD1000E73068 /* TIFFRawCompression.m in Sources */,
+				04B60FBF1E37AC3100E73068 /* TIFFFieldTagTypes.m in Sources */,
+				04B60FCD1E37AC3100E73068 /* TIFFReader.m in Sources */,
+				04B60FC11E37AC3100E73068 /* TIFFFieldTypes.m in Sources */,
+				04B610131E37AD6E00E73068 /* TIFFConstants.m in Sources */,
+				04B60FC71E37AC3100E73068 /* TIFFImage.m in Sources */,
+				04B60FC91E37AC3100E73068 /* TIFFImageWindow.m in Sources */,
+				04B6100F1E37AD5600E73068 /* TIFFIOUtils.m in Sources */,
+				04B60FC51E37AC3100E73068 /* TIFFFileDirectoryEntry.m in Sources */,
+				04B60FCF1E37AC3100E73068 /* TIFFWriter.m in Sources */,
+				04B60FFF1E37AD1000E73068 /* TIFFLZWCompression.m in Sources */,
+				04B60FFD1E37AD1000E73068 /* TIFFDeflateCompression.m in Sources */,
+				04B6100B1E37AD5600E73068 /* TIFFByteReader.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		042FC6521B963FE500549A4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04B60FA31E37A9BC00E73068 /* TIFFReadTest.m in Sources */,
+				04AB919E1BF29F9A00894999 /* TIFFTestUtils.m in Sources */,
+				04B60FA51E37A9BC00E73068 /* TIFFWriteTest.m in Sources */,
+				04B60FA41E37A9BC00E73068 /* TIFFTestConstants.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		042FC6591B963FE500549A4B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 042FC64A1B963FE500549A4B /* tiff-ios */;
+			targetProxy = 042FC6581B963FE500549A4B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		042FC65F1B963FE500549A4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		042FC6601B963FE500549A4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		042FC6621B963FE500549A4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "tiff-ios/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = tiff_ios;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		042FC6631B963FE500549A4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "tiff-ios/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = tiff_ios;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		042FC6651B963FE500549A4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDCFC787E85937478095557C /* Pods-tiff-iosTests.debug.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "tiff-iosTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = tiff_iosTests;
+			};
+			name = Debug;
+		};
+		042FC6661B963FE500549A4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73029AF16F858F06EBCEC53C /* Pods-tiff-iosTests.release.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "tiff-iosTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = tiff_iosTests;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		042FC6451B963FE500549A4B /* Build configuration list for PBXProject "tiff-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				042FC65F1B963FE500549A4B /* Debug */,
+				042FC6601B963FE500549A4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		042FC6611B963FE500549A4B /* Build configuration list for PBXNativeTarget "tiff-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				042FC6621B963FE500549A4B /* Debug */,
+				042FC6631B963FE500549A4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		042FC6641B963FE500549A4B /* Build configuration list for PBXNativeTarget "tiff-iosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				042FC6651B963FE500549A4B /* Debug */,
+				042FC6661B963FE500549A4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 042FC6421B963FE500549A4B /* Project object */;
+}
