@@ -90,7 +90,7 @@ NSInteger const TIFF_LZW_MIN_BITS = 9;
             } else {
                 
                 if (oldCode >= self.table.count) {
-                    [NSException raise:@"Not Found" format:@"Code not in the table, %d, Table Length: %lu, Position: %d", oldCode, self.table.count, self.position];
+                    [NSException raise:@"Not Found" format:@"Code not in the table, %d, Table Length: %d, Position: %d", oldCode, (int)self.table.count, self.position];
                 }
                 
                 // Create and write new value from old value
