@@ -26,7 +26,8 @@ NSInteger const TIFF_LZW_MIN_BITS = 9;
 
 @interface TIFFLZWCompression()
 
-@property (nonatomic, strong) NSMutableArray<NSMutableArray<NSNumber *> *> * table;
+@property (nonatomic, strong) NSMutableDictionary<NSNumber *, NSMutableArray<NSNumber *> *> * table;
+@property (nonatomic) int maxCode;
 @property (nonatomic) int byteLength;
 @property (nonatomic) int position;
 
@@ -69,44 +70,35 @@ NSInteger const TIFF_LZW_MIN_BITS = 9;
             }
             
             // Write the code value
-            NSMutableArray<NSNumber *> * value = [self.table objectAtIndex:code];
+            NSMutableArray<NSNumber *> * value = [self.table objectForKey:[NSNumber numberWithInt:code]];
             [self writeValue:value toStream:decodedStream];
             oldCode = code;
             
         } else {
             
             // If already in the table
-            if (code < self.table.count) {
+            NSArray<NSNumber *> * value = [self.table objectForKey:[NSNumber numberWithInt:code]];
+            if (value != nil) {
                 
                 // Write the code value
-                NSArray<NSNumber *> * value = [self.table objectAtIndex:code];
                 [self writeValue:value toStream:decodedStream];
                 
                 // Create new value and add to table
-                NSMutableArray<NSNumber *> * newValue = [self concatArray:[self.table objectAtIndex:oldCode] withNumber:[[self.table objectAtIndex:code] objectAtIndex:0]];
-                [self addToTable:newValue];
+                NSMutableArray<NSNumber *> * newValue = [self concatArray:[self.table objectForKey:[NSNumber numberWithInt:oldCode]] withNumber:[[self.table objectForKey:[NSNumber numberWithInt:code]] objectAtIndex:0]];
+                [self addToTableWithValue:newValue];
                 oldCode = code;
                 
             } else {
                 
-                if (oldCode >= self.table.count) {
-                    [NSException raise:@"Not Found" format:@"Code not in the table, %d, Table Length: %d, Position: %d", oldCode, (int)self.table.count, self.position];
-                }
-                
                 // Create and write new value from old value
-                NSArray<NSNumber *> * oldValue = [self.table objectAtIndex:oldCode];
+                NSArray<NSNumber *> * oldValue = [self.table objectForKey:[NSNumber numberWithInt:oldCode]];
                 NSMutableArray<NSNumber *> * newValue = [self concatArray:oldValue withNumber:[oldValue objectAtIndex:0]];
                 [self writeValue:newValue toStream:decodedStream];
                 
                 // Write value to the table
-                [self addToTable:newValue];
+                [self addToTableWithCode:code andValue:newValue];
                 oldCode = code;
             }
-        }
-        
-        // Increase byte length if needed
-        if (self.table.count >= pow(2, self.byteLength) - 1) {
-            self.byteLength++;
         }
         
         // Get the next code
@@ -124,10 +116,11 @@ NSInteger const TIFF_LZW_MIN_BITS = 9;
  * Initialize the table and byte length
  */
 -(void) initializeTable{
-    self.table = [[NSMutableArray alloc] init];
+    self.table = [[NSMutableDictionary alloc] init];
     for (int i = 0; i <= 257; i++) {
-        [self.table addObject:[[NSMutableArray alloc] initWithObjects:[NSNumber numberWithInt:i], nil]];
+        [self.table setObject:[[NSMutableArray alloc] initWithObjects:[NSNumber numberWithInt:i], nil] forKey:[NSNumber numberWithInt:i]];
     }
+    self.maxCode = 257;
     self.byteLength = TIFF_LZW_MIN_BITS;
 }
 
@@ -135,7 +128,7 @@ NSInteger const TIFF_LZW_MIN_BITS = 9;
  * Check the byte length and increase if needed
  */
 -(void) checkByteLength{
-    if (self.table.count >= pow(2, self.byteLength)) {
+    if (self.maxCode >= pow(2, self.byteLength) - 2) {
         self.byteLength++;
     }
 }
@@ -146,8 +139,21 @@ NSInteger const TIFF_LZW_MIN_BITS = 9;
  * @param value
  *            value
  */
--(void) addToTable: (NSMutableArray<NSNumber *> *) value{
-    [self.table addObject:value];
+-(void) addToTableWithValue: (NSMutableArray<NSNumber *> *) value{
+    [self addToTableWithCode:self.maxCode + 1 andValue:value];
+}
+
+/**
+ * Add the code and value to the table
+ *
+ * @param code
+ *            code
+ * @param value
+ *            value
+ */
+-(void) addToTableWithCode: (int) code andValue: (NSMutableArray<NSNumber *> *) value{
+    [self.table setObject:value forKey:[NSNumber numberWithInt:code]];
+    self.maxCode = MAX(self.maxCode, code);
     [self checkByteLength];
 }
 
