@@ -646,7 +646,7 @@
     enum TIFFFieldType fieldType = 0;
     
     NSArray<NSNumber *> * sampleFormat = [self sampleFormat];
-    int format = sampleFormat != nil ? [[sampleFormat objectAtIndex:sampleIndex] intValue] : (int)TIFF_SAMPLE_FORMAT_UNSIGNED_INT;
+    int format = sampleFormat != nil && sampleIndex < sampleFormat.count ? [[sampleFormat objectAtIndex:sampleIndex] intValue] : (int)TIFF_SAMPLE_FORMAT_UNSIGNED_INT;
     int bitsPerSample = [[[self bitsPerSample] objectAtIndex:sampleIndex] intValue];
     
     if(format == TIFF_SAMPLE_FORMAT_UNSIGNED_INT){
