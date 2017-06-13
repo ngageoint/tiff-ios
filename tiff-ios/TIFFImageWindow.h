@@ -58,7 +58,6 @@
  * Initialize, full image size
  *
  * @param fileDirectory file directory
- * @param y y coordinate
  */
 -(instancetype) initWithFileDirectory: (TIFFFileDirectory *) fileDirectory;
 

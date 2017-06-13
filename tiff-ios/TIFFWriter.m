@@ -179,8 +179,6 @@
  *
  * @param fileDirectory
  *            file directory
- * @param strips
- *            number of strips
  */
 +(void) populateStripEntriesWithFileDirectory: (TIFFFileDirectory *) fileDirectory{
 

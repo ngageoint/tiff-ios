@@ -57,8 +57,8 @@
 /**
  * Read a TIFF from the bytes
  *
- * @param bytes
- *            TIFF bytes
+ * @param data
+ *            TIFF data
  * @return TIFF image
  */
 +(TIFFImage *) readTiffFromData: (NSData *) data;
@@ -66,8 +66,8 @@
 /**
  * Read a TIFF from the bytes
  *
- * @param bytes
- *            TIFF bytes
+ * @param data
+ *            TIFF data
  * @param cache
  *            true to cache tiles and strips
  * @return TIFF image

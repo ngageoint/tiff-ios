@@ -174,7 +174,7 @@
 /**
  * Set the image height
  *
- * @param width
+ * @param height
  *            image height
  */
 -(void) setImageHeight: (unsigned short) height;
@@ -182,7 +182,7 @@
 /**
  * Set the image height
  *
- * @param width
+ * @param height
  *            image height
  */
 -(void) setImageHeightAsLong: (unsigned long) height;

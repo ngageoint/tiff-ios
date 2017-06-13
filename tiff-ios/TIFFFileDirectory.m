@@ -848,8 +848,10 @@
 /**
  * Set an unsigned short list of values for the field tag type
  *
- * @param value
+ * @param value 
+ *           unsigned shorts list
  * @param fieldTagType
+ *           field tag type
  */
 -(void) setUnsignedShortListEntryValue: (NSArray<NSNumber *> *) value withFieldTag: (enum TIFFFieldTagType) fieldTagType{
     [self setEntryValue:value withFieldTag:fieldTagType andFieldType:TIFF_FIELD_SHORT andTypeCount:(int)value.count];
@@ -897,7 +899,9 @@
  * Set an unsigned long list of values for the field tag type
  *
  * @param value
+ *           unsigned longs list
  * @param fieldTagType
+ *           field tag type
  */
 -(void) setUnsignedLongListEntryValue: (NSArray<NSNumber *> *) value withFieldTag: (enum TIFFFieldTagType) fieldTagType{
     [self setEntryValue:value withFieldTag:fieldTagType andFieldType:TIFF_FIELD_LONG andTypeCount:(int)value.count];
