@@ -102,7 +102,7 @@ Pull from [CocoaPods](https://cocoapods.org/pods/tiff-ios):
 Pull from GitHub:
 
     pod 'tiff-ios', :git => 'https://github.com/ngageoint/geopackage-tiff-iOS.git', :branch => 'master'
-    pod 'tiff-ios', :git => 'https://github.com/ngageoint/geopackage-tiff-iOS.git', :tag => '1.0.1'
+    pod 'tiff-ios', :git => 'https://github.com/ngageoint/geopackage-tiff-iOS.git', :tag => '1.0.2'
 
 Include as local project:
 
