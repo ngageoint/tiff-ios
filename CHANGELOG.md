@@ -6,7 +6,7 @@ Adheres to [Semantic Versioning](http://semver.org/).
 
 ## 1.0.3 (TBD)
 
-* TBD
+* Handle writing file directory entry ASCII values ending with more than one null
 
 ## [1.0.2](https://github.com/ngageoint/geopackage-tiff-ios/releases/tag/1.0.2) (06-13-2017)
 
