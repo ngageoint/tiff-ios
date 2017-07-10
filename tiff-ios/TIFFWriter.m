@@ -472,8 +472,9 @@
             case TIFF_FIELD_ASCII:
                 bytesWritten += [writer writeString:(NSString *)value];
                 if (bytesWritten < [entry typeCount]) {
-                    [self writerFillerBytesWithWriter:writer andCount:1];
-                    bytesWritten++;
+                    int fillerBytes = [entry typeCount] - bytesWritten;
+                    [self writerFillerBytesWithWriter:writer andCount:fillerBytes];
+                    bytesWritten += fillerBytes;
                 }
                 break;
             case TIFF_FIELD_BYTE:
