@@ -94,7 +94,7 @@
         NSMutableArray<NSNumber *> * valueBytesCheck = [[NSMutableArray alloc] init];
         
         // Write the raster bytes to temporary storage
-        if ([fileDirectory rowsPerStrip] == nil) {
+        if ([fileDirectory isTiled]){
             [NSException raise:@"Not Supported" format:@"Tiled images are not supported"];
         }
         
@@ -167,7 +167,7 @@
     }
     
     // Populate the raster entries
-    if ([fileDirectory rowsPerStrip] != nil) {
+    if (![fileDirectory isTiled]) {
         [self populateStripEntriesWithFileDirectory:fileDirectory];
     } else {
         [NSException raise:@"Not Supported" format:@"Tiled images are not supported"];
@@ -183,7 +183,8 @@
 +(void) populateStripEntriesWithFileDirectory: (TIFFFileDirectory *) fileDirectory{
 
     int rowsPerStrip = [[fileDirectory rowsPerStrip] intValue];
-    int stripsPerSample = ceil([[fileDirectory imageHeight] doubleValue] / rowsPerStrip);
+    int imageHeight = [[fileDirectory imageHeight] intValue];
+    int stripsPerSample = (imageHeight + rowsPerStrip - 1) / rowsPerStrip;
     int strips = stripsPerSample;
     if ([[fileDirectory planarConfiguration] intValue] == TIFF_PLANAR_CONFIGURATION_PLANAR) {
         strips *= [[fileDirectory samplesPerPixel] intValue];
@@ -230,7 +231,7 @@
     TIFFByteWriter * writer = [[TIFFByteWriter alloc] initWithByteOrder:byteOrder];
     
     // Write the rasters
-    if ([fileDirectory rowsPerStrip] != nil) {
+    if (![fileDirectory isTiled]) {
         [self writeStripRastersWithWriter:writer andFileDirectory:fileDirectory andOffset:offset andFieldTypes:sampleFieldTypes andEncoder:encoder];
     } else {
         [NSException raise:@"Not Supported" format:@"Tiled images are not supported"];
@@ -264,7 +265,7 @@
     // Get the row and strip counts
     int rowsPerStrip = [[fileDirectory rowsPerStrip] intValue];
     int maxY = [[fileDirectory imageHeight] intValue];
-    int stripsPerSample = ceil((double)maxY / (double) rowsPerStrip);
+    int stripsPerSample = (maxY + rowsPerStrip - 1) / rowsPerStrip;
 
     int strips = stripsPerSample;
     if ([[fileDirectory planarConfiguration] intValue] == TIFF_PLANAR_CONFIGURATION_PLANAR) {

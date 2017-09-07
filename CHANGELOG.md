@@ -6,7 +6,10 @@ Adheres to [Semantic Versioning](http://semver.org/).
 
 ## 1.0.4 (TBD)
 
-* TBD
+* Rasters initializer support for multiple samples per pixel
+* Handle missing samples per pixel values by using length of bits per sample
+* Public access to tiff tags
+* String Entry Value getter and setter
 
 ## [1.0.3](https://github.com/ngageoint/geopackage-tiff-ios/releases/tag/1.0.3) (07-10-2017)
 

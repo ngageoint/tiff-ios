@@ -749,6 +749,123 @@
 -(enum TIFFFieldType) fieldTypeForSample: (int) sampleIndex;
 
 /**
+ * Get a short entry value
+ *
+ * @param fieldTagType
+ *            field tag type
+ * @return short  value
+ */
+-(NSNumber *) shortEntryValueWithFieldTag: (enum TIFFFieldTagType) fieldTagType;
+
+/**
+ * Set an unsigned short entry value for the field tag type
+ *
+ * @param value
+ *            unsigned short value (16 bit)
+ * @param fieldTagType
+ *            field tag type
+ */
+-(void) setUnsignedShortEntryValue: (unsigned short) value withFieldTag: (enum TIFFFieldTagType) fieldTagType;
+
+/**
+ * Get a number entry value
+ *
+ * @param fieldTagType
+ *            field tag type
+ * @return number value
+ */
+-(NSNumber *) numberEntryValueWithFieldTag: (enum TIFFFieldTagType) fieldTagType;
+
+/**
+ * Set an unsigned long entry value for the field tag type
+ *
+ * @param value
+ *            unsigned long value (32 bit)
+ * @param fieldTagType
+ *            field tag type
+ */
+-(void) setUnsignedLongEntryValue: (unsigned long) value withFieldTag: (enum TIFFFieldTagType) fieldTagType;
+
+/**
+ * Get a string entry value for the field tag type
+ *
+ * @param fieldTagType
+ *            field tag type
+ * @return string value
+ */
+-(NSString *) stringEntryValueWithFieldTag: (enum TIFFFieldTagType) fieldTagType;
+
+/**
+ * Set string value for the field tag type
+ *
+ * @param value
+ *            string value
+ * @param fieldTagType
+ *            field tag type
+ */
+-(void) setStringEntryValue: (NSString *) value withFieldTag: (enum TIFFFieldTagType) fieldTagType;
+
+/**
+ * Get an short list entry value
+ *
+ * @param fieldTagType
+ *            field tag type
+ * @return short list value
+ */
+-(NSArray<NSNumber *> *) shortListEntryValueWithFieldTag: (enum TIFFFieldTagType) fieldTagType;
+
+/**
+ * Set an unsigned short list of values for the field tag type
+ *
+ * @param value
+ *           unsigned shorts list
+ * @param fieldTagType
+ *           field tag type
+ */
+-(void) setUnsignedShortListEntryValue: (NSArray<NSNumber *> *) value withFieldTag: (enum TIFFFieldTagType) fieldTagType;
+
+/**
+ * Get the max short from short list entry values
+ *
+ * @param fieldTagType
+ *            field tag type
+ * @return max short value
+ */
+-(NSNumber *) maxShortEntryValueWithFieldTag: (enum TIFFFieldTagType) fieldTagType;
+
+/**
+ * Get a number list entry value
+ *
+ * @param fieldTagType
+ *            field tag type
+ * @return long list value
+ */
+-(NSArray<NSNumber *> *) numberListEntryValueWithFieldTag: (enum TIFFFieldTagType) fieldTagType;
+
+/**
+ * Get a long list entry value
+ *
+ * @param fieldTagType
+ *            field tag type
+ * @return long list value
+ */
+-(NSArray<NSNumber *> *) longListEntryValueWithFieldTag: (enum TIFFFieldTagType) fieldTagType;
+
+/**
+ * Set an unsigned long list of values for the field tag type
+ *
+ * @param value
+ *           unsigned longs list
+ * @param fieldTagType
+ *           field tag type
+ */
+-(void) setUnsignedLongListEntryValue: (NSArray<NSNumber *> *) value withFieldTag: (enum TIFFFieldTagType) fieldTagType;
+
+
+
+
+
+/**
  * Size in bytes of the Image File Directory (all contiguous)
  *
  * @return size in bytes

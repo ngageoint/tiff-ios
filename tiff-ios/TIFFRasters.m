@@ -75,7 +75,7 @@
 }
 
 -(instancetype) initWithWidth: (int) width andHeight: (int) height andSamplesPerPixel: (int) samplesPerPixel andSingleBitsPerSample: (int) bitsPerSample{
-    return [self initWithWidth:width andHeight:height andSamplesPerPixel:samplesPerPixel andBitsPerSample:[[NSMutableArray alloc]initWithObjects:[NSNumber numberWithInt:bitsPerSample], nil]];
+    return [self initWithWidth:width andHeight:height andSamplesPerPixel:samplesPerPixel andBitsPerSample:[TIFFRasters makeBitsPerSampleArrayWithSamplesPerPixel:samplesPerPixel andBitsPerSample:bitsPerSample]];
 }
 
 -(void) validateValues{
@@ -384,6 +384,14 @@
     int rowsPerStrip = MAX(1, maxBytesPerStrip / bytesPerRow);
     
     return rowsPerStrip;
+}
+
++(NSArray<NSNumber *> *) makeBitsPerSampleArrayWithSamplesPerPixel: (int) samplesPerPixel andBitsPerSample: (int) bitsPerSample{
+    NSMutableArray<NSNumber *> *bitsPerSampleArray = [[NSMutableArray alloc] init];
+    for(int i = 0; i < samplesPerPixel; i++){
+        [bitsPerSampleArray addObject:[NSNumber numberWithInt:bitsPerSample]];
+    }
+    return bitsPerSampleArray;
 }
 
 @end
