@@ -379,12 +379,10 @@
         encoder = [[TIFFLZWCompression alloc] init];
     }else if(compressionInteger == TIFF_COMPRESSION_JPEG_OLD || compressionInteger == TIFF_COMPRESSION_JPEG_NEW){
         [NSException raise:@"Not Supported" format:@"JPEG compression not supported: %@", compression];
-    }else if(compressionInteger == TIFF_COMPRESSION_DEFLATE){
+    }else if(compressionInteger == TIFF_COMPRESSION_DEFLATE || compressionInteger == TIFF_COMPRESSION_PKZIP_DEFLATE){
         encoder = [[TIFFDeflateCompression alloc] init];
     }else if(compressionInteger == TIFF_COMPRESSION_PACKBITS){
         encoder = [[TIFFPackbitsCompression alloc] init];
-    }else if(compressionInteger == TIFF_COMPRESSION_PKZIP_DEFLATE){
-        [NSException raise:@"Not Supported" format:@"PKZIP Deflate not supported for encoding. Use Adobe-style instead (COMPRESSION_DEFLATE)"];
     }else{
         [NSException raise:@"Not Supported" format:@"Unknown compression method identifier: %@", compression];
     }
