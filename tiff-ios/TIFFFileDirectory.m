@@ -81,7 +81,7 @@
             self.decoder = [[TIFFLZWCompression alloc] init];
         }else if(compressionInteger == TIFF_COMPRESSION_JPEG_OLD || compressionInteger == TIFF_COMPRESSION_JPEG_NEW){
             [NSException raise:@"Not Supported" format:@"JPEG compression not supported: %@", compression];
-        }else if(compressionInteger == TIFF_COMPRESSION_DEFLATE){
+        }else if(compressionInteger == TIFF_COMPRESSION_DEFLATE || compressionInteger == TIFF_COMPRESSION_PKZIP_DEFLATE){
             self.decoder = [[TIFFDeflateCompression alloc] init];
         }else if(compressionInteger == TIFF_COMPRESSION_PACKBITS){
             self.decoder = [[TIFFPackbitsCompression alloc] init];

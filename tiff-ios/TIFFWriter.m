@@ -383,6 +383,8 @@
         encoder = [[TIFFDeflateCompression alloc] init];
     }else if(compressionInteger == TIFF_COMPRESSION_PACKBITS){
         encoder = [[TIFFPackbitsCompression alloc] init];
+    }else if(compressionInteger == TIFF_COMPRESSION_PKZIP_DEFLATE){
+        [NSException raise:@"Not Supported" format:@"PKZIP Deflate not supported for encoding. Use Adobe-style instead (COMPRESSION_DEFLATE)"];
     }else{
         [NSException raise:@"Not Supported" format:@"Unknown compression method identifier: %@", compression];
     }

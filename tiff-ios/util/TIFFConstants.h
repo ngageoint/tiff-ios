@@ -57,6 +57,7 @@ extern NSInteger const TIFF_COMPRESSION_LZW;
 extern NSInteger const TIFF_COMPRESSION_JPEG_OLD;
 extern NSInteger const TIFF_COMPRESSION_JPEG_NEW;
 extern NSInteger const TIFF_COMPRESSION_DEFLATE;
+extern NSInteger const TIFF_COMPRESSION_PKZIP_DEFLATE;
 extern NSInteger const TIFF_COMPRESSION_PACKBITS;
 
 // Extra Samples constants
