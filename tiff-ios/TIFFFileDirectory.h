@@ -291,7 +291,7 @@
  *
  * @return samples per pixel
  */
--(NSNumber *) samplesPerPixel;
+-(int) samplesPerPixel;
 
 /**
  * Set the samples per pixel
@@ -860,10 +860,6 @@
  *           field tag type
  */
 -(void) setUnsignedLongListEntryValue: (NSArray<NSNumber *> *) value withFieldTag: (enum TIFFFieldTagType) fieldTagType;
-
-
-
-
 
 /**
  * Size in bytes of the Image File Directory (all contiguous)

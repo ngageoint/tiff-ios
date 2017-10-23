@@ -249,17 +249,13 @@
     [self setStripOffsetsAsLongs:[self createSingleLongListWithValue:stripOffset]];
 }
 
--(NSNumber *) samplesPerPixel{
+-(int) samplesPerPixel{
     NSNumber *samplesPerPixel = [self shortEntryValueWithFieldTag:TIFF_TAG_SAMPLES_PER_PIXEL];
     if(samplesPerPixel == nil){
-        // if SamplesPerPixel tag is missing, try using length of BitsPerSample list
-        NSArray<NSNumber *> *bitsPerSampleArray = [self bitsPerSample];
-        if(bitsPerSampleArray != nil){
-            samplesPerPixel = [NSNumber numberWithUnsignedInteger:bitsPerSampleArray.count];
-        }
+        // if SamplesPerPixel tag is missing, use default value defined by TIFF standard
+        samplesPerPixel = [NSNumber numberWithInt:1];
     }
-    
-    return samplesPerPixel;
+    return [samplesPerPixel intValue];
 }
 
 -(void) setSamplesPerPixel: (unsigned short) samplesPerPixel{
@@ -489,7 +485,7 @@
     int numPixels = windowWidth * windowHeight;
     
     // Set or validate the samples
-    int samplesPerPixel = [[self samplesPerPixel] intValue];
+    int samplesPerPixel = [self samplesPerPixel];
     if (samples == nil || samples.count == 0) {
         NSMutableArray<NSNumber *> * allSamples = [[NSMutableArray alloc] initWithCapacity:samplesPerPixel];
         for (int i = 0; i < samplesPerPixel; i++) {
@@ -652,46 +648,12 @@
 
 -(enum TIFFFieldType) fieldTypeForSample: (int) sampleIndex{
 
-    enum TIFFFieldType fieldType = 0;
-    
-    NSArray<NSNumber *> * sampleFormat = [self sampleFormat];
-    int format = sampleFormat != nil && sampleIndex < sampleFormat.count ? [[sampleFormat objectAtIndex:sampleIndex] intValue] : (int)TIFF_SAMPLE_FORMAT_UNSIGNED_INT;
+    NSArray<NSNumber *> * sampleFormatArray = [self sampleFormat];
+    int sampleFormat = sampleFormatArray == nil ? (int)TIFF_SAMPLE_FORMAT_UNSIGNED_INT
+        : [[sampleFormatArray objectAtIndex: (sampleIndex < sampleFormatArray.count ? sampleIndex : 0)] intValue];
     int bitsPerSample = [[[self bitsPerSample] objectAtIndex:sampleIndex] intValue];
     
-    if(format == TIFF_SAMPLE_FORMAT_UNSIGNED_INT){
-        switch (bitsPerSample) {
-            case 8:
-                fieldType = TIFF_FIELD_BYTE;
-                break;
-            case 16:
-                fieldType = TIFF_FIELD_SHORT;
-                break;
-            case 32:
-                fieldType = TIFF_FIELD_LONG;
-                break;
-        }
-    }else if(format == TIFF_SAMPLE_FORMAT_SIGNED_INT){
-        switch (bitsPerSample) {
-            case 8:
-                fieldType = TIFF_FIELD_SBYTE;
-                break;
-            case 16:
-                fieldType = TIFF_FIELD_SSHORT;
-                break;
-            case 32:
-                fieldType = TIFF_FIELD_SLONG;
-                break;
-        }
-    }else if(format == TIFF_SAMPLE_FORMAT_FLOAT){
-        switch (bitsPerSample) {
-            case 32:
-                fieldType = TIFF_FIELD_FLOAT;
-                break;
-            case 64:
-                fieldType = TIFF_FIELD_DOUBLE;
-                break;
-        }
-    }
+    enum TIFFFieldType fieldType = [TIFFFieldTypes typeBySampleFormat:sampleFormat andBitsPerSample:bitsPerSample];
     
     return fieldType;
 }

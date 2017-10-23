@@ -131,7 +131,7 @@
 +(void) compareFileDirectory: (TIFFFileDirectory *) fileDirectory andRastersMetadata: (TIFFRasters *) rasters{
     [self assertEqualIntWithValue:[[fileDirectory imageWidth] intValue] andValue2:[rasters width]];
     [self assertEqualIntWithValue:[[fileDirectory imageHeight] intValue] andValue2:[rasters height]];
-    [self assertEqualIntWithValue:[[fileDirectory samplesPerPixel] intValue] andValue2:[rasters samplesPerPixel]];
+    [self assertEqualIntWithValue:[fileDirectory samplesPerPixel] andValue2:[rasters samplesPerPixel]];
     [self assertEqualIntWithValue:(int)[fileDirectory bitsPerSample].count andValue2:(int)[rasters bitsPerSample].count];
     for (int i = 0; i < [fileDirectory bitsPerSample].count; i++) {
         [self assertEqualWithValue:[[fileDirectory bitsPerSample] objectAtIndex:i] andValue2:[[rasters bitsPerSample] objectAtIndex:i]];

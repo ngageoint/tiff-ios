@@ -187,7 +187,7 @@
     int stripsPerSample = (imageHeight + rowsPerStrip - 1) / rowsPerStrip;
     int strips = stripsPerSample;
     if ([[fileDirectory planarConfiguration] intValue] == TIFF_PLANAR_CONFIGURATION_PLANAR) {
-        strips *= [[fileDirectory samplesPerPixel] intValue];
+        strips *= [fileDirectory samplesPerPixel];
     }
     
     NSMutableArray *stripOffsets = [[NSMutableArray alloc] initWithCapacity:strips];
@@ -269,7 +269,7 @@
 
     int strips = stripsPerSample;
     if ([[fileDirectory planarConfiguration] intValue] == TIFF_PLANAR_CONFIGURATION_PLANAR) {
-        strips *= [[fileDirectory samplesPerPixel] intValue];
+        strips *= [fileDirectory samplesPerPixel];
     }
     
     // Build the strip offsets and byte counts
