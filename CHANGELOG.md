@@ -4,10 +4,11 @@ Adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## 1.0.4 (TBD)
+## 1.1.0 (TBD)
 
+* TIFF Field Type sample format utilities
 * Rasters initializer support for multiple samples per pixel
-* Handle missing samples per pixel values by using length of bits per sample
+* Handle missing samples per pixel with default value of 1
 * Public access to tiff tags
 * String Entry Value getter and setter
 

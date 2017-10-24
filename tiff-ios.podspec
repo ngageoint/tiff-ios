@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'tiff-ios'
-  s.version          = '1.0.4'
+  s.version          = '1.1.0'
   s.license          =  {:type => 'MIT', :file => 'LICENSE' }
   s.summary          = 'iOS SDK for Tagged Image File Format'
   s.homepage         = 'https://github.com/ngageoint/geopackage-tiff-ios'
