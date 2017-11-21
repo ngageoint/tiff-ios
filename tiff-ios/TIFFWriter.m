@@ -94,7 +94,7 @@
         NSMutableArray<NSNumber *> * valueBytesCheck = [[NSMutableArray alloc] init];
         
         // Write the raster bytes to temporary storage
-        if ([fileDirectory rowsPerStrip] == nil) {
+        if ([fileDirectory isTiled]){
             [NSException raise:@"Not Supported" format:@"Tiled images are not supported"];
         }
         
@@ -167,7 +167,7 @@
     }
     
     // Populate the raster entries
-    if ([fileDirectory rowsPerStrip] != nil) {
+    if (![fileDirectory isTiled]) {
         [self populateStripEntriesWithFileDirectory:fileDirectory];
     } else {
         [NSException raise:@"Not Supported" format:@"Tiled images are not supported"];
@@ -183,10 +183,11 @@
 +(void) populateStripEntriesWithFileDirectory: (TIFFFileDirectory *) fileDirectory{
 
     int rowsPerStrip = [[fileDirectory rowsPerStrip] intValue];
-    int stripsPerSample = ceil([[fileDirectory imageHeight] doubleValue] / rowsPerStrip);
+    int imageHeight = [[fileDirectory imageHeight] intValue];
+    int stripsPerSample = (imageHeight + rowsPerStrip - 1) / rowsPerStrip;
     int strips = stripsPerSample;
     if ([[fileDirectory planarConfiguration] intValue] == TIFF_PLANAR_CONFIGURATION_PLANAR) {
-        strips *= [[fileDirectory samplesPerPixel] intValue];
+        strips *= [fileDirectory samplesPerPixel];
     }
     
     NSMutableArray *stripOffsets = [[NSMutableArray alloc] initWithCapacity:strips];
@@ -230,7 +231,7 @@
     TIFFByteWriter * writer = [[TIFFByteWriter alloc] initWithByteOrder:byteOrder];
     
     // Write the rasters
-    if ([fileDirectory rowsPerStrip] != nil) {
+    if (![fileDirectory isTiled]) {
         [self writeStripRastersWithWriter:writer andFileDirectory:fileDirectory andOffset:offset andFieldTypes:sampleFieldTypes andEncoder:encoder];
     } else {
         [NSException raise:@"Not Supported" format:@"Tiled images are not supported"];
@@ -264,11 +265,11 @@
     // Get the row and strip counts
     int rowsPerStrip = [[fileDirectory rowsPerStrip] intValue];
     int maxY = [[fileDirectory imageHeight] intValue];
-    int stripsPerSample = ceil((double)maxY / (double) rowsPerStrip);
+    int stripsPerSample = (maxY + rowsPerStrip - 1) / rowsPerStrip;
 
     int strips = stripsPerSample;
     if ([[fileDirectory planarConfiguration] intValue] == TIFF_PLANAR_CONFIGURATION_PLANAR) {
-        strips *= [[fileDirectory samplesPerPixel] intValue];
+        strips *= [fileDirectory samplesPerPixel];
     }
     
     // Build the strip offsets and byte counts
@@ -378,7 +379,7 @@
         encoder = [[TIFFLZWCompression alloc] init];
     }else if(compressionInteger == TIFF_COMPRESSION_JPEG_OLD || compressionInteger == TIFF_COMPRESSION_JPEG_NEW){
         [NSException raise:@"Not Supported" format:@"JPEG compression not supported: %@", compression];
-    }else if(compressionInteger == TIFF_COMPRESSION_DEFLATE){
+    }else if(compressionInteger == TIFF_COMPRESSION_DEFLATE || compressionInteger == TIFF_COMPRESSION_PKZIP_DEFLATE){
         encoder = [[TIFFDeflateCompression alloc] init];
     }else if(compressionInteger == TIFF_COMPRESSION_PACKBITS){
         encoder = [[TIFFPackbitsCompression alloc] init];

@@ -50,6 +50,15 @@ enum TIFFFieldType{
 +(int) bytes: (enum TIFFFieldType) fieldType;
 
 /**
+ * Get the number of bits per value
+ *
+ * @param fieldType field type
+ *
+ * @return number of bits
+ */
++(int) bits: (enum TIFFFieldType) fieldType;
+
+/**
  * Get the field type
  *
  * @param value
@@ -58,5 +67,27 @@ enum TIFFFieldType{
  * @return field type
  */
 +(enum TIFFFieldType) typeByValue: (int) value;
+
+/**
+ * Get the field type of the sample format and bits per sample
+ *
+ * @param sampleFormat
+ *            sample format
+ * @param bitsPerSample
+ *            bits per sample
+ *
+ * @return field type
+ */
++(enum TIFFFieldType) typeBySampleFormat: (int) sampleFormat andBitsPerSample: (int) bitsPerSample;
+
+/**
+ * Get the sample format of the field type
+ *
+ * @param fieldType
+ *            field type
+ *
+ * @return sample format
+ */
++(int) sampleFormatByType: (enum TIFFFieldType) fieldType;
 
 @end

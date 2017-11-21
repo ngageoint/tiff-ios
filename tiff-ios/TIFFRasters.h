@@ -87,7 +87,7 @@
  * @param samplesPerPixel
  *            samples per pixel
  * @param bitsPerSample
- *            bits per sample
+ *            bits per sample for all samples of a pixel
  */
 -(instancetype) initWithWidth: (int) width andHeight: (int) height andSamplesPerPixel: (int) samplesPerPixel andSingleBitsPerSample: (int) bitsPerSample;
 
@@ -375,5 +375,17 @@
  *            number of pixels
  */
 +(NSMutableArray *) createEmptyInterleaveValuesWithSamplesPerPixel: (int) samplesPerPixel andPixels: (int) pixels;
+
+/**
+ * Make a bits per sample array where each samples of a pixel has the same
+ * value
+ *
+ * @param samplesPerPixel
+ *            samples per pixel
+ * @param bitsPerSample
+ *            bits per sample for all samples of a pixel
+ * @return bits per sample array
+ */
++(NSArray<NSNumber *> *) makeBitsPerSampleArrayWithSamplesPerPixel: (int) samplesPerPixel andBitsPerSample: (int) bitsPerSample;
 
 @end

@@ -81,7 +81,7 @@
             self.decoder = [[TIFFLZWCompression alloc] init];
         }else if(compressionInteger == TIFF_COMPRESSION_JPEG_OLD || compressionInteger == TIFF_COMPRESSION_JPEG_NEW){
             [NSException raise:@"Not Supported" format:@"JPEG compression not supported: %@", compression];
-        }else if(compressionInteger == TIFF_COMPRESSION_DEFLATE){
+        }else if(compressionInteger == TIFF_COMPRESSION_DEFLATE || compressionInteger == TIFF_COMPRESSION_PKZIP_DEFLATE){
             self.decoder = [[TIFFDeflateCompression alloc] init];
         }else if(compressionInteger == TIFF_COMPRESSION_PACKBITS){
             self.decoder = [[TIFFPackbitsCompression alloc] init];
@@ -249,8 +249,13 @@
     [self setStripOffsetsAsLongs:[self createSingleLongListWithValue:stripOffset]];
 }
 
--(NSNumber *) samplesPerPixel{
-    return [self shortEntryValueWithFieldTag:TIFF_TAG_SAMPLES_PER_PIXEL];
+-(int) samplesPerPixel{
+    NSNumber *samplesPerPixel = [self shortEntryValueWithFieldTag:TIFF_TAG_SAMPLES_PER_PIXEL];
+    if(samplesPerPixel == nil){
+        // if SamplesPerPixel tag is missing, use default value defined by TIFF standard
+        samplesPerPixel = [NSNumber numberWithInt:1];
+    }
+    return [samplesPerPixel intValue];
 }
 
 -(void) setSamplesPerPixel: (unsigned short) samplesPerPixel{
@@ -480,7 +485,7 @@
     int numPixels = windowWidth * windowHeight;
     
     // Set or validate the samples
-    int samplesPerPixel = [[self samplesPerPixel] intValue];
+    int samplesPerPixel = [self samplesPerPixel];
     if (samples == nil || samples.count == 0) {
         NSMutableArray<NSNumber *> * allSamples = [[NSMutableArray alloc] initWithCapacity:samplesPerPixel];
         for (int i = 0; i < samplesPerPixel; i++) {
@@ -531,10 +536,10 @@
     int tileWidth = [[self tileWidth] intValue];
     int tileHeight = [[self tileHeight] intValue];
 
-    int minXTile = floor(window.minX / ((double) tileWidth));
-    int maxXTile = ceil(window.maxX / ((double) tileWidth));
-    int minYTile = floor(window.minY / ((double) tileHeight));
-    int maxYTile = ceil(window.maxY / ((double) tileHeight));
+    int minXTile = window.minX / tileWidth;
+    int maxXTile = (window.maxX + tileWidth - 1) / tileWidth;
+    int minYTile = window.minY / tileHeight;
+    int maxYTile = (window.maxY + tileHeight - 1) / tileHeight;
     
     int windowWidth = window.maxX - window.minX;
     
@@ -643,46 +648,12 @@
 
 -(enum TIFFFieldType) fieldTypeForSample: (int) sampleIndex{
 
-    enum TIFFFieldType fieldType = 0;
-    
-    NSArray<NSNumber *> * sampleFormat = [self sampleFormat];
-    int format = sampleFormat != nil && sampleIndex < sampleFormat.count ? [[sampleFormat objectAtIndex:sampleIndex] intValue] : (int)TIFF_SAMPLE_FORMAT_UNSIGNED_INT;
+    NSArray<NSNumber *> * sampleFormatArray = [self sampleFormat];
+    int sampleFormat = sampleFormatArray == nil ? (int)TIFF_SAMPLE_FORMAT_UNSIGNED_INT
+        : [[sampleFormatArray objectAtIndex: (sampleIndex < sampleFormatArray.count ? sampleIndex : 0)] intValue];
     int bitsPerSample = [[[self bitsPerSample] objectAtIndex:sampleIndex] intValue];
     
-    if(format == TIFF_SAMPLE_FORMAT_UNSIGNED_INT){
-        switch (bitsPerSample) {
-            case 8:
-                fieldType = TIFF_FIELD_BYTE;
-                break;
-            case 16:
-                fieldType = TIFF_FIELD_SHORT;
-                break;
-            case 32:
-                fieldType = TIFF_FIELD_LONG;
-                break;
-        }
-    }else if(format == TIFF_SAMPLE_FORMAT_SIGNED_INT){
-        switch (bitsPerSample) {
-            case 8:
-                fieldType = TIFF_FIELD_SBYTE;
-                break;
-            case 16:
-                fieldType = TIFF_FIELD_SSHORT;
-                break;
-            case 32:
-                fieldType = TIFF_FIELD_SLONG;
-                break;
-        }
-    }else if(format == TIFF_SAMPLE_FORMAT_FLOAT){
-        switch (bitsPerSample) {
-            case 32:
-                fieldType = TIFF_FIELD_FLOAT;
-                break;
-            case 64:
-                fieldType = TIFF_FIELD_DOUBLE;
-                break;
-        }
-    }
+    enum TIFFFieldType fieldType = [TIFFFieldTypes typeBySampleFormat:sampleFormat andBitsPerSample:bitsPerSample];
     
     return fieldType;
 }
@@ -702,8 +673,12 @@
     
     NSData * tileOrStrip = nil;
     
-    int numTilesPerRow = ceil([[self imageWidth] doubleValue] / [[self tileWidth] doubleValue]);
-    int numTilesPerCol = ceil([[self imageHeight] doubleValue] / [[self tileHeight] doubleValue]);
+    int imageWidth = [[self imageWidth] intValue];
+    int imageHeight = [[self imageHeight] intValue];
+    int tileWidth = [[self tileWidth] intValue];
+    int tileHeight = [[self tileHeight] intValue];
+    int numTilesPerRow = (imageWidth + tileWidth - 1) / tileWidth;
+    int numTilesPerCol = (imageHeight + tileHeight - 1) / tileHeight;
     
     int index = 0;
     if (self.planarConfig == TIFF_PLANAR_CONFIGURATION_CHUNKY) {
@@ -788,121 +763,62 @@
     return bitsPerSample / 8;
 }
 
-/**
- * Get a short entry value
- *
- * @param fieldTagType
- *            field tag type
- * @return short  value
- */
 -(NSNumber *) shortEntryValueWithFieldTag: (enum TIFFFieldTagType) fieldTagType{
     return (NSNumber *)[self entryValueWithFieldTag:fieldTagType];
 }
 
-/**
- * Set an unsigned short entry value for the field tag type
- *
- * @param value
- *            unsigned short value (16 bit)
- * @param fieldTagType
- *            field tag type
- */
 -(void) setUnsignedShortEntryValue: (unsigned short) value withFieldTag: (enum TIFFFieldTagType) fieldTagType{
     [self setEntryValue:[NSNumber numberWithUnsignedShort:value] withFieldTag:fieldTagType andFieldType:TIFF_FIELD_SHORT andTypeCount:1];
 }
 
-/**
- * Get an number entry value
- *
- * @param fieldTagType
- *            field tag type
- * @return number value
- */
 -(NSNumber *) numberEntryValueWithFieldTag: (enum TIFFFieldTagType) fieldTagType{
     return (NSNumber *)[self entryValueWithFieldTag:fieldTagType];
 }
 
-/**
- * Set an unsigned long entry value for the field tag type
- *
- * @param value
- *            unsigned long value (32 bit)
- * @param fieldTagType
- *            field tag type
- */
 -(void) setUnsignedLongEntryValue: (unsigned long) value withFieldTag: (enum TIFFFieldTagType) fieldTagType{
     [self setEntryValue:[NSNumber numberWithUnsignedLong:value] withFieldTag:fieldTagType andFieldType:TIFF_FIELD_LONG andTypeCount:1];
 }
 
-/**
- * Get an short list entry value
- *
- * @param fieldTagType
- *            field tag type
- * @return short list value
- */
+-(NSString *) stringEntryValueWithFieldTag: (enum TIFFFieldTagType) fieldTagType{
+    NSString *value = nil;
+    NSArray<NSString *> *values = (NSArray<NSString *> *)[self entryValueWithFieldTag:fieldTagType];
+    if(values != nil && values.count > 0){
+        value = [values objectAtIndex:0];
+    }
+    return value;
+}
+
+-(void) setStringEntryValue: (NSString *) value withFieldTag: (enum TIFFFieldTagType) fieldTagType{
+    NSMutableArray<NSString *> *values = [[NSMutableArray alloc] init];
+    [values addObject:value];
+    [self setEntryValue:values withFieldTag:fieldTagType andFieldType:TIFF_FIELD_ASCII andTypeCount:(int)value.length + 1];
+}
+
 -(NSArray<NSNumber *> *) shortListEntryValueWithFieldTag: (enum TIFFFieldTagType) fieldTagType{
     return (NSArray<NSNumber *> *)[self entryValueWithFieldTag:fieldTagType];
 }
 
-/**
- * Set an unsigned short list of values for the field tag type
- *
- * @param value 
- *           unsigned shorts list
- * @param fieldTagType
- *           field tag type
- */
 -(void) setUnsignedShortListEntryValue: (NSArray<NSNumber *> *) value withFieldTag: (enum TIFFFieldTagType) fieldTagType{
     [self setEntryValue:value withFieldTag:fieldTagType andFieldType:TIFF_FIELD_SHORT andTypeCount:(int)value.count];
 }
 
-/**
- * Get the max short from short list entry values
- *
- * @param fieldTagType
- *            field tag type
- * @return max short value
- */
 -(NSNumber *) maxShortEntryValueWithFieldTag: (enum TIFFFieldTagType) fieldTagType{
     NSNumber * maxValue = nil;
     NSArray<NSNumber *> * values = [self shortListEntryValueWithFieldTag:fieldTagType];
     if (values != nil) {
-        maxValue = [[self sampleFormat] valueForKeyPath:@"@max.intValue"];
+        maxValue = [values valueForKeyPath:@"@max.intValue"];
     }
     return maxValue;
 }
 
-/**
- * Get a number list entry value
- *
- * @param fieldTagType
- *            field tag type
- * @return long list value
- */
 -(NSArray<NSNumber *> *) numberListEntryValueWithFieldTag: (enum TIFFFieldTagType) fieldTagType{
     return (NSArray<NSNumber *> *)[self entryValueWithFieldTag:fieldTagType];
 }
 
-/**
- * Get a long list entry value
- *
- * @param fieldTagType
- *            field tag type
- * @return long list value
- */
 -(NSArray<NSNumber *> *) longListEntryValueWithFieldTag: (enum TIFFFieldTagType) fieldTagType{
     return (NSArray<NSNumber *> *)[self entryValueWithFieldTag:fieldTagType];
 }
 
-/**
- * Set an unsigned long list of values for the field tag type
- *
- * @param value
- *           unsigned longs list
- * @param fieldTagType
- *           field tag type
- */
 -(void) setUnsignedLongListEntryValue: (NSArray<NSNumber *> *) value withFieldTag: (enum TIFFFieldTagType) fieldTagType{
     [self setEntryValue:value withFieldTag:fieldTagType andFieldType:TIFF_FIELD_LONG andTypeCount:(int)value.count];
 }
