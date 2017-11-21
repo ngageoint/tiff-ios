@@ -97,12 +97,12 @@ Include this repository by specifying it in a Podfile using a supported option.
 
 Pull from [CocoaPods](https://cocoapods.org/pods/tiff-ios):
 
-    pod 'tiff-ios', '~> 1.0'
+    pod 'tiff-ios', '~> 1.1'
 
 Pull from GitHub:
 
     pod 'tiff-ios', :git => 'https://github.com/ngageoint/geopackage-tiff-iOS.git', :branch => 'master'
-    pod 'tiff-ios', :git => 'https://github.com/ngageoint/geopackage-tiff-iOS.git', :tag => '1.0.3'
+    pod 'tiff-ios', :git => 'https://github.com/ngageoint/geopackage-tiff-iOS.git', :tag => '1.1.0'
 
 Include as local project:
 

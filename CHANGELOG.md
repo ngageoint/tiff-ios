@@ -4,7 +4,7 @@ Adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## 1.1.0 (TBD)
+## [1.1.0](https://github.com/ngageoint/geopackage-tiff-ios/releases/tag/1.1.0) (11-21-2017)
 
 * TIFF Field Type sample format utilities
 * Rasters initializer support for multiple samples per pixel
