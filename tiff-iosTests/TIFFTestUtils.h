@@ -1,6 +1,6 @@
 //
 //  TIFFTestUtils.h
-//  geopackage-ios
+//  tiff-ios
 //
 //  Created by Brian Osborn on 1/17/17.
 //  Copyright © 2017 NGA. All rights reserved.

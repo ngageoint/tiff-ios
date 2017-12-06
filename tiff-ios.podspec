@@ -3,10 +3,10 @@ Pod::Spec.new do |s|
   s.version          = '1.1.1'
   s.license          =  {:type => 'MIT', :file => 'LICENSE' }
   s.summary          = 'iOS SDK for Tagged Image File Format'
-  s.homepage         = 'https://github.com/ngageoint/geopackage-tiff-ios'
+  s.homepage         = 'https://github.com/ngageoint/tiff-ios'
   s.authors          = { 'NGA' => '', 'BIT Systems' => '', 'Brian Osborn' => 'osbornb@bit-sys.com' }
   s.social_media_url = 'https://twitter.com/NGA_GEOINT'
-  s.source           = { :git => 'https://github.com/ngageoint/geopackage-tiff-ios.git', :tag => s.version }
+  s.source           = { :git => 'https://github.com/ngageoint/tiff-ios.git', :tag => s.version }
   s.requires_arc     = true
 
   s.platform         = :ios, '8.0'

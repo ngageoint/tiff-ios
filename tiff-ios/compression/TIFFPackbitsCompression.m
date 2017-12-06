@@ -1,6 +1,6 @@
 //
 //  TIFFPackbitsCompression.m
-//  geopackage-ios
+//  tiff-ios
 //
 //  Created by Brian Osborn on 1/9/17.
 //  Copyright © 2017 NGA. All rights reserved.
