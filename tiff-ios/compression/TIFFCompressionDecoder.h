@@ -12,7 +12,7 @@
 #import <Foundation/Foundation.h>
 
 /**
- *  Elevation image interface
+ *  Compression Decoder interface
  */
 @protocol TIFFCompressionDecoder <NSObject>
 
