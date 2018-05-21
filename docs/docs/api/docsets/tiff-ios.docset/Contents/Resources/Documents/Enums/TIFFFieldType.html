@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TIFFFieldType Enumeration Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Enum/TIFFFieldType" class="dashAnchor"></a>
+    <a title="TIFFFieldType Enumeration Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">tiff-ios Docs</a> (62% documented)</p>
+        <p class="header-right"><a href="https://github.com/ngageoint/tiff-ios"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">tiff-ios Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        TIFFFieldType Enumeration Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/TIFFByteReader.html">TIFFByteReader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TIFFByteWriter.html">TIFFByteWriter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)TIFFConstants">TIFFConstants</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)TIFFDeflateCompression">TIFFDeflateCompression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TIFFFieldTagTypes.html">TIFFFieldTagTypes</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TIFFFieldTypes.html">TIFFFieldTypes</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TIFFFileDirectory.html">TIFFFileDirectory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TIFFFileDirectoryEntry.html">TIFFFileDirectoryEntry</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TIFFIOUtils.html">TIFFIOUtils</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TIFFImage.html">TIFFImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TIFFImageWindow.html">TIFFImageWindow</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)TIFFLZWCompression">TIFFLZWCompression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)TIFFPackbitsCompression">TIFFPackbitsCompression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TIFFRasters.html">TIFFRasters</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)TIFFRawCompression">TIFFRawCompression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TIFFReader.html">TIFFReader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TIFFWriter.html">TIFFWriter</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_BYTE_ORDER_BIG_ENDIAN">TIFF_BYTE_ORDER_BIG_ENDIAN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_BYTE_ORDER_LITTLE_ENDIAN">TIFF_BYTE_ORDER_LITTLE_ENDIAN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_COMPRESSION_CCITT_HUFFMAN">TIFF_COMPRESSION_CCITT_HUFFMAN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_COMPRESSION_DEFLATE">TIFF_COMPRESSION_DEFLATE</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_COMPRESSION_JPEG_NEW">TIFF_COMPRESSION_JPEG_NEW</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_COMPRESSION_JPEG_OLD">TIFF_COMPRESSION_JPEG_OLD</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_COMPRESSION_LZW">TIFF_COMPRESSION_LZW</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_COMPRESSION_NO">TIFF_COMPRESSION_NO</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_COMPRESSION_PACKBITS">TIFF_COMPRESSION_PACKBITS</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_COMPRESSION_PKZIP_DEFLATE">TIFF_COMPRESSION_PKZIP_DEFLATE</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_COMPRESSION_T4">TIFF_COMPRESSION_T4</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_COMPRESSION_T6">TIFF_COMPRESSION_T6</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_DEFAULT_MAX_BYTES_PER_STRIP">TIFF_DEFAULT_MAX_BYTES_PER_STRIP</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_EXTRA_SAMPLES_ASSOCIATED_ALPHA">TIFF_EXTRA_SAMPLES_ASSOCIATED_ALPHA</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_EXTRA_SAMPLES_UNASSOCIATED_ALPHA">TIFF_EXTRA_SAMPLES_UNASSOCIATED_ALPHA</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_EXTRA_SAMPLES_UNSPECIFIED">TIFF_EXTRA_SAMPLES_UNSPECIFIED</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_FILE_IDENTIFIER">TIFF_FILE_IDENTIFIER</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_FILL_ORDER_LOWER_COLUMN_HIGHER_ORDER">TIFF_FILL_ORDER_LOWER_COLUMN_HIGHER_ORDER</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_FILL_ORDER_LOWER_COLUMN_LOWER_ORDER">TIFF_FILL_ORDER_LOWER_COLUMN_LOWER_ORDER</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_GRAY_RESPONSE_HUNDREDTHS">TIFF_GRAY_RESPONSE_HUNDREDTHS</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_GRAY_RESPONSE_HUNDRED_THOUSANDTHS">TIFF_GRAY_RESPONSE_HUNDRED_THOUSANDTHS</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_GRAY_RESPONSE_TENTHS">TIFF_GRAY_RESPONSE_TENTHS</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_GRAY_RESPONSE_TEN_THOUSANDTHS">TIFF_GRAY_RESPONSE_TEN_THOUSANDTHS</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_GRAY_RESPONSE_THOUSANDTHS">TIFF_GRAY_RESPONSE_THOUSANDTHS</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_HEADER_BYTES">TIFF_HEADER_BYTES</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_IFD_ENTRY_BYTES">TIFF_IFD_ENTRY_BYTES</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_IFD_HEADER_BYTES">TIFF_IFD_HEADER_BYTES</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_IFD_OFFSET_BYTES">TIFF_IFD_OFFSET_BYTES</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_ORIENTATION_BOTTOM_ROW_LEFT_COLUMN">TIFF_ORIENTATION_BOTTOM_ROW_LEFT_COLUMN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_ORIENTATION_BOTTOM_ROW_RIGHT_COLUMN">TIFF_ORIENTATION_BOTTOM_ROW_RIGHT_COLUMN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_ORIENTATION_LEFT_ROW_BOTTOM_COLUMN">TIFF_ORIENTATION_LEFT_ROW_BOTTOM_COLUMN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_ORIENTATION_LEFT_ROW_TOP_COLUMN">TIFF_ORIENTATION_LEFT_ROW_TOP_COLUMN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_ORIENTATION_RIGHT_ROW_BOTTOM_COLUMN">TIFF_ORIENTATION_RIGHT_ROW_BOTTOM_COLUMN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_ORIENTATION_RIGHT_ROW_TOP_COLUMN">TIFF_ORIENTATION_RIGHT_ROW_TOP_COLUMN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_ORIENTATION_TOP_ROW_LEFT_COLUMN">TIFF_ORIENTATION_TOP_ROW_LEFT_COLUMN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_ORIENTATION_TOP_ROW_RIGHT_COLUMN">TIFF_ORIENTATION_TOP_ROW_RIGHT_COLUMN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_PHOTOMETRIC_INTERPRETATION_BLACK_IS_ZERO">TIFF_PHOTOMETRIC_INTERPRETATION_BLACK_IS_ZERO</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_PHOTOMETRIC_INTERPRETATION_PALETTE">TIFF_PHOTOMETRIC_INTERPRETATION_PALETTE</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_PHOTOMETRIC_INTERPRETATION_RGB">TIFF_PHOTOMETRIC_INTERPRETATION_RGB</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_PHOTOMETRIC_INTERPRETATION_TRANSPARENCY">TIFF_PHOTOMETRIC_INTERPRETATION_TRANSPARENCY</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_PHOTOMETRIC_INTERPRETATION_WHITE_IS_ZERO">TIFF_PHOTOMETRIC_INTERPRETATION_WHITE_IS_ZERO</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_PLANAR_CONFIGURATION_CHUNKY">TIFF_PLANAR_CONFIGURATION_CHUNKY</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_PLANAR_CONFIGURATION_PLANAR">TIFF_PLANAR_CONFIGURATION_PLANAR</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_RESOLUTION_UNIT_CENTIMETER">TIFF_RESOLUTION_UNIT_CENTIMETER</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_RESOLUTION_UNIT_INCH">TIFF_RESOLUTION_UNIT_INCH</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_RESOLUTION_UNIT_NO">TIFF_RESOLUTION_UNIT_NO</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_SAMPLE_FORMAT_FLOAT">TIFF_SAMPLE_FORMAT_FLOAT</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_SAMPLE_FORMAT_SIGNED_INT">TIFF_SAMPLE_FORMAT_SIGNED_INT</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_SAMPLE_FORMAT_SINGLE_PAGE_MULTI_PAGE">TIFF_SAMPLE_FORMAT_SINGLE_PAGE_MULTI_PAGE</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_SAMPLE_FORMAT_UNDEFINED">TIFF_SAMPLE_FORMAT_UNDEFINED</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_SAMPLE_FORMAT_UNSIGNED_INT">TIFF_SAMPLE_FORMAT_UNSIGNED_INT</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_SUBFILE_TYPE_FULL">TIFF_SUBFILE_TYPE_FULL</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_SUBFILE_TYPE_REDUCED">TIFF_SUBFILE_TYPE_REDUCED</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_THRESHHOLDING_NO">TIFF_THRESHHOLDING_NO</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_THRESHHOLDING_ORDERED">TIFF_THRESHHOLDING_ORDERED</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_THRESHHOLDING_RANDOM">TIFF_THRESHHOLDING_RANDOM</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/TIFFFieldTagType.html">TIFFFieldTagType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TIFFFieldType.html">TIFFFieldType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/TIFFCompressionDecoder.html">TIFFCompressionDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TIFFCompressionEncoder.html">TIFFCompressionEncoder</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>TIFFFieldType</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">TIFFFieldType</span> <span class="p">{}</span></code></pre>
+
+                </div>
+              </div>
+            <p>Field tag type enumeration</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@TIFFFieldType@TIFF_FIELD_BYTE"></a>
+                    <a name="//apple_ref/objc/Case/TIFF_FIELD_BYTE" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@TIFFFieldType@TIFF_FIELD_BYTE">TIFF_FIELD_BYTE</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">TIFF_FIELD_BYTE</span> <span class="o">=</span> <span class="mi">1</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/TIFFFieldTypes.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@TIFFFieldType@TIFF_FIELD_ASCII"></a>
+                    <a name="//apple_ref/objc/Case/TIFF_FIELD_ASCII" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@TIFFFieldType@TIFF_FIELD_ASCII">TIFF_FIELD_ASCII</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">TIFF_FIELD_ASCII</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/TIFFFieldTypes.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@TIFFFieldType@TIFF_FIELD_SHORT"></a>
+                    <a name="//apple_ref/objc/Case/TIFF_FIELD_SHORT" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@TIFFFieldType@TIFF_FIELD_SHORT">TIFF_FIELD_SHORT</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">TIFF_FIELD_SHORT</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/TIFFFieldTypes.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@TIFFFieldType@TIFF_FIELD_LONG"></a>
+                    <a name="//apple_ref/objc/Case/TIFF_FIELD_LONG" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@TIFFFieldType@TIFF_FIELD_LONG">TIFF_FIELD_LONG</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">TIFF_FIELD_LONG</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/TIFFFieldTypes.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@TIFFFieldType@TIFF_FIELD_RATIONAL"></a>
+                    <a name="//apple_ref/objc/Case/TIFF_FIELD_RATIONAL" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@TIFFFieldType@TIFF_FIELD_RATIONAL">TIFF_FIELD_RATIONAL</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">TIFF_FIELD_RATIONAL</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/TIFFFieldTypes.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@TIFFFieldType@TIFF_FIELD_SBYTE"></a>
+                    <a name="//apple_ref/objc/Case/TIFF_FIELD_SBYTE" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@TIFFFieldType@TIFF_FIELD_SBYTE">TIFF_FIELD_SBYTE</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">TIFF_FIELD_SBYTE</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/TIFFFieldTypes.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@TIFFFieldType@TIFF_FIELD_UNDEFINED"></a>
+                    <a name="//apple_ref/objc/Case/TIFF_FIELD_UNDEFINED" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@TIFFFieldType@TIFF_FIELD_UNDEFINED">TIFF_FIELD_UNDEFINED</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">TIFF_FIELD_UNDEFINED</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/TIFFFieldTypes.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@TIFFFieldType@TIFF_FIELD_SSHORT"></a>
+                    <a name="//apple_ref/objc/Case/TIFF_FIELD_SSHORT" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@TIFFFieldType@TIFF_FIELD_SSHORT">TIFF_FIELD_SSHORT</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">TIFF_FIELD_SSHORT</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/TIFFFieldTypes.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@TIFFFieldType@TIFF_FIELD_SLONG"></a>
+                    <a name="//apple_ref/objc/Case/TIFF_FIELD_SLONG" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@TIFFFieldType@TIFF_FIELD_SLONG">TIFF_FIELD_SLONG</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">TIFF_FIELD_SLONG</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/TIFFFieldTypes.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@TIFFFieldType@TIFF_FIELD_SRATIONAL"></a>
+                    <a name="//apple_ref/objc/Case/TIFF_FIELD_SRATIONAL" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@TIFFFieldType@TIFF_FIELD_SRATIONAL">TIFF_FIELD_SRATIONAL</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">TIFF_FIELD_SRATIONAL</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/TIFFFieldTypes.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@TIFFFieldType@TIFF_FIELD_FLOAT"></a>
+                    <a name="//apple_ref/objc/Case/TIFF_FIELD_FLOAT" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@TIFFFieldType@TIFF_FIELD_FLOAT">TIFF_FIELD_FLOAT</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">TIFF_FIELD_FLOAT</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/TIFFFieldTypes.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@TIFFFieldType@TIFF_FIELD_DOUBLE"></a>
+                    <a name="//apple_ref/objc/Case/TIFF_FIELD_DOUBLE" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@TIFFFieldType@TIFF_FIELD_DOUBLE">TIFF_FIELD_DOUBLE</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">TIFF_FIELD_DOUBLE</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/TIFFFieldTypes.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://www.nga.mil" target="_blank" rel="external">NGA</a>. All rights reserved. (Last updated: 2018-05-21)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

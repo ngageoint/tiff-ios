@@ -1,0 +1,1603 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TIFFByteWriter Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Class/TIFFByteWriter" class="dashAnchor"></a>
+    <a title="TIFFByteWriter Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">tiff-ios Docs</a> (62% documented)</p>
+        <p class="header-right"><a href="https://github.com/ngageoint/tiff-ios"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">tiff-ios Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        TIFFByteWriter Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/TIFFByteReader.html">TIFFByteReader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TIFFByteWriter.html">TIFFByteWriter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)TIFFConstants">TIFFConstants</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)TIFFDeflateCompression">TIFFDeflateCompression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TIFFFieldTagTypes.html">TIFFFieldTagTypes</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TIFFFieldTypes.html">TIFFFieldTypes</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TIFFFileDirectory.html">TIFFFileDirectory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TIFFFileDirectoryEntry.html">TIFFFileDirectoryEntry</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TIFFIOUtils.html">TIFFIOUtils</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TIFFImage.html">TIFFImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TIFFImageWindow.html">TIFFImageWindow</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)TIFFLZWCompression">TIFFLZWCompression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)TIFFPackbitsCompression">TIFFPackbitsCompression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TIFFRasters.html">TIFFRasters</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)TIFFRawCompression">TIFFRawCompression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TIFFReader.html">TIFFReader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TIFFWriter.html">TIFFWriter</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_BYTE_ORDER_BIG_ENDIAN">TIFF_BYTE_ORDER_BIG_ENDIAN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_BYTE_ORDER_LITTLE_ENDIAN">TIFF_BYTE_ORDER_LITTLE_ENDIAN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_COMPRESSION_CCITT_HUFFMAN">TIFF_COMPRESSION_CCITT_HUFFMAN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_COMPRESSION_DEFLATE">TIFF_COMPRESSION_DEFLATE</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_COMPRESSION_JPEG_NEW">TIFF_COMPRESSION_JPEG_NEW</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_COMPRESSION_JPEG_OLD">TIFF_COMPRESSION_JPEG_OLD</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_COMPRESSION_LZW">TIFF_COMPRESSION_LZW</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_COMPRESSION_NO">TIFF_COMPRESSION_NO</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_COMPRESSION_PACKBITS">TIFF_COMPRESSION_PACKBITS</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_COMPRESSION_PKZIP_DEFLATE">TIFF_COMPRESSION_PKZIP_DEFLATE</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_COMPRESSION_T4">TIFF_COMPRESSION_T4</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_COMPRESSION_T6">TIFF_COMPRESSION_T6</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_DEFAULT_MAX_BYTES_PER_STRIP">TIFF_DEFAULT_MAX_BYTES_PER_STRIP</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_EXTRA_SAMPLES_ASSOCIATED_ALPHA">TIFF_EXTRA_SAMPLES_ASSOCIATED_ALPHA</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_EXTRA_SAMPLES_UNASSOCIATED_ALPHA">TIFF_EXTRA_SAMPLES_UNASSOCIATED_ALPHA</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_EXTRA_SAMPLES_UNSPECIFIED">TIFF_EXTRA_SAMPLES_UNSPECIFIED</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_FILE_IDENTIFIER">TIFF_FILE_IDENTIFIER</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_FILL_ORDER_LOWER_COLUMN_HIGHER_ORDER">TIFF_FILL_ORDER_LOWER_COLUMN_HIGHER_ORDER</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_FILL_ORDER_LOWER_COLUMN_LOWER_ORDER">TIFF_FILL_ORDER_LOWER_COLUMN_LOWER_ORDER</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_GRAY_RESPONSE_HUNDREDTHS">TIFF_GRAY_RESPONSE_HUNDREDTHS</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_GRAY_RESPONSE_HUNDRED_THOUSANDTHS">TIFF_GRAY_RESPONSE_HUNDRED_THOUSANDTHS</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_GRAY_RESPONSE_TENTHS">TIFF_GRAY_RESPONSE_TENTHS</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_GRAY_RESPONSE_TEN_THOUSANDTHS">TIFF_GRAY_RESPONSE_TEN_THOUSANDTHS</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_GRAY_RESPONSE_THOUSANDTHS">TIFF_GRAY_RESPONSE_THOUSANDTHS</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_HEADER_BYTES">TIFF_HEADER_BYTES</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_IFD_ENTRY_BYTES">TIFF_IFD_ENTRY_BYTES</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_IFD_HEADER_BYTES">TIFF_IFD_HEADER_BYTES</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_IFD_OFFSET_BYTES">TIFF_IFD_OFFSET_BYTES</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_ORIENTATION_BOTTOM_ROW_LEFT_COLUMN">TIFF_ORIENTATION_BOTTOM_ROW_LEFT_COLUMN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_ORIENTATION_BOTTOM_ROW_RIGHT_COLUMN">TIFF_ORIENTATION_BOTTOM_ROW_RIGHT_COLUMN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_ORIENTATION_LEFT_ROW_BOTTOM_COLUMN">TIFF_ORIENTATION_LEFT_ROW_BOTTOM_COLUMN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_ORIENTATION_LEFT_ROW_TOP_COLUMN">TIFF_ORIENTATION_LEFT_ROW_TOP_COLUMN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_ORIENTATION_RIGHT_ROW_BOTTOM_COLUMN">TIFF_ORIENTATION_RIGHT_ROW_BOTTOM_COLUMN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_ORIENTATION_RIGHT_ROW_TOP_COLUMN">TIFF_ORIENTATION_RIGHT_ROW_TOP_COLUMN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_ORIENTATION_TOP_ROW_LEFT_COLUMN">TIFF_ORIENTATION_TOP_ROW_LEFT_COLUMN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_ORIENTATION_TOP_ROW_RIGHT_COLUMN">TIFF_ORIENTATION_TOP_ROW_RIGHT_COLUMN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_PHOTOMETRIC_INTERPRETATION_BLACK_IS_ZERO">TIFF_PHOTOMETRIC_INTERPRETATION_BLACK_IS_ZERO</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_PHOTOMETRIC_INTERPRETATION_PALETTE">TIFF_PHOTOMETRIC_INTERPRETATION_PALETTE</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_PHOTOMETRIC_INTERPRETATION_RGB">TIFF_PHOTOMETRIC_INTERPRETATION_RGB</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_PHOTOMETRIC_INTERPRETATION_TRANSPARENCY">TIFF_PHOTOMETRIC_INTERPRETATION_TRANSPARENCY</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_PHOTOMETRIC_INTERPRETATION_WHITE_IS_ZERO">TIFF_PHOTOMETRIC_INTERPRETATION_WHITE_IS_ZERO</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_PLANAR_CONFIGURATION_CHUNKY">TIFF_PLANAR_CONFIGURATION_CHUNKY</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_PLANAR_CONFIGURATION_PLANAR">TIFF_PLANAR_CONFIGURATION_PLANAR</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_RESOLUTION_UNIT_CENTIMETER">TIFF_RESOLUTION_UNIT_CENTIMETER</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_RESOLUTION_UNIT_INCH">TIFF_RESOLUTION_UNIT_INCH</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_RESOLUTION_UNIT_NO">TIFF_RESOLUTION_UNIT_NO</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_SAMPLE_FORMAT_FLOAT">TIFF_SAMPLE_FORMAT_FLOAT</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_SAMPLE_FORMAT_SIGNED_INT">TIFF_SAMPLE_FORMAT_SIGNED_INT</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_SAMPLE_FORMAT_SINGLE_PAGE_MULTI_PAGE">TIFF_SAMPLE_FORMAT_SINGLE_PAGE_MULTI_PAGE</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_SAMPLE_FORMAT_UNDEFINED">TIFF_SAMPLE_FORMAT_UNDEFINED</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_SAMPLE_FORMAT_UNSIGNED_INT">TIFF_SAMPLE_FORMAT_UNSIGNED_INT</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_SUBFILE_TYPE_FULL">TIFF_SUBFILE_TYPE_FULL</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_SUBFILE_TYPE_REDUCED">TIFF_SUBFILE_TYPE_REDUCED</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_THRESHHOLDING_NO">TIFF_THRESHHOLDING_NO</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_THRESHHOLDING_ORDERED">TIFF_THRESHHOLDING_ORDERED</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_THRESHHOLDING_RANDOM">TIFF_THRESHHOLDING_RANDOM</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/TIFFFieldTagType.html">TIFFFieldTagType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TIFFFieldType.html">TIFFFieldType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/TIFFCompressionDecoder.html">TIFFCompressionDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TIFFCompressionEncoder.html">TIFFCompressionEncoder</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>TIFFByteWriter</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">TIFFByteWriter</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>Write byte data</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)TIFFByteWriter(py)nextByte"></a>
+                    <a name="//apple_ref/objc/Property/nextByte" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)TIFFByteWriter(py)nextByte">nextByte</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Next byte index to write</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="kt">int</span> <span class="n">nextByte</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">nextByte</span><span class="p">:</span> <span class="kt">Int32</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/io/TIFFByteWriter.h#L19">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)TIFFByteWriter(py)os"></a>
+                    <a name="//apple_ref/objc/Property/os" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)TIFFByteWriter(py)os">os</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Output stream to write bytes to</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSOutputStream</span> <span class="o">*</span><span class="n">os</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">os</span><span class="p">:</span> <span class="kt">OutputStream</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/io/TIFFByteWriter.h#L24">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)TIFFByteWriter(py)byteOrder"></a>
+                    <a name="//apple_ref/objc/Property/byteOrder" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)TIFFByteWriter(py)byteOrder">byteOrder</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Byte order used to write, little or big endian</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">CFByteOrder</span> <span class="n">byteOrder</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">byteOrder</span><span class="p">:</span> <span class="kt">CFByteOrder</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/io/TIFFByteWriter.h#L29">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)TIFFByteWriter(im)init"></a>
+                    <a name="//apple_ref/objc/Method/-init" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)TIFFByteWriter(im)init">-init</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialize</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="n">init</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="o">!</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>new byte writer</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/io/TIFFByteWriter.h#L36">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)TIFFByteWriter(im)initWithByteOrder:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithByteOrder:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)TIFFByteWriter(im)initWithByteOrder:">-initWithByteOrder:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialize</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithByteOrder</span><span class="p">:(</span><span class="n">CFByteOrder</span><span class="p">)</span><span class="nv">byteOrder</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="o">!</span><span class="p">(</span><span class="nv">byteOrder</span><span class="p">:</span> <span class="kt">CFByteOrder</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>byteOrder</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>byte order</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>new byte writer</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/io/TIFFByteWriter.h#L45">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)TIFFByteWriter(im)close"></a>
+                    <a name="//apple_ref/objc/Method/-close" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)TIFFByteWriter(im)close">-close</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Close the byte writer</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">close</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">close</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/io/TIFFByteWriter.h#L50">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)TIFFByteWriter(im)getData"></a>
+                    <a name="//apple_ref/objc/Method/-getData" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)TIFFByteWriter(im)getData">-getData</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get the written byte data</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="n">getData</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getData</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Data</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>byte data</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/io/TIFFByteWriter.h#L57">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)TIFFByteWriter(im)size"></a>
+                    <a name="//apple_ref/objc/Method/-size" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)TIFFByteWriter(im)size">-size</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get the current size in bytes written</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">size</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">size</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Int32</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>bytes written</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/io/TIFFByteWriter.h#L64">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)TIFFByteWriter(im)writeString:"></a>
+                    <a name="//apple_ref/objc/Method/-writeString:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)TIFFByteWriter(im)writeString:">-writeString:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Write a string</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="nf">writeString</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">value</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">write</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int32</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>string</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>bytes written</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/io/TIFFByteWriter.h#L72">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)TIFFByteWriter(im)writeNumberAsByte:"></a>
+                    <a name="//apple_ref/objc/Method/-writeNumberAsByte:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)TIFFByteWriter(im)writeNumberAsByte:">-writeNumberAsByte:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Write a byte</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">writeNumberAsByte</span><span class="p">:(</span><span class="n">NSNumber</span> <span class="o">*</span><span class="p">)</span><span class="nv">value</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">writeNumber</span><span class="p">(</span><span class="n">asByte</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">NSNumber</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>byte</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/io/TIFFByteWriter.h#L79">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)TIFFByteWriter(im)writeByte:"></a>
+                    <a name="//apple_ref/objc/Method/-writeByte:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)TIFFByteWriter(im)writeByte:">-writeByte:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Write a byte</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">writeByte</span><span class="p">:(</span><span class="kt">char</span><span class="p">)</span><span class="nv">value</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">writeByte</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Int8</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>byte</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/io/TIFFByteWriter.h#L86">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)TIFFByteWriter(im)writeNumberAsUnsignedByte:"></a>
+                    <a name="//apple_ref/objc/Method/-writeNumberAsUnsignedByte:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)TIFFByteWriter(im)writeNumberAsUnsignedByte:">-writeNumberAsUnsignedByte:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Write an unsigned byte</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">writeNumberAsUnsignedByte</span><span class="p">:(</span><span class="n">NSNumber</span> <span class="o">*</span><span class="p">)</span><span class="nv">value</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">writeNumber</span><span class="p">(</span><span class="n">asUnsignedByte</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">NSNumber</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>unsigned byte as a short</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/io/TIFFByteWriter.h#L94">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)TIFFByteWriter(im)writeUnsignedByte:"></a>
+                    <a name="//apple_ref/objc/Method/-writeUnsignedByte:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)TIFFByteWriter(im)writeUnsignedByte:">-writeUnsignedByte:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Write an unsigned byte</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">writeUnsignedByte</span><span class="p">:(</span><span class="kt">unsigned</span> <span class="kt">char</span><span class="p">)</span><span class="nv">value</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">writeUnsignedByte</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>unsigned byte as a short</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/io/TIFFByteWriter.h#L102">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)TIFFByteWriter(im)writeBytesWithData:"></a>
+                    <a name="//apple_ref/objc/Method/-writeBytesWithData:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)TIFFByteWriter(im)writeBytesWithData:">-writeBytesWithData:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Write the bytes</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">writeBytesWithData</span><span class="p">:(</span><span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nv">data</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">writeBytes</span><span class="p">(</span><span class="n">with</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>bytes</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/io/TIFFByteWriter.h#L110">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)TIFFByteWriter(im)writeNumberAsShort:"></a>
+                    <a name="//apple_ref/objc/Method/-writeNumberAsShort:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)TIFFByteWriter(im)writeNumberAsShort:">-writeNumberAsShort:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Write a short</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">writeNumberAsShort</span><span class="p">:(</span><span class="n">NSNumber</span> <span class="o">*</span><span class="p">)</span><span class="nv">value</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">writeNumber</span><span class="p">(</span><span class="n">asShort</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">NSNumber</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>short</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/io/TIFFByteWriter.h#L118">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)TIFFByteWriter(im)writeShort:"></a>
+                    <a name="//apple_ref/objc/Method/-writeShort:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)TIFFByteWriter(im)writeShort:">-writeShort:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Write a short</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">writeShort</span><span class="p">:(</span><span class="kt">short</span><span class="p">)</span><span class="nv">value</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">writeShort</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Int16</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>short</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/io/TIFFByteWriter.h#L126">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)TIFFByteWriter(im)writeNumberAsUnsignedShort:"></a>
+                    <a name="//apple_ref/objc/Method/-writeNumberAsUnsignedShort:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)TIFFByteWriter(im)writeNumberAsUnsignedShort:">-writeNumberAsUnsignedShort:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Write an unsigned short</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">writeNumberAsUnsignedShort</span><span class="p">:(</span><span class="n">NSNumber</span> <span class="o">*</span><span class="p">)</span><span class="nv">value</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">writeNumber</span><span class="p">(</span><span class="n">asUnsignedShort</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">NSNumber</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>unsigned short as an int</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/io/TIFFByteWriter.h#L134">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)TIFFByteWriter(im)writeUnsignedShort:"></a>
+                    <a name="//apple_ref/objc/Method/-writeUnsignedShort:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)TIFFByteWriter(im)writeUnsignedShort:">-writeUnsignedShort:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Write an unsigned short</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">writeUnsignedShort</span><span class="p">:(</span><span class="kt">unsigned</span> <span class="kt">short</span><span class="p">)</span><span class="nv">value</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">writeUnsignedShort</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">UInt16</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>unsigned short as an int</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/io/TIFFByteWriter.h#L142">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)TIFFByteWriter(im)writeNumberAsInt:"></a>
+                    <a name="//apple_ref/objc/Method/-writeNumberAsInt:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)TIFFByteWriter(im)writeNumberAsInt:">-writeNumberAsInt:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Write an integer</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">writeNumberAsInt</span><span class="p">:(</span><span class="n">NSNumber</span> <span class="o">*</span><span class="p">)</span><span class="nv">value</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">writeNumber</span><span class="p">(</span><span class="n">asInt</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">NSNumber</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>integer</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/io/TIFFByteWriter.h#L149">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)TIFFByteWriter(im)writeInt:"></a>
+                    <a name="//apple_ref/objc/Method/-writeInt:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)TIFFByteWriter(im)writeInt:">-writeInt:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Write an integer</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">writeInt</span><span class="p">:(</span><span class="kt">int</span><span class="p">)</span><span class="nv">value</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">write</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>integer</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/io/TIFFByteWriter.h#L156">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)TIFFByteWriter(im)writeNumberAsUnsignedInt:"></a>
+                    <a name="//apple_ref/objc/Method/-writeNumberAsUnsignedInt:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)TIFFByteWriter(im)writeNumberAsUnsignedInt:">-writeNumberAsUnsignedInt:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Write an unsigned int</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">writeNumberAsUnsignedInt</span><span class="p">:(</span><span class="n">NSNumber</span> <span class="o">*</span><span class="p">)</span><span class="nv">value</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">writeNumber</span><span class="p">(</span><span class="n">asUnsignedInt</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">NSNumber</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>unsigned int as long</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/io/TIFFByteWriter.h#L164">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)TIFFByteWriter(im)writeUnsignedInt:"></a>
+                    <a name="//apple_ref/objc/Method/-writeUnsignedInt:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)TIFFByteWriter(im)writeUnsignedInt:">-writeUnsignedInt:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Write an unsigned int</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">writeUnsignedInt</span><span class="p">:(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span><span class="nv">value</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">writeUnsignedInt</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>unsigned int as long</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/io/TIFFByteWriter.h#L172">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)TIFFByteWriter(im)writeNumberAsFloat:"></a>
+                    <a name="//apple_ref/objc/Method/-writeNumberAsFloat:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)TIFFByteWriter(im)writeNumberAsFloat:">-writeNumberAsFloat:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Write a float</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">writeNumberAsFloat</span><span class="p">:(</span><span class="n">NSDecimalNumber</span> <span class="o">*</span><span class="p">)</span><span class="nv">value</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">writeNumber</span><span class="p">(</span><span class="n">asFloat</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">NSDecimalNumber</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>float</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/io/TIFFByteWriter.h#L180">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)TIFFByteWriter(im)writeFloat:"></a>
+                    <a name="//apple_ref/objc/Method/-writeFloat:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)TIFFByteWriter(im)writeFloat:">-writeFloat:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Write a float</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">writeFloat</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">value</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">write</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>float</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/io/TIFFByteWriter.h#L188">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)TIFFByteWriter(im)writeNumberAsDouble:"></a>
+                    <a name="//apple_ref/objc/Method/-writeNumberAsDouble:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)TIFFByteWriter(im)writeNumberAsDouble:">-writeNumberAsDouble:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Write a double</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">writeNumberAsDouble</span><span class="p">:(</span><span class="n">NSDecimalNumber</span> <span class="o">*</span><span class="p">)</span><span class="nv">value</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">writeNumber</span><span class="p">(</span><span class="n">asDouble</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">NSDecimalNumber</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>double</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/io/TIFFByteWriter.h#L195">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)TIFFByteWriter(im)writeDouble:"></a>
+                    <a name="//apple_ref/objc/Method/-writeDouble:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)TIFFByteWriter(im)writeDouble:">-writeDouble:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Write a double</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">writeDouble</span><span class="p">:(</span><span class="kt">double</span><span class="p">)</span><span class="nv">value</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">write</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>double</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/io/TIFFByteWriter.h#L202">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://www.nga.mil" target="_blank" rel="external">NGA</a>. All rights reserved. (Last updated: 2018-05-21)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

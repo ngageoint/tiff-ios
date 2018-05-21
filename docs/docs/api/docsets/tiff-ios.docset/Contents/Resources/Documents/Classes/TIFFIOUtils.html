@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TIFFIOUtils Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Class/TIFFIOUtils" class="dashAnchor"></a>
+    <a title="TIFFIOUtils Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">tiff-ios Docs</a> (62% documented)</p>
+        <p class="header-right"><a href="https://github.com/ngageoint/tiff-ios"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">tiff-ios Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        TIFFIOUtils Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/TIFFByteReader.html">TIFFByteReader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TIFFByteWriter.html">TIFFByteWriter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)TIFFConstants">TIFFConstants</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)TIFFDeflateCompression">TIFFDeflateCompression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TIFFFieldTagTypes.html">TIFFFieldTagTypes</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TIFFFieldTypes.html">TIFFFieldTypes</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TIFFFileDirectory.html">TIFFFileDirectory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TIFFFileDirectoryEntry.html">TIFFFileDirectoryEntry</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TIFFIOUtils.html">TIFFIOUtils</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TIFFImage.html">TIFFImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TIFFImageWindow.html">TIFFImageWindow</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)TIFFLZWCompression">TIFFLZWCompression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)TIFFPackbitsCompression">TIFFPackbitsCompression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TIFFRasters.html">TIFFRasters</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)TIFFRawCompression">TIFFRawCompression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TIFFReader.html">TIFFReader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TIFFWriter.html">TIFFWriter</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_BYTE_ORDER_BIG_ENDIAN">TIFF_BYTE_ORDER_BIG_ENDIAN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_BYTE_ORDER_LITTLE_ENDIAN">TIFF_BYTE_ORDER_LITTLE_ENDIAN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_COMPRESSION_CCITT_HUFFMAN">TIFF_COMPRESSION_CCITT_HUFFMAN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_COMPRESSION_DEFLATE">TIFF_COMPRESSION_DEFLATE</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_COMPRESSION_JPEG_NEW">TIFF_COMPRESSION_JPEG_NEW</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_COMPRESSION_JPEG_OLD">TIFF_COMPRESSION_JPEG_OLD</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_COMPRESSION_LZW">TIFF_COMPRESSION_LZW</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_COMPRESSION_NO">TIFF_COMPRESSION_NO</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_COMPRESSION_PACKBITS">TIFF_COMPRESSION_PACKBITS</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_COMPRESSION_PKZIP_DEFLATE">TIFF_COMPRESSION_PKZIP_DEFLATE</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_COMPRESSION_T4">TIFF_COMPRESSION_T4</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_COMPRESSION_T6">TIFF_COMPRESSION_T6</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_DEFAULT_MAX_BYTES_PER_STRIP">TIFF_DEFAULT_MAX_BYTES_PER_STRIP</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_EXTRA_SAMPLES_ASSOCIATED_ALPHA">TIFF_EXTRA_SAMPLES_ASSOCIATED_ALPHA</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_EXTRA_SAMPLES_UNASSOCIATED_ALPHA">TIFF_EXTRA_SAMPLES_UNASSOCIATED_ALPHA</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_EXTRA_SAMPLES_UNSPECIFIED">TIFF_EXTRA_SAMPLES_UNSPECIFIED</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_FILE_IDENTIFIER">TIFF_FILE_IDENTIFIER</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_FILL_ORDER_LOWER_COLUMN_HIGHER_ORDER">TIFF_FILL_ORDER_LOWER_COLUMN_HIGHER_ORDER</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_FILL_ORDER_LOWER_COLUMN_LOWER_ORDER">TIFF_FILL_ORDER_LOWER_COLUMN_LOWER_ORDER</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_GRAY_RESPONSE_HUNDREDTHS">TIFF_GRAY_RESPONSE_HUNDREDTHS</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_GRAY_RESPONSE_HUNDRED_THOUSANDTHS">TIFF_GRAY_RESPONSE_HUNDRED_THOUSANDTHS</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_GRAY_RESPONSE_TENTHS">TIFF_GRAY_RESPONSE_TENTHS</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_GRAY_RESPONSE_TEN_THOUSANDTHS">TIFF_GRAY_RESPONSE_TEN_THOUSANDTHS</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_GRAY_RESPONSE_THOUSANDTHS">TIFF_GRAY_RESPONSE_THOUSANDTHS</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_HEADER_BYTES">TIFF_HEADER_BYTES</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_IFD_ENTRY_BYTES">TIFF_IFD_ENTRY_BYTES</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_IFD_HEADER_BYTES">TIFF_IFD_HEADER_BYTES</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_IFD_OFFSET_BYTES">TIFF_IFD_OFFSET_BYTES</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_ORIENTATION_BOTTOM_ROW_LEFT_COLUMN">TIFF_ORIENTATION_BOTTOM_ROW_LEFT_COLUMN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_ORIENTATION_BOTTOM_ROW_RIGHT_COLUMN">TIFF_ORIENTATION_BOTTOM_ROW_RIGHT_COLUMN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_ORIENTATION_LEFT_ROW_BOTTOM_COLUMN">TIFF_ORIENTATION_LEFT_ROW_BOTTOM_COLUMN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_ORIENTATION_LEFT_ROW_TOP_COLUMN">TIFF_ORIENTATION_LEFT_ROW_TOP_COLUMN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_ORIENTATION_RIGHT_ROW_BOTTOM_COLUMN">TIFF_ORIENTATION_RIGHT_ROW_BOTTOM_COLUMN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_ORIENTATION_RIGHT_ROW_TOP_COLUMN">TIFF_ORIENTATION_RIGHT_ROW_TOP_COLUMN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_ORIENTATION_TOP_ROW_LEFT_COLUMN">TIFF_ORIENTATION_TOP_ROW_LEFT_COLUMN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_ORIENTATION_TOP_ROW_RIGHT_COLUMN">TIFF_ORIENTATION_TOP_ROW_RIGHT_COLUMN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_PHOTOMETRIC_INTERPRETATION_BLACK_IS_ZERO">TIFF_PHOTOMETRIC_INTERPRETATION_BLACK_IS_ZERO</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_PHOTOMETRIC_INTERPRETATION_PALETTE">TIFF_PHOTOMETRIC_INTERPRETATION_PALETTE</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_PHOTOMETRIC_INTERPRETATION_RGB">TIFF_PHOTOMETRIC_INTERPRETATION_RGB</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_PHOTOMETRIC_INTERPRETATION_TRANSPARENCY">TIFF_PHOTOMETRIC_INTERPRETATION_TRANSPARENCY</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_PHOTOMETRIC_INTERPRETATION_WHITE_IS_ZERO">TIFF_PHOTOMETRIC_INTERPRETATION_WHITE_IS_ZERO</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_PLANAR_CONFIGURATION_CHUNKY">TIFF_PLANAR_CONFIGURATION_CHUNKY</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_PLANAR_CONFIGURATION_PLANAR">TIFF_PLANAR_CONFIGURATION_PLANAR</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_RESOLUTION_UNIT_CENTIMETER">TIFF_RESOLUTION_UNIT_CENTIMETER</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_RESOLUTION_UNIT_INCH">TIFF_RESOLUTION_UNIT_INCH</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_RESOLUTION_UNIT_NO">TIFF_RESOLUTION_UNIT_NO</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_SAMPLE_FORMAT_FLOAT">TIFF_SAMPLE_FORMAT_FLOAT</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_SAMPLE_FORMAT_SIGNED_INT">TIFF_SAMPLE_FORMAT_SIGNED_INT</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_SAMPLE_FORMAT_SINGLE_PAGE_MULTI_PAGE">TIFF_SAMPLE_FORMAT_SINGLE_PAGE_MULTI_PAGE</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_SAMPLE_FORMAT_UNDEFINED">TIFF_SAMPLE_FORMAT_UNDEFINED</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_SAMPLE_FORMAT_UNSIGNED_INT">TIFF_SAMPLE_FORMAT_UNSIGNED_INT</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_SUBFILE_TYPE_FULL">TIFF_SUBFILE_TYPE_FULL</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_SUBFILE_TYPE_REDUCED">TIFF_SUBFILE_TYPE_REDUCED</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_THRESHHOLDING_NO">TIFF_THRESHHOLDING_NO</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_THRESHHOLDING_ORDERED">TIFF_THRESHHOLDING_ORDERED</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@TIFF_THRESHHOLDING_RANDOM">TIFF_THRESHHOLDING_RANDOM</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/TIFFFieldTagType.html">TIFFFieldTagType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TIFFFieldType.html">TIFFFieldType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/TIFFCompressionDecoder.html">TIFFCompressionDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TIFFCompressionEncoder.html">TIFFCompressionEncoder</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>TIFFIOUtils</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">TIFFIOUtils</span> <span class="p">:</span> <span class="nc">NSObject</span>
+
+<span class="cm">/**
+ *  Copy a file
+ *
+ *  @param copyFrom file to copy
+ *  @param copyTo   file location to copy to
+ */</span>
+<span class="k">+</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="nf">copyFile</span><span class="p">:</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span> <span class="n">copyFrom</span> <span class="n">toFile</span><span class="o">:</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span> <span class="n">copyTo</span><span class="p">;</span>
+
+<span class="cm">/**
+ *  Copy an input stream to a file
+ *
+ *  @param copyFrom input stream to copy
+ *  @param copyTo   file location to copy to
+ */</span>
+<span class="k">+</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="nf">copyInputStream</span><span class="p">:</span> <span class="p">(</span><span class="n">NSInputStream</span> <span class="o">*</span><span class="p">)</span> <span class="n">copyFrom</span> <span class="n">toFile</span><span class="o">:</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span> <span class="n">copyTo</span><span class="p">;</span>
+
+<span class="cm">/**
+ *  Get the file byte data
+ *
+ *  @param file file path
+ *
+ *  @return byte data
+ */</span>
+<span class="k">+</span><span class="p">(</span><span class="n">NSData</span> <span class="o">*</span><span class="p">)</span> <span class="nf">fileData</span><span class="p">:</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span> <span class="n">file</span><span class="p">;</span>
+
+<span class="cm">/**
+ *  Get the input stream byte data
+ *
+ *  @param stream input stream
+ *
+ *  @return input stream byte data
+ */</span>
+<span class="k">+</span><span class="p">(</span><span class="n">NSData</span> <span class="o">*</span><span class="p">)</span> <span class="nf">streamData</span><span class="p">:</span> <span class="p">(</span><span class="n">NSInputStream</span> <span class="o">*</span><span class="p">)</span> <span class="n">stream</span><span class="p">;</span>
+
+<span class="cm">/**
+ *  Copy the input stream to an output stream
+ *
+ *  @param copyFrom input stream
+ *  @param copyTo   output stream
+ */</span>
+<span class="k">+</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="nf">copyInputStream</span><span class="p">:</span> <span class="p">(</span><span class="n">NSInputStream</span> <span class="o">*</span><span class="p">)</span> <span class="n">copyFrom</span> <span class="n">toOutputStream</span><span class="o">:</span> <span class="p">(</span><span class="n">NSOutputStream</span> <span class="o">*</span><span class="p">)</span> <span class="n">copyTo</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)TIFFIOUtils(cm)copyFile:toFile:"></a>
+                    <a name="//apple_ref/objc/Method/+copyFile:toFile:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)TIFFIOUtils(cm)copyFile:toFile:">+copyFile:toFile:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Copy a file</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">copyFile</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">copyFrom</span> <span class="nf">toFile</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">copyTo</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">copyFile</span><span class="p">(</span><span class="n">_</span> <span class="nv">copyFrom</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">,</span> <span class="n">toFile</span> <span class="nv">copyTo</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>copyFrom</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>file to copy</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>copyTo</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>file location to copy to</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/io/TIFFIOUtils.h#L19">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)TIFFIOUtils(cm)copyInputStream:toFile:"></a>
+                    <a name="//apple_ref/objc/Method/+copyInputStream:toFile:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)TIFFIOUtils(cm)copyInputStream:toFile:">+copyInputStream:toFile:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Copy an input stream to a file</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">copyInputStream</span><span class="p">:(</span><span class="n">NSInputStream</span> <span class="o">*</span><span class="p">)</span><span class="nv">copyFrom</span> <span class="nf">toFile</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">copyTo</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">copy</span><span class="p">(</span><span class="n">_</span> <span class="nv">copyFrom</span><span class="p">:</span> <span class="kt">InputStream</span><span class="o">!</span><span class="p">,</span> <span class="n">toFile</span> <span class="nv">copyTo</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>copyFrom</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>input stream to copy</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>copyTo</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>file location to copy to</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/io/TIFFIOUtils.h#L27">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)TIFFIOUtils(cm)fileData:"></a>
+                    <a name="//apple_ref/objc/Method/+fileData:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)TIFFIOUtils(cm)fileData:">+fileData:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get the file byte data</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nf">fileData</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">file</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">fileData</span><span class="p">(</span><span class="n">_</span> <span class="nv">file</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Data</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>file</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>file path</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>byte data</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/io/TIFFIOUtils.h#L36">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)TIFFIOUtils(cm)streamData:"></a>
+                    <a name="//apple_ref/objc/Method/+streamData:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)TIFFIOUtils(cm)streamData:">+streamData:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get the input stream byte data</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nf">streamData</span><span class="p">:(</span><span class="n">NSInputStream</span> <span class="o">*</span><span class="p">)</span><span class="nv">stream</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">streamData</span><span class="p">(</span><span class="n">_</span> <span class="nv">stream</span><span class="p">:</span> <span class="kt">InputStream</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Data</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>stream</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>input stream</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>input stream byte data</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/io/TIFFIOUtils.h#L45">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)TIFFIOUtils(cm)copyInputStream:toOutputStream:"></a>
+                    <a name="//apple_ref/objc/Method/+copyInputStream:toOutputStream:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)TIFFIOUtils(cm)copyInputStream:toOutputStream:">+copyInputStream:toOutputStream:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Copy the input stream to an output stream</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">copyInputStream</span><span class="p">:(</span><span class="n">NSInputStream</span> <span class="o">*</span><span class="p">)</span><span class="nv">copyFrom</span>
+         <span class="nf">toOutputStream</span><span class="p">:(</span><span class="n">NSOutputStream</span> <span class="o">*</span><span class="p">)</span><span class="nv">copyTo</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">copy</span><span class="p">(</span><span class="n">_</span> <span class="nv">copyFrom</span><span class="p">:</span> <span class="kt">InputStream</span><span class="o">!</span><span class="p">,</span> <span class="n">to</span> <span class="nv">copyTo</span><span class="p">:</span> <span class="kt">OutputStream</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>copyFrom</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>input stream</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>copyTo</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>output stream</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.0/tiff-ios/io/TIFFIOUtils.h#L53">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://www.nga.mil" target="_blank" rel="external">NGA</a>. All rights reserved. (Last updated: 2018-05-21)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
