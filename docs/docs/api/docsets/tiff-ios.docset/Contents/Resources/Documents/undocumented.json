@@ -1,0 +1,1139 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 15,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_ARTIST",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 16,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_BITS_PER_SAMPLE",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 17,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_CELL_LENGTH",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 18,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_CELL_WIDTH",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 19,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_COLOR_MAP",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 20,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_COMPRESSION",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 21,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_COPYRIGHT",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 22,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_DATE_TIME",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 23,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_EXTRA_SAMPLES",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 24,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_FILL_ORDER",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 25,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_FREE_BYTE_COUNTS",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 26,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_FREE_OFFSETS",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 27,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_GRAY_RESPONSE_CURVE",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 28,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_GRAY_RESPONSE_UNIT",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 29,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_HOST_COMPUTER",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 30,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_IMAGE_DESCRIPTION",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 31,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_IMAGE_LENGTH",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 32,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_IMAGE_WIDTH",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 33,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_MAKE",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 34,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_MAX_SAMPLE_VALUE",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 35,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_MIN_SAMPLE_VALUE",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 36,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_MODEL",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 37,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_NEW_SUBFILE_TYPE",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 38,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_ORIENTATION",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 39,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_PHOTOMETRIC_INTERPRETATION",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 40,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_PLANAR_CONFIGURATION",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 41,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_RESOLUTION_UNIT",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 42,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_ROWS_PER_STRIP",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 43,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_SAMPLES_PER_PIXEL",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 44,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_SOFTWARE",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 45,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_STRIP_BYTE_COUNTS",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 46,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_STRIP_OFFSETS",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 47,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_SUBFILE_TYPE",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 48,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_THRESHOLDING",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 49,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_X_RESOLUTION",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 50,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_Y_RESOLUTION",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 51,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_BAD_FAX_LINES",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 52,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_CLEAN_FAX_DATA",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 53,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_CLIP_PATH",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 54,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_CONSECUTIVE_BAD_FAX_LINES",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 55,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_DECODE",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 56,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_DEFAULT_IMAGE_COLOR",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 57,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_DOCUMENT_NAME",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 58,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_DOT_RANGE",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 59,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_HALFTONE_HINTS",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 60,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_INDEXED",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 61,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_JPEG_TABLES",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 62,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_PAGE_NAME",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 63,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_PAGE_NUMBER",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 64,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_PREDICTOR",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 65,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_PRIMARY_CHROMATICITIES",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 66,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_REFERENCE_BLACK_WHITE",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 67,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_SAMPLE_FORMAT",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 68,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_S_MIN_SAMPLE_VALUE",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 69,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_S_MAX_SAMPLE_VALUE",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 70,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_STRIP_ROW_COUNTS",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 71,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_SUB_IFDS",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 72,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_T4_OPTIONS",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 73,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_T6_OPTIONS",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 74,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_TILE_BYTE_COUNTS",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 75,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_TILE_LENGTH",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 76,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_TILE_OFFSETS",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 77,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_TILE_WIDTH",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 78,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_TRANSFER_FUNCTION",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 79,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_WHITE_POINT",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 80,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_X_CLIP_PATH_UNITS",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 81,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_X_POSITION",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 82,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_Y_CB_CR_COEFFICIENTS",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 83,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_Y_CB_CR_POSITIONING",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 84,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_Y_CB_CR_SUB_SAMPLING",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 85,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_Y_CLIP_PATH_UNITS",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 86,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_Y_POSITION",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 87,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_APERTURE_VALUE",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 88,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_COLOR_SPACE",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 89,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_DATE_TIME_DIGITIZED",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 90,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_DATE_TIME_ORIGINAL",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 91,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_EXIF_IFD",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 92,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_EXIF_VERSION",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 93,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_EXPOSURE_TIME",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 94,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_FILE_SOURCE",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 95,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_FLASH",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 96,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_FLASHPIX_VERSION",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 97,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_F_NUMBER",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 98,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_IMAGE_UNIQUE_ID",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 99,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_LIGHT_SOURCE",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 100,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_MAKER_NOTE",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 101,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_SHUTTER_SPEED_VALUE",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 102,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_USER_COMMENT",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 103,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_IPTC",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 104,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_ICC_PROFILE",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 105,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_XMP",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 106,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_GDAL_METADATA",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 107,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_GDAL_NODATA",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 108,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_PHOTOSHOP",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 109,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_MODEL_PIXEL_SCALE",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 110,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_MODEL_TIEPOINT",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 111,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_MODEL_TRANSFORMATION",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 112,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_GEO_KEY_DIRECTORY",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 113,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_GEO_DOUBLE_PARAMS",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTagTypes.h",
+      "line": 114,
+      "symbol": "TIFFFieldTagType.TIFF_TAG_GEO_ASCII_PARAMS",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTypes.h",
+      "line": 15,
+      "symbol": "TIFFFieldType.TIFF_FIELD_BYTE",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTypes.h",
+      "line": 16,
+      "symbol": "TIFFFieldType.TIFF_FIELD_ASCII",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTypes.h",
+      "line": 17,
+      "symbol": "TIFFFieldType.TIFF_FIELD_SHORT",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTypes.h",
+      "line": 18,
+      "symbol": "TIFFFieldType.TIFF_FIELD_LONG",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTypes.h",
+      "line": 19,
+      "symbol": "TIFFFieldType.TIFF_FIELD_RATIONAL",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTypes.h",
+      "line": 20,
+      "symbol": "TIFFFieldType.TIFF_FIELD_SBYTE",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTypes.h",
+      "line": 21,
+      "symbol": "TIFFFieldType.TIFF_FIELD_UNDEFINED",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTypes.h",
+      "line": 22,
+      "symbol": "TIFFFieldType.TIFF_FIELD_SSHORT",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTypes.h",
+      "line": 23,
+      "symbol": "TIFFFieldType.TIFF_FIELD_SLONG",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTypes.h",
+      "line": 24,
+      "symbol": "TIFFFieldType.TIFF_FIELD_SRATIONAL",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTypes.h",
+      "line": 25,
+      "symbol": "TIFFFieldType.TIFF_FIELD_FLOAT",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/TIFFFieldTypes.h",
+      "line": 26,
+      "symbol": "TIFFFieldType.TIFF_FIELD_DOUBLE",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/io/TIFFIOUtils.h",
+      "line": 11,
+      "symbol": "TIFFIOUtils",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 52,
+      "symbol": "TIFF_COMPRESSION_NO",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 53,
+      "symbol": "TIFF_COMPRESSION_CCITT_HUFFMAN",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 54,
+      "symbol": "TIFF_COMPRESSION_T4",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 55,
+      "symbol": "TIFF_COMPRESSION_T6",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 56,
+      "symbol": "TIFF_COMPRESSION_LZW",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 57,
+      "symbol": "TIFF_COMPRESSION_JPEG_OLD",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 58,
+      "symbol": "TIFF_COMPRESSION_JPEG_NEW",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 59,
+      "symbol": "TIFF_COMPRESSION_DEFLATE",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 60,
+      "symbol": "TIFF_COMPRESSION_PKZIP_DEFLATE",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 61,
+      "symbol": "TIFF_COMPRESSION_PACKBITS",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 64,
+      "symbol": "TIFF_EXTRA_SAMPLES_UNSPECIFIED",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 65,
+      "symbol": "TIFF_EXTRA_SAMPLES_ASSOCIATED_ALPHA",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 66,
+      "symbol": "TIFF_EXTRA_SAMPLES_UNASSOCIATED_ALPHA",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 69,
+      "symbol": "TIFF_FILL_ORDER_LOWER_COLUMN_HIGHER_ORDER",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 70,
+      "symbol": "TIFF_FILL_ORDER_LOWER_COLUMN_LOWER_ORDER",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 73,
+      "symbol": "TIFF_GRAY_RESPONSE_TENTHS",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 74,
+      "symbol": "TIFF_GRAY_RESPONSE_HUNDREDTHS",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 75,
+      "symbol": "TIFF_GRAY_RESPONSE_THOUSANDTHS",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 76,
+      "symbol": "TIFF_GRAY_RESPONSE_TEN_THOUSANDTHS",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 77,
+      "symbol": "TIFF_GRAY_RESPONSE_HUNDRED_THOUSANDTHS",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 80,
+      "symbol": "TIFF_ORIENTATION_TOP_ROW_LEFT_COLUMN",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 81,
+      "symbol": "TIFF_ORIENTATION_TOP_ROW_RIGHT_COLUMN",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 82,
+      "symbol": "TIFF_ORIENTATION_BOTTOM_ROW_RIGHT_COLUMN",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 83,
+      "symbol": "TIFF_ORIENTATION_BOTTOM_ROW_LEFT_COLUMN",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 84,
+      "symbol": "TIFF_ORIENTATION_LEFT_ROW_TOP_COLUMN",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 85,
+      "symbol": "TIFF_ORIENTATION_RIGHT_ROW_TOP_COLUMN",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 86,
+      "symbol": "TIFF_ORIENTATION_RIGHT_ROW_BOTTOM_COLUMN",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 87,
+      "symbol": "TIFF_ORIENTATION_LEFT_ROW_BOTTOM_COLUMN",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 90,
+      "symbol": "TIFF_PHOTOMETRIC_INTERPRETATION_WHITE_IS_ZERO",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 91,
+      "symbol": "TIFF_PHOTOMETRIC_INTERPRETATION_BLACK_IS_ZERO",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 92,
+      "symbol": "TIFF_PHOTOMETRIC_INTERPRETATION_RGB",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 93,
+      "symbol": "TIFF_PHOTOMETRIC_INTERPRETATION_PALETTE",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 94,
+      "symbol": "TIFF_PHOTOMETRIC_INTERPRETATION_TRANSPARENCY",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 97,
+      "symbol": "TIFF_PLANAR_CONFIGURATION_CHUNKY",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 98,
+      "symbol": "TIFF_PLANAR_CONFIGURATION_PLANAR",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 101,
+      "symbol": "TIFF_RESOLUTION_UNIT_NO",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 102,
+      "symbol": "TIFF_RESOLUTION_UNIT_INCH",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 103,
+      "symbol": "TIFF_RESOLUTION_UNIT_CENTIMETER",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 106,
+      "symbol": "TIFF_SAMPLE_FORMAT_UNSIGNED_INT",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 107,
+      "symbol": "TIFF_SAMPLE_FORMAT_SIGNED_INT",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 108,
+      "symbol": "TIFF_SAMPLE_FORMAT_FLOAT",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 109,
+      "symbol": "TIFF_SAMPLE_FORMAT_UNDEFINED",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 112,
+      "symbol": "TIFF_SUBFILE_TYPE_FULL",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 113,
+      "symbol": "TIFF_SUBFILE_TYPE_REDUCED",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 114,
+      "symbol": "TIFF_SAMPLE_FORMAT_SINGLE_PAGE_MULTI_PAGE",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 117,
+      "symbol": "TIFF_THRESHHOLDING_NO",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 118,
+      "symbol": "TIFF_THRESHHOLDING_ORDERED",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 119,
+      "symbol": "TIFF_THRESHHOLDING_RANDOM",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 121,
+      "symbol": "TIFFConstants",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/osbornb/git/tiff-ios"
+}
