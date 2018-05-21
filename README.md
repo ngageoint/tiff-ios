@@ -15,7 +15,7 @@ Software source code previously released under an open source license and then m
 
 ### Usage ###
 
-View the latest [Appledoc on CocoaDocs](http://cocoadocs.org/docsets/tiff-ios)
+View the latest [Appledoc](http://ngageoint.github.io/tiff-ios/docs/api/)
 
 #### Read ####
 

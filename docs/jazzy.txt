@@ -1,0 +1,11 @@
+jazzy \
+  --objc \
+  --author NGA \
+  --author_url https://www.nga.mil \
+  --github_url https://github.com/ngageoint/tiff-ios \
+  --github-file-prefix https://github.com/ngageoint/tiff-ios/tree/1.1.0 \
+  --module-version 1.1.0 \
+  --umbrella-header tiff-ios/tiff-ios-Bridging-Header.h \
+  --framework-root . \
+  --module tiff-ios \
+  --output docs/docs/api
