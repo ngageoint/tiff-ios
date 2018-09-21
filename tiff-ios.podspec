@@ -14,6 +14,5 @@ Pod::Spec.new do |s|
 
   s.source_files = 'tiff-ios/**/*.{h,m}'
 
-  s.resource_bundle = { 'TIFF' => ['tiff-ios/**/*.plist'] }
   s.frameworks = 'Foundation'
 end

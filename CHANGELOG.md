@@ -6,6 +6,7 @@ Adheres to [Semantic Versioning](http://semver.org/).
 
 ## 1.1.1 (TBD)
 
+* Xcode 10 fix
 * Dropping "geopackage" from library name
 
 ## [1.1.0](https://github.com/ngageoint/tiff-ios/releases/tag/1.1.0) (11-21-2017)
