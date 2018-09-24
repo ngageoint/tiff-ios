@@ -4,6 +4,10 @@ Adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## 1.1.2 (TBD)
+
+* TBD
+
 ## [1.1.1](https://github.com/ngageoint/tiff-ios/releases/tag/1.1.1) (09-24-2018)
 
 * Xcode 10 fix
