@@ -18,6 +18,7 @@ NSString * const TIFF_TEST_FILE_INT32 = @"int32.tiff";
 NSString * const TIFF_TEST_FILE_UINT32 = @"uint32.tiff";
 NSString * const TIFF_TEST_FILE_INTERLEAVE = @"interleave.tiff";
 NSString * const TIFF_TEST_FILE_TILED_PLANAR = @"tiledplanar.tiff";
+NSString * const TIFF_TEST_FILE_JPEG = @"quad-jpeg.tif";
 
 @implementation TIFFTestConstants
 

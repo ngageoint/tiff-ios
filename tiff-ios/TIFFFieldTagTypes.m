@@ -231,6 +231,33 @@
         case TIFF_TAG_Y_POSITION:
             tagId = 287;
             break;
+        case TIFF_TAG_JPEG_PROC:
+            tagId = 512;
+            break;
+        case TIFF_TAG_JPEG_INTERCHANGE_FORMAT:
+            tagId = 513;
+            break;
+        case TIFF_TAG_JPEG_INTERCHANGE_FORMAT_LENGTH:
+            tagId = 514;
+            break;
+        case TIFF_TAG_JPEG_RESTART_INTERVAL:
+            tagId = 515;
+            break;
+        case TIFF_TAG_JPEG_LOSSLESS_PREDICTORS:
+            tagId = 517;
+            break;
+        case TIFF_TAG_JPEG_POINT_TRANSFORMS:
+            tagId = 518;
+            break;
+        case TIFF_TAG_JPEG_Q_TABLES:
+            tagId = 519;
+            break;
+        case TIFF_TAG_JPEG_DC_TABLES:
+            tagId = 520;
+            break;
+        case TIFF_TAG_JPEG_AC_TABLES:
+            tagId = 521;
+            break;
         case TIFF_TAG_APERTURE_VALUE:
             tagId = 37378;
             break;
@@ -392,6 +419,10 @@
         case TIFF_TAG_Y_CB_CR_SUB_SAMPLING:
         case TIFF_TAG_Y_CLIP_PATH_UNITS:
         case TIFF_TAG_Y_POSITION:
+        case TIFF_TAG_JPEG_PROC:
+        case TIFF_TAG_JPEG_INTERCHANGE_FORMAT:
+        case TIFF_TAG_JPEG_INTERCHANGE_FORMAT_LENGTH:
+        case TIFF_TAG_JPEG_RESTART_INTERVAL:
         case TIFF_TAG_APERTURE_VALUE:
         case TIFF_TAG_COLOR_SPACE:
         case TIFF_TAG_DATE_TIME_DIGITIZED:
@@ -431,6 +462,11 @@
         case TIFF_TAG_STRIP_ROW_COUNTS:
         case TIFF_TAG_TILE_BYTE_COUNTS:
         case TIFF_TAG_TILE_OFFSETS:
+        case TIFF_TAG_JPEG_LOSSLESS_PREDICTORS:
+        case TIFF_TAG_JPEG_POINT_TRANSFORMS:
+        case TIFF_TAG_JPEG_Q_TABLES:
+        case TIFF_TAG_JPEG_DC_TABLES:
+        case TIFF_TAG_JPEG_AC_TABLES:
             array = true;
             break;
             
@@ -663,6 +699,33 @@
             break;
         case 287:
             fieldTagType = TIFF_TAG_Y_POSITION;
+            break;
+        case 512:
+            fieldTagType = TIFF_TAG_JPEG_PROC;
+            break;
+        case 513:
+            fieldTagType = TIFF_TAG_JPEG_INTERCHANGE_FORMAT;
+            break;
+        case 514:
+            fieldTagType = TIFF_TAG_JPEG_INTERCHANGE_FORMAT_LENGTH;
+            break;
+        case 515:
+            fieldTagType = TIFF_TAG_JPEG_RESTART_INTERVAL;
+            break;
+        case 517:
+            fieldTagType = TIFF_TAG_JPEG_LOSSLESS_PREDICTORS;
+            break;
+        case 518:
+            fieldTagType = TIFF_TAG_JPEG_POINT_TRANSFORMS;
+            break;
+        case 519:
+            fieldTagType = TIFF_TAG_JPEG_Q_TABLES;
+            break;
+        case 520:
+            fieldTagType = TIFF_TAG_JPEG_DC_TABLES;
+            break;
+        case 521:
+            fieldTagType = TIFF_TAG_JPEG_AC_TABLES;
             break;
         case 37378:
             fieldTagType = TIFF_TAG_APERTURE_VALUE;

@@ -12,6 +12,9 @@
 		042FC6D51B96453E00549A4B /* tiff_ios.h in Headers */ = {isa = PBXBuildFile; fileRef = 042FC6D41B96453E00549A4B /* tiff_ios.h */; };
 		0472B51B1C03590500496B87 /* tiff-ios-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 0472B51A1C03590500496B87 /* tiff-ios-Bridging-Header.h */; };
 		04AB919E1BF29F9A00894999 /* TIFFTestUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AB919D1BF29F9A00894999 /* TIFFTestUtils.m */; };
+		04B23E9521C2ABD8004080AF /* TIFFUnsupportedCompression.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B23E9321C2ABD8004080AF /* TIFFUnsupportedCompression.h */; };
+		04B23E9621C2ABD8004080AF /* TIFFUnsupportedCompression.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B23E9421C2ABD8004080AF /* TIFFUnsupportedCompression.m */; };
+		04B23E9821C2BBE6004080AF /* quad-jpeg.tif in Resources */ = {isa = PBXBuildFile; fileRef = 04B23E9721C2BBE6004080AF /* quad-jpeg.tif */; };
 		04B60F961E37A9BC00E73068 /* deflate.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04B60F801E37A9BB00E73068 /* deflate.tiff */; };
 		04B60F971E37A9BC00E73068 /* float32.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04B60F811E37A9BB00E73068 /* float32.tiff */; };
 		04B60F981E37A9BC00E73068 /* float64.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04B60F821E37A9BB00E73068 /* float64.tiff */; };
@@ -89,6 +92,9 @@
 		0472B51A1C03590500496B87 /* tiff-ios-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "tiff-ios-Bridging-Header.h"; sourceTree = "<group>"; };
 		04AB919C1BF29F9A00894999 /* TIFFTestUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIFFTestUtils.h; sourceTree = "<group>"; };
 		04AB919D1BF29F9A00894999 /* TIFFTestUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIFFTestUtils.m; sourceTree = "<group>"; };
+		04B23E9321C2ABD8004080AF /* TIFFUnsupportedCompression.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TIFFUnsupportedCompression.h; sourceTree = "<group>"; };
+		04B23E9421C2ABD8004080AF /* TIFFUnsupportedCompression.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TIFFUnsupportedCompression.m; sourceTree = "<group>"; };
+		04B23E9721C2BBE6004080AF /* quad-jpeg.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "quad-jpeg.tif"; sourceTree = "<group>"; };
 		04B60F801E37A9BB00E73068 /* deflate.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = deflate.tiff; sourceTree = "<group>"; };
 		04B60F811E37A9BB00E73068 /* float32.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = float32.tiff; sourceTree = "<group>"; };
 		04B60F821E37A9BB00E73068 /* float64.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = float64.tiff; sourceTree = "<group>"; };
@@ -258,6 +264,7 @@
 				04B60F931E37A9BB00E73068 /* tiled.tiff */,
 				04B60F941E37A9BB00E73068 /* tiledplanar.tiff */,
 				04B60F951E37A9BB00E73068 /* uint32.tiff */,
+				04B23E9721C2BBE6004080AF /* quad-jpeg.tif */,
 			);
 			path = "tiff-iosTests";
 			sourceTree = "<group>";
@@ -283,6 +290,8 @@
 				04B60FF71E37AD1000E73068 /* TIFFPackbitsCompression.m */,
 				04B60FF81E37AD1000E73068 /* TIFFRawCompression.h */,
 				04B60FF91E37AD1000E73068 /* TIFFRawCompression.m */,
+				04B23E9321C2ABD8004080AF /* TIFFUnsupportedCompression.h */,
+				04B23E9421C2ABD8004080AF /* TIFFUnsupportedCompression.m */,
 			);
 			path = compression;
 			sourceTree = "<group>";
@@ -342,6 +351,7 @@
 				04B60FFB1E37AD1000E73068 /* TIFFCompressionEncoder.h in Headers */,
 				04B610121E37AD6E00E73068 /* TIFFConstants.h in Headers */,
 				04B60FC21E37AC3100E73068 /* TIFFFileDirectory.h in Headers */,
+				04B23E9521C2ABD8004080AF /* TIFFUnsupportedCompression.h in Headers */,
 				04B60FC61E37AC3100E73068 /* TIFFImage.h in Headers */,
 				042FC6D31B96421E00549A4B /* tiff-ios-Prefix.pch in Headers */,
 				04B60FC81E37AC3100E73068 /* TIFFImageWindow.h in Headers */,
@@ -457,6 +467,7 @@
 				04B60F9B1E37A9BC00E73068 /* interleave.tiff in Resources */,
 				04B60F961E37A9BC00E73068 /* deflate.tiff in Resources */,
 				04B60F9A1E37A9BC00E73068 /* int32.tiff in Resources */,
+				04B23E9821C2BBE6004080AF /* quad-jpeg.tif in Resources */,
 				04B60FA11E37A9BC00E73068 /* small.tiff in Resources */,
 				04B60F9D1E37A9BC00E73068 /* overviews.tiff in Resources */,
 				04B60FA71E37A9BC00E73068 /* tiledplanar.tiff in Resources */,
@@ -494,6 +505,7 @@
 				04B610011E37AD1000E73068 /* TIFFPackbitsCompression.m in Sources */,
 				04B6100D1E37AD5600E73068 /* TIFFByteWriter.m in Sources */,
 				04B60FC31E37AC3100E73068 /* TIFFFileDirectory.m in Sources */,
+				04B23E9621C2ABD8004080AF /* TIFFUnsupportedCompression.m in Sources */,
 				04B60FCB1E37AC3100E73068 /* TIFFRasters.m in Sources */,
 				04B610031E37AD1000E73068 /* TIFFRawCompression.m in Sources */,
 				04B60FBF1E37AC3100E73068 /* TIFFFieldTagTypes.m in Sources */,

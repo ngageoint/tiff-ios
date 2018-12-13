@@ -58,6 +58,11 @@ extern NSString * const TIFF_TEST_FILE_INTERLEAVE;
  */
 extern NSString * const TIFF_TEST_FILE_TILED_PLANAR;
 
+/**
+ * JPEG TIFF test file
+ */
+extern NSString * const TIFF_TEST_FILE_JPEG;
+
 @interface TIFFTestConstants : NSObject
 
 @end

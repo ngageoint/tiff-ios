@@ -14,6 +14,7 @@
 #import "TIFFLZWCompression.h"
 #import "TIFFDeflateCompression.h"
 #import "TIFFPackbitsCompression.h"
+#import "TIFFUnsupportedCompression.h"
 
 @interface TIFFFileDirectory()
 
@@ -72,21 +73,21 @@
         if(compressionInteger == TIFF_COMPRESSION_NO){
             self.decoder = [[TIFFRawCompression alloc] init];
         }else if(compressionInteger == TIFF_COMPRESSION_CCITT_HUFFMAN){
-            [NSException raise:@"Not Supported" format:@"CCITT Huffman compression not supported: %@", compression];
+            self.decoder = [[TIFFUnsupportedCompression alloc] initWithMessage:[NSString stringWithFormat:@"CCITT Huffman compression not supported: %@", compression]];
         }else if(compressionInteger == TIFF_COMPRESSION_T4){
-            [NSException raise:@"Not Supported" format:@"T4-encoding compression not supported: %@", compression];
+            self.decoder = [[TIFFUnsupportedCompression alloc] initWithMessage:[NSString stringWithFormat:@"T4-encoding compression not supported: %@", compression]];
         }else if(compressionInteger == TIFF_COMPRESSION_T6){
-            [NSException raise:@"Not Supported" format:@"T6-encoding compression not supported: %@", compression];
+            self.decoder = [[TIFFUnsupportedCompression alloc] initWithMessage:[NSString stringWithFormat:@"T6-encoding compression not supported: %@", compression]];
         }else if(compressionInteger == TIFF_COMPRESSION_LZW){
             self.decoder = [[TIFFLZWCompression alloc] init];
         }else if(compressionInteger == TIFF_COMPRESSION_JPEG_OLD || compressionInteger == TIFF_COMPRESSION_JPEG_NEW){
-            [NSException raise:@"Not Supported" format:@"JPEG compression not supported: %@", compression];
+            self.decoder = [[TIFFUnsupportedCompression alloc] initWithMessage:[NSString stringWithFormat:@"JPEG compression not supported: %@", compression]];
         }else if(compressionInteger == TIFF_COMPRESSION_DEFLATE || compressionInteger == TIFF_COMPRESSION_PKZIP_DEFLATE){
             self.decoder = [[TIFFDeflateCompression alloc] init];
         }else if(compressionInteger == TIFF_COMPRESSION_PACKBITS){
             self.decoder = [[TIFFPackbitsCompression alloc] init];
         }else{
-            [NSException raise:@"Not Supported" format:@"Unknown compression method identifier: %@", compression];
+            self.decoder = [[TIFFUnsupportedCompression alloc] initWithMessage:[NSString stringWithFormat:@"Unknown compression method identifier: %@", compression]];
         }
     }
     return self;

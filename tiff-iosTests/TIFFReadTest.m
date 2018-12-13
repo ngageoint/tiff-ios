@@ -148,5 +148,29 @@
     
 }
 
+/**
+ * Test the JPEG file header
+ */
+-(void) testJPEGHeader{
+    
+    NSString * jpegFile = [TIFFTestUtils getTestFileWithName:TIFF_TEST_FILE_JPEG];
+    TIFFImage * jpegTiff = [TIFFReader readTiffFromFile:jpegFile];
+    
+    [TIFFTestUtils assertNotNil:jpegTiff];
+    [TIFFTestUtils assertTrue:[jpegTiff fileDirectories].count > 0];
+    for (int i = 0; i < [jpegTiff fileDirectories].count; i++) {
+        TIFFFileDirectory *fileDirectory = [jpegTiff fileDirectoryAtIndex:i];
+        [TIFFTestUtils assertNotNil:fileDirectory];
+        
+        @try {
+            [fileDirectory readRasters];
+            [NSException raise:@"Unexpected" format:@"JPEG compression was not expected to be implemented"];
+        } @catch (NSException *exception) {
+            // expected
+        }
+
+    }
+    
+}
 
 @end
