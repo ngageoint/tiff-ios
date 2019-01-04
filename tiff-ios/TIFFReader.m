@@ -127,9 +127,11 @@
             // Read the field values
             NSObject * values = [self readFieldValuesWithReader:reader andFieldTag:fieldTag andFieldType:fieldType andTypeCount:typeCount];
             
-            // Create and add a file directory
-            TIFFFileDirectoryEntry * entry = [[TIFFFileDirectoryEntry alloc] initWithFieldTag:fieldTag andFieldType:fieldType andTypeCount:typeCount andValues:values];
-            [entries addObject:entry];
+            // Create and add a file directory if the tag is recognized
+            if((int)fieldTag >= 0){
+                TIFFFileDirectoryEntry * entry = [[TIFFFileDirectoryEntry alloc] initWithFieldTag:fieldTag andFieldType:fieldType andTypeCount:typeCount andValues:values];
+                [entries addObject:entry];
+            }
             
             // Restore the next byte to read location
             [reader setNextByte:nextByte + 4];
@@ -173,6 +175,7 @@
     // Get the single or array values
     NSObject * values = nil;
     if (typeCount == 1
+        && (int)fieldTag >= 0
         && ![TIFFFieldTagTypes isArray:fieldTag]
         && !(fieldType == TIFF_FIELD_RATIONAL || fieldType == TIFF_FIELD_SRATIONAL)) {
         values = [valuesList objectAtIndex:0];

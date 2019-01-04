@@ -481,7 +481,7 @@
 
 +(enum TIFFFieldTagType) typeByTagId: (int) tagId{
     
-    enum TIFFFieldTagType fieldTagType;
+    enum TIFFFieldTagType fieldTagType = -1;
     
     switch (tagId) {
         case 315:
@@ -812,7 +812,6 @@
             fieldTagType = TIFF_TAG_GEO_ASCII_PARAMS;
             break;
         default:
-            [NSException raise:@"Unsupported Field Tag Id" format:@"Unsupported Field Tag Id %d", tagId];
             break;
     }
     
