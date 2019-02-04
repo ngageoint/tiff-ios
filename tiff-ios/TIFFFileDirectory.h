@@ -862,6 +862,16 @@
 -(void) setUnsignedLongListEntryValue: (NSArray<NSNumber *> *) value withFieldTag: (enum TIFFFieldTagType) fieldTagType;
 
 /**
+ * Set rational value for the field tag type
+ *
+ * @param fieldTagType
+ *            field tag type
+ * @param value
+ *            long list value
+ */
+-(void) setRationalEntryValue: (NSArray<NSNumber *> *) value withFieldTag: (enum TIFFFieldTagType) fieldTagType;
+
+/**
  * Size in bytes of the Image File Directory (all contiguous)
  *
  * @return size in bytes

@@ -300,11 +300,11 @@
 }
 
 -(void) setXResolution: (NSArray<NSNumber *> *) xResolution{
-    [self setUnsignedLongListEntryValue:xResolution withFieldTag:TIFF_TAG_X_RESOLUTION];
+    [self setRationalEntryValue:xResolution withFieldTag:TIFF_TAG_X_RESOLUTION];
 }
 
 -(void) setXResolutionAsSingleValue: (unsigned long) xResolution{
-    [self setXResolution:[self createSingleLongListWithValue:xResolution]];
+    [self setXResolution:[self createRationalValue:xResolution]];
 }
 
 -(NSArray<NSNumber *> *) yResolution{
@@ -312,11 +312,11 @@
 }
 
 -(void) setYResolution: (NSArray<NSNumber *> *) yResolution{
-    [self setUnsignedLongListEntryValue:yResolution withFieldTag:TIFF_TAG_Y_RESOLUTION];
+    [self setRationalEntryValue:yResolution withFieldTag:TIFF_TAG_Y_RESOLUTION];
 }
 
 -(void) setYResolutionAsSingleValue: (unsigned long) yResolution{
-    [self setYResolution:[self createSingleLongListWithValue:yResolution]];
+    [self setYResolution:[self createRationalValue:yResolution]];
 }
 
 -(NSNumber *) planarConfiguration{
@@ -824,6 +824,13 @@
     [self setEntryValue:value withFieldTag:fieldTagType andFieldType:TIFF_FIELD_LONG andTypeCount:(int)value.count];
 }
 
+-(void) setRationalEntryValue: (NSArray<NSNumber *> *) value withFieldTag: (enum TIFFFieldTagType) fieldTagType{
+    if(value == nil || value.count != 2){
+        [NSException raise:@"Invalid Value" format:@"Invalid rational value, must be two longs. Size: %lu", value.count];
+    }
+    [self setEntryValue:value withFieldTag:fieldTagType andFieldType:TIFF_FIELD_RATIONAL andTypeCount:1];
+}
+
 /**
  * Get an entry value
  *
@@ -896,6 +903,17 @@
  */
 -(NSArray<NSNumber *> *) createSingleLongListWithValue: (unsigned long) value{
     return [[NSArray alloc] initWithObjects:[NSNumber numberWithUnsignedLong:value], nil];
+}
+
+/**
+ * Create a rational value (list of two longs) from a numerator value
+ *
+ * @param numerator
+ *            long numerator value
+ * @return rational list of two longs
+ */
+-(NSArray<NSNumber *> *) createRationalValue: (unsigned long) numerator{
+    return [[NSArray alloc] initWithObjects:[NSNumber numberWithUnsignedShort:numerator], [NSNumber numberWithUnsignedShort:1], nil];
 }
 
 -(int) size{
