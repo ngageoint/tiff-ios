@@ -6,7 +6,10 @@ Adheres to [Semantic Versioning](http://semver.org/).
 
 ## 1.1.2 (TBD)
 
-* TBD
+* xResolution and yResolution write fix
+* Skip unknown tags while reading
+* Allow headers to be read for unsupported compression types
+* JPEG field tags
 
 ## [1.1.1](https://github.com/ngageoint/tiff-ios/releases/tag/1.1.1) (09-24-2018)
 
