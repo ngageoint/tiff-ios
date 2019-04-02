@@ -25,6 +25,7 @@
 #import "TIFFLZWCompression.h"
 #import "TIFFPackbitsCompression.h"
 #import "TIFFRawCompression.h"
+#import "TIFFUnsupportedCompression.h"
 #import "TIFFByteReader.h"
 #import "TIFFByteWriter.h"
 #import "TIFFIOUtils.h"
