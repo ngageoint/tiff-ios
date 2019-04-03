@@ -826,7 +826,7 @@
 
 -(void) setRationalEntryValue: (NSArray<NSNumber *> *) value withFieldTag: (enum TIFFFieldTagType) fieldTagType{
     if(value == nil || value.count != 2){
-        [NSException raise:@"Invalid Value" format:@"Invalid rational value, must be two longs. Size: %lu", value.count];
+        [NSException raise:@"Invalid Value" format:@"Invalid rational value, must be two longs. Size: %d", (int)value.count];
     }
     [self setEntryValue:value withFieldTag:fieldTagType andFieldType:TIFF_FIELD_RATIONAL andTypeCount:1];
 }
