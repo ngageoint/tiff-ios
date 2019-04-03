@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>TIFFCompressionDecoder Protocol Reference</title>
+    <title>TIFFUnsupportedCompression Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/objc/Protocol/TIFFCompressionDecoder" class="dashAnchor"></a>
-    <a title="TIFFCompressionDecoder Protocol Reference"></a>
+    <a name="//apple_ref/objc/Class/TIFFUnsupportedCompression" class="dashAnchor"></a>
+    <a title="TIFFUnsupportedCompression Class Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">tiff-ios Docs</a> (61% documented)</p>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">tiff-ios Reference</a>
         <img id="carat" src="../img/carat.png" />
-        TIFFCompressionDecoder Protocol Reference
+        TIFFUnsupportedCompression Class Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -287,14 +287,15 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>TIFFCompressionDecoder</h1>
+            <h1>TIFFUnsupportedCompression</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">TIFFCompressionDecoder</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">TIFFUnsupportedCompression</span>
+    <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="../Protocols/TIFFCompressionDecoder.html">TIFFCompressionDecoder</a></span><span class="p">,</span> <span class="n"><a href="../Protocols/TIFFCompressionEncoder.html">TIFFCompressionEncoder</a></span><span class="o">&gt;</span></code></pre>
 
                 </div>
               </div>
-            <p>Compression Decoder interface</p>
+            <p>Unsupported compression</p>
 
           </section>
           <section class="section task-group-section">
@@ -303,9 +304,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(pl)TIFFCompressionDecoder(im)decodeData:withByteOrder:"></a>
-                    <a name="//apple_ref/objc/Method/-decodeData:withByteOrder:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)TIFFCompressionDecoder(im)decodeData:withByteOrder:">-decodeData:withByteOrder:</a>
+                    <a name="/c:objc(cs)TIFFUnsupportedCompression(im)initWithMessage:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithMessage:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)TIFFUnsupportedCompression(im)initWithMessage:">-initWithMessage:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -313,19 +314,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Decode the data</p>
+                        <p>Initialize</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nf">decodeData</span><span class="p">:(</span><span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nv">data</span> <span class="nf">withByteOrder</span><span class="p">:(</span><span class="n">CFByteOrder</span><span class="p">)</span><span class="nv">byteOrder</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithMessage</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">message</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">decode</span><span class="p">(</span><span class="n">_</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="o">!</span><span class="p">,</span> <span class="n">withByteOrder</span> <span class="nv">byteOrder</span><span class="p">:</span> <span class="kt">CFByteOrder</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Data</span><span class="o">!</span></code></pre>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="o">!</span><span class="p">(</span><span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -336,24 +337,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>data</em>
+                                <em>message</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>data to decode</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>byteOrder</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>data byte order</p>
+                                  <p>message of the TiffException</p>
                                 </div>
                               </td>
                             </tr>
@@ -362,10 +351,10 @@
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>decoded data</p>
+                        <p>new unsupported compression</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.2/tiff-ios/compression/TIFFCompressionDecoder.h#L28">Show on GitHub</a>
+                        <a href="https://github.com/ngageoint/tiff-ios/tree/1.1.2/tiff-ios/compression/TIFFUnsupportedCompression.h#L25">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

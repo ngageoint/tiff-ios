@@ -13,7 +13,7 @@
     <a title="tiff-ios  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">tiff-ios Docs</a> (62% documented)</p>
+        <p><a href="index.html">tiff-ios Docs</a> (61% documented)</p>
         <p class="header-right"><a href="https://github.com/ngageoint/tiff-ios"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -77,6 +77,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/TIFFReader.html">TIFFReader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/TIFFUnsupportedCompression.html">TIFFUnsupportedCompression</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/TIFFWriter.html">TIFFWriter</a>
@@ -300,57 +303,57 @@
 
 <p>View the latest <a href="http://ngageoint.github.io/tiff-ios/docs/api/">Appledoc</a></p>
 <h4 id='read' class='heading'>Read</h4>
-<pre class="highlight plaintext"><code>
-//NSString * file = ...;
-//NSInputStream * stream = ...;
-//NSData * data = ...;
-//TIFFByteReader * reader = ...;
+<pre class="highlight objective_c"><code>
+<span class="c1">//NSString * file = ...;</span>
+<span class="c1">//NSInputStream * stream = ...;</span>
+<span class="c1">//NSData * data = ...;</span>
+<span class="c1">//TIFFByteReader * reader = ...;</span>
 
-TIFFImage * tiffImage = [TIFFReader readTiffFromFile:file];
-//TIFFImage * tiffImage = [TIFFReader readTiffFromStream:stream];
-//TIFFImage * tiffImage = [TIFFReader readTiffFromData:data];
-//TIFFImage * tiffImage = [TIFFReader readTiffFromReader:reader];
-NSArray&lt;TIFFFileDirectory *&gt; * directories = [tiffImage fileDirectories];
-TIFFFileDirectory * directory  = [directories objectAtIndex:0];
-TIFFRasters * rasters = [directory readRasters];
+<span class="n">TIFFImage</span> <span class="o">*</span> <span class="n">tiffImage</span> <span class="o">=</span> <span class="p">[</span><span class="n">TIFFReader</span> <span class="nf">readTiffFromFile</span><span class="p">:</span><span class="n">file</span><span class="p">];</span>
+<span class="c1">//TIFFImage * tiffImage = [TIFFReader readTiffFromStream:stream];</span>
+<span class="c1">//TIFFImage * tiffImage = [TIFFReader readTiffFromData:data];</span>
+<span class="c1">//TIFFImage * tiffImage = [TIFFReader readTiffFromReader:reader];</span>
+<span class="n">NSArray</span><span class="o">&lt;</span><span class="n">TIFFFileDirectory</span> <span class="o">*&gt;</span> <span class="o">*</span> <span class="n">directories</span> <span class="o">=</span> <span class="p">[</span><span class="n">tiffImage</span> <span class="nf">fileDirectories</span><span class="p">];</span>
+<span class="n">TIFFFileDirectory</span> <span class="o">*</span> <span class="n">directory</span>  <span class="o">=</span> <span class="p">[</span><span class="n">directories</span> <span class="nf">objectAtIndex</span><span class="p">:</span><span class="mi">0</span><span class="p">];</span>
+<span class="n">TIFFRasters</span> <span class="o">*</span> <span class="n">rasters</span> <span class="o">=</span> <span class="p">[</span><span class="n">directory</span> <span class="nf">readRasters</span><span class="p">];</span>
 
 </code></pre>
 <h4 id='write' class='heading'>Write</h4>
-<pre class="highlight plaintext"><code>
-int width = 256;
-int height = 256;
-int samplesPerPixel = 1;
-int bitsPerSample = 32;
+<pre class="highlight objective_c"><code>
+<span class="kt">int</span> <span class="n">width</span> <span class="o">=</span> <span class="mi">256</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">height</span> <span class="o">=</span> <span class="mi">256</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">samplesPerPixel</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">bitsPerSample</span> <span class="o">=</span> <span class="mi">32</span><span class="p">;</span>
 
-TIFFRasters * rasters = [[TIFFRasters alloc] initWithWidth:width andHeight:height andSamplesPerPixel:samplesPerPixel andSingleBitsPerSample:bitsPerSample];
+<span class="n">TIFFRasters</span> <span class="o">*</span> <span class="n">rasters</span> <span class="o">=</span> <span class="p">[[</span><span class="n">TIFFRasters</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">initWithWidth</span><span class="p">:</span><span class="n">width</span> <span class="nf">andHeight</span><span class="p">:</span><span class="n">height</span> <span class="n">andSamplesPerPixel</span><span class="o">:</span><span class="n">samplesPerPixel</span> <span class="n">andSingleBitsPerSample</span><span class="o">:</span><span class="n">bitsPerSample</span><span class="p">];</span>
 
-int rowsPerStrip = [rasters calculateRowsPerStripWithPlanarConfiguration:(int)TIFF_PLANAR_CONFIGURATION_CHUNKY];
+<span class="kt">int</span> <span class="n">rowsPerStrip</span> <span class="o">=</span> <span class="p">[</span><span class="n">rasters</span> <span class="nf">calculateRowsPerStripWithPlanarConfiguration</span><span class="p">:(</span><span class="kt">int</span><span class="p">)</span><span class="n">TIFF_PLANAR_CONFIGURATION_CHUNKY</span><span class="p">];</span>
 
-TIFFFileDirectory * directory = [[TIFFFileDirectory alloc] init];
-[directory setImageWidth: width];
-[directory setImageHeight: height];
-[directory setBitsPerSampleAsSingleValue: bitsPerSample];
-[directory setCompression: TIFF_COMPRESSION_NO];
-[directory setPhotometricInterpretation: TIFF_PHOTOMETRIC_INTERPRETATION_BLACK_IS_ZERO];
-[directory setSamplesPerPixel: samplesPerPixel];
-[directory setRowsPerStrip: rowsPerStrip];
-[directory setPlanarConfiguration: TIFF_PLANAR_CONFIGURATION_CHUNKY];
-[directory setSampleFormatAsSingleValue: TIFF_SAMPLE_FORMAT_FLOAT];
-[directory setWriteRasters: rasters];
+<span class="n">TIFFFileDirectory</span> <span class="o">*</span> <span class="n">directory</span> <span class="o">=</span> <span class="p">[[</span><span class="n">TIFFFileDirectory</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">init</span><span class="p">];</span>
+<span class="p">[</span><span class="n">directory</span> <span class="nf">setImageWidth</span><span class="p">:</span> <span class="n">width</span><span class="p">];</span>
+<span class="p">[</span><span class="n">directory</span> <span class="nf">setImageHeight</span><span class="p">:</span> <span class="n">height</span><span class="p">];</span>
+<span class="p">[</span><span class="n">directory</span> <span class="nf">setBitsPerSampleAsSingleValue</span><span class="p">:</span> <span class="n">bitsPerSample</span><span class="p">];</span>
+<span class="p">[</span><span class="n">directory</span> <span class="nf">setCompression</span><span class="p">:</span> <span class="n">TIFF_COMPRESSION_NO</span><span class="p">];</span>
+<span class="p">[</span><span class="n">directory</span> <span class="nf">setPhotometricInterpretation</span><span class="p">:</span> <span class="n">TIFF_PHOTOMETRIC_INTERPRETATION_BLACK_IS_ZERO</span><span class="p">];</span>
+<span class="p">[</span><span class="n">directory</span> <span class="nf">setSamplesPerPixel</span><span class="p">:</span> <span class="n">samplesPerPixel</span><span class="p">];</span>
+<span class="p">[</span><span class="n">directory</span> <span class="nf">setRowsPerStrip</span><span class="p">:</span> <span class="n">rowsPerStrip</span><span class="p">];</span>
+<span class="p">[</span><span class="n">directory</span> <span class="nf">setPlanarConfiguration</span><span class="p">:</span> <span class="n">TIFF_PLANAR_CONFIGURATION_CHUNKY</span><span class="p">];</span>
+<span class="p">[</span><span class="n">directory</span> <span class="nf">setSampleFormatAsSingleValue</span><span class="p">:</span> <span class="n">TIFF_SAMPLE_FORMAT_FLOAT</span><span class="p">];</span>
+<span class="p">[</span><span class="n">directory</span> <span class="nf">setWriteRasters</span><span class="p">:</span> <span class="n">rasters</span><span class="p">];</span>
 
-for (int y = 0; y &lt; height; y++) {
-    for (int x = 0; x &lt; width; x++) {
-        float pixelValue = ...;
-        [rasters setFirstPixelSampleAtX:x andY:y withValue:[[NSDecimalNumber alloc] initWithFloat:pixelValue]];
-    }
-}
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">height</span><span class="p">;</span> <span class="n">y</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">width</span><span class="p">;</span> <span class="n">x</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">float</span> <span class="n">pixelValue</span> <span class="o">=</span> <span class="p">...;</span>
+        <span class="p">[</span><span class="n">rasters</span> <span class="nf">setFirstPixelSampleAtX</span><span class="p">:</span><span class="n">x</span> <span class="nf">andY</span><span class="p">:</span><span class="n">y</span> <span class="n">withValue</span><span class="o">:</span><span class="p">[[</span><span class="n">NSDecimalNumber</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">initWithFloat</span><span class="p">:</span><span class="n">pixelValue</span><span class="p">]];</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 
-TIFFImage * tiffImage = [[TIFFImage alloc] init];
-[tiffImage addFileDirectory:directory];
-NSData * data = [TIFFWriter writeTiffToDataWithImage:tiffImage];
-// or
-NSString * file = ...;
-[TIFFWriter writeTiffWithFile:file andImage:tiffImage];
+<span class="n">TIFFImage</span> <span class="o">*</span> <span class="n">tiffImage</span> <span class="o">=</span> <span class="p">[[</span><span class="n">TIFFImage</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">init</span><span class="p">];</span>
+<span class="p">[</span><span class="n">tiffImage</span> <span class="nf">addFileDirectory</span><span class="p">:</span><span class="n">directory</span><span class="p">];</span>
+<span class="n">NSData</span> <span class="o">*</span> <span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">TIFFWriter</span> <span class="nf">writeTiffToDataWithImage</span><span class="p">:</span><span class="n">tiffImage</span><span class="p">];</span>
+<span class="c1">// or</span>
+<span class="n">NSString</span> <span class="o">*</span> <span class="n">file</span> <span class="o">=</span> <span class="p">...;</span>
+<span class="p">[</span><span class="n">TIFFWriter</span> <span class="nf">writeTiffWithFile</span><span class="p">:</span><span class="n">file</span> <span class="nf">andImage</span><span class="p">:</span><span class="n">tiffImage</span><span class="p">];</span>
 
 </code></pre>
 <h3 id='build' class='heading'>Build</h3>
@@ -371,12 +374,12 @@ NSString * file = ...;
 <p>Include this repository by specifying it in a Podfile using a supported option.</p>
 
 <p>Pull from <a href="https://cocoapods.org/pods/tiff-ios">CocoaPods</a>:</p>
-<pre class="highlight plaintext"><code>pod 'tiff-ios', '~&gt; 1.1.1'
+<pre class="highlight plaintext"><code>pod 'tiff-ios', '~&gt; 1.1.2'
 </code></pre>
 
 <p>Pull from GitHub:</p>
 <pre class="highlight plaintext"><code>pod 'tiff-ios', :git =&gt; 'https://github.com/ngageoint/tiff-ios.git', :branch =&gt; 'master'
-pod 'tiff-ios', :git =&gt; 'https://github.com/ngageoint/tiff-ios.git', :tag =&gt; '1.1.1'
+pod 'tiff-ios', :git =&gt; 'https://github.com/ngageoint/tiff-ios.git', :tag =&gt; '1.1.2'
 </code></pre>
 
 <p>Include as local project:</p>
@@ -445,8 +448,8 @@ pod 'tiff-ios', :git =&gt; 'https://github.com/ngageoint/tiff-ios.git', :tag =&g
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://www.nga.mil" target="_blank" rel="external">NGA</a>. All rights reserved. (Last updated: 2018-09-24)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://www.nga.mil" target="_blank" rel="external">NGA</a>. All rights reserved. (Last updated: 2019-04-03)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
