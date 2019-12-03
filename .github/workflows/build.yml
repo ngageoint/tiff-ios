@@ -1,0 +1,20 @@
+name: Build
+
+on:
+  push:
+    branches-ignore:
+      - master
+
+jobs:
+  
+  build:
+
+    runs-on: macOS-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v1
+    - name: Install
+      run: pod install
+    - name: Build
+      run: xcodebuild build-for-testing -workspace tiff-ios.xcworkspace -scheme tiff-ios -destination 'platform=iOS Simulator,OS=latest,name=iPhone 11'
