@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		041F18C324C5F5E3001311E4 /* TIFFReadmeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 041F18C224C5F5E3001311E4 /* TIFFReadmeTest.m */; };
+		041F18CB24C6044D001311E4 /* TIFFSwiftReadmeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F18CA24C6044D001311E4 /* TIFFSwiftReadmeTest.swift */; };
 		042FC6571B963FE500549A4B /* tiff_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042FC64B1B963FE500549A4B /* tiff_ios.framework */; };
 		042FC6D31B96421E00549A4B /* tiff-ios-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 042FC69E1B96421E00549A4B /* tiff-ios-Prefix.pch */; };
 		042FC6D51B96453E00549A4B /* tiff_ios.h in Headers */ = {isa = PBXBuildFile; fileRef = 042FC6D41B96453E00549A4B /* tiff_ios.h */; };
@@ -86,6 +87,8 @@
 /* Begin PBXFileReference section */
 		041F18C124C5F5E3001311E4 /* TIFFReadmeTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TIFFReadmeTest.h; sourceTree = "<group>"; };
 		041F18C224C5F5E3001311E4 /* TIFFReadmeTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TIFFReadmeTest.m; sourceTree = "<group>"; };
+		041F18C924C6044C001311E4 /* tiff-iosTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tiff-iosTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		041F18CA24C6044D001311E4 /* TIFFSwiftReadmeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TIFFSwiftReadmeTest.swift; sourceTree = "<group>"; };
 		042FC64B1B963FE500549A4B /* tiff_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = tiff_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		042FC64F1B963FE500549A4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		042FC6561B963FE500549A4B /* tiff_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tiff_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -246,6 +249,8 @@
 				042FC65B1B963FE500549A4B /* Supporting Files */,
 				041F18C124C5F5E3001311E4 /* TIFFReadmeTest.h */,
 				041F18C224C5F5E3001311E4 /* TIFFReadmeTest.m */,
+				041F18CA24C6044D001311E4 /* TIFFSwiftReadmeTest.swift */,
+				041F18C924C6044C001311E4 /* tiff-iosTests-Bridging-Header.h */,
 				04B60F8D1E37A9BB00E73068 /* TIFFReadTest.h */,
 				04B60F8E1E37A9BB00E73068 /* TIFFReadTest.m */,
 				04B60F911E37A9BB00E73068 /* TIFFWriteTest.h */,
@@ -427,6 +432,7 @@
 					};
 					042FC6551B963FE500549A4B = {
 						CreatedOnToolsVersion = 6.4;
+						LastSwiftMigration = 1160;
 					};
 				};
 			};
@@ -533,6 +539,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				041F18CB24C6044D001311E4 /* TIFFSwiftReadmeTest.swift in Sources */,
 				04B60FA31E37A9BC00E73068 /* TIFFReadTest.m in Sources */,
 				04AB919E1BF29F9A00894999 /* TIFFTestUtils.m in Sources */,
 				04B60FA51E37A9BC00E73068 /* TIFFWriteTest.m in Sources */,
@@ -703,6 +710,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EDCFC787E85937478095557C /* Pods-tiff-iosTests.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -715,6 +723,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "mil.nga.tiff.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = tiff_iosTests;
+				SWIFT_OBJC_BRIDGING_HEADER = "tiff-iosTests/tiff-iosTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -722,6 +733,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 73029AF16F858F06EBCEC53C /* Pods-tiff-iosTests.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -730,6 +742,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "mil.nga.tiff.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = tiff_iosTests;
+				SWIFT_OBJC_BRIDGING_HEADER = "tiff-iosTests/tiff-iosTests-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
