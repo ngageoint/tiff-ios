@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041F18C324C5F5E3001311E4 /* TIFFReadmeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 041F18C224C5F5E3001311E4 /* TIFFReadmeTest.m */; };
 		042FC6571B963FE500549A4B /* tiff_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042FC64B1B963FE500549A4B /* tiff_ios.framework */; };
 		042FC6D31B96421E00549A4B /* tiff-ios-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 042FC69E1B96421E00549A4B /* tiff-ios-Prefix.pch */; };
 		042FC6D51B96453E00549A4B /* tiff_ios.h in Headers */ = {isa = PBXBuildFile; fileRef = 042FC6D41B96453E00549A4B /* tiff_ios.h */; };
@@ -83,6 +84,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		041F18C124C5F5E3001311E4 /* TIFFReadmeTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TIFFReadmeTest.h; sourceTree = "<group>"; };
+		041F18C224C5F5E3001311E4 /* TIFFReadmeTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TIFFReadmeTest.m; sourceTree = "<group>"; };
 		042FC64B1B963FE500549A4B /* tiff_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = tiff_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		042FC64F1B963FE500549A4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		042FC6561B963FE500549A4B /* tiff_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tiff_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -241,6 +244,8 @@
 			isa = PBXGroup;
 			children = (
 				042FC65B1B963FE500549A4B /* Supporting Files */,
+				041F18C124C5F5E3001311E4 /* TIFFReadmeTest.h */,
+				041F18C224C5F5E3001311E4 /* TIFFReadmeTest.m */,
 				04B60F8D1E37A9BB00E73068 /* TIFFReadTest.h */,
 				04B60F8E1E37A9BB00E73068 /* TIFFReadTest.m */,
 				04B60F911E37A9BB00E73068 /* TIFFWriteTest.h */,
@@ -532,6 +537,7 @@
 				04AB919E1BF29F9A00894999 /* TIFFTestUtils.m in Sources */,
 				04B60FA51E37A9BC00E73068 /* TIFFWriteTest.m in Sources */,
 				04B60FA41E37A9BC00E73068 /* TIFFTestConstants.m in Sources */,
+				041F18C324C5F5E3001311E4 /* TIFFReadmeTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

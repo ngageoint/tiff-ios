@@ -21,18 +21,18 @@ View the latest [Appledoc](http://ngageoint.github.io/tiff-ios/docs/api/)
 
 ```objectivec
 
-//NSString * file = ...;
-//NSInputStream * stream = ...;
-//NSData * data = ...;
-//TIFFByteReader * reader = ...;
+// NSData *data = ...;
+// NSString *file = ...;
+// NSInputStream *stream = ...;
+// TIFFByteReader *reader = ...;
 
-TIFFImage * tiffImage = [TIFFReader readTiffFromFile:file];
-//TIFFImage * tiffImage = [TIFFReader readTiffFromStream:stream];
-//TIFFImage * tiffImage = [TIFFReader readTiffFromData:data];
-//TIFFImage * tiffImage = [TIFFReader readTiffFromReader:reader];
-NSArray<TIFFFileDirectory *> * directories = [tiffImage fileDirectories];
-TIFFFileDirectory * directory  = [directories objectAtIndex:0];
-TIFFRasters * rasters = [directory readRasters];
+TIFFImage *tiffImage = [TIFFReader readTiffFromData:data];
+// TIFFImage *tiffImage = [TIFFReader readTiffFromFile:file];
+// TIFFImage *tiffImage = [TIFFReader readTiffFromStream:stream];
+// TIFFImage *tiffImage = [TIFFReader readTiffFromReader:reader];
+NSArray<TIFFFileDirectory *> *directories = [tiffImage fileDirectories];
+TIFFFileDirectory *directory  = [directories objectAtIndex:0];
+TIFFRasters *rasters = [directory readRasters];
 
 ```
 
@@ -45,11 +45,11 @@ int height = 256;
 int samplesPerPixel = 1;
 int bitsPerSample = 32;
 
-TIFFRasters * rasters = [[TIFFRasters alloc] initWithWidth:width andHeight:height andSamplesPerPixel:samplesPerPixel andSingleBitsPerSample:bitsPerSample];
+TIFFRasters *rasters = [[TIFFRasters alloc] initWithWidth:width andHeight:height andSamplesPerPixel:samplesPerPixel andSingleBitsPerSample:bitsPerSample];
 
 int rowsPerStrip = [rasters calculateRowsPerStripWithPlanarConfiguration:(int)TIFF_PLANAR_CONFIGURATION_CHUNKY];
 
-TIFFFileDirectory * directory = [[TIFFFileDirectory alloc] init];
+TIFFFileDirectory *directory = [[TIFFFileDirectory alloc] init];
 [directory setImageWidth: width];
 [directory setImageHeight: height];
 [directory setBitsPerSampleAsSingleValue: bitsPerSample];
@@ -63,17 +63,17 @@ TIFFFileDirectory * directory = [[TIFFFileDirectory alloc] init];
 
 for (int y = 0; y < height; y++) {
     for (int x = 0; x < width; x++) {
-        float pixelValue = ...;
+        float pixelValue = 1.0; // any pixel value
         [rasters setFirstPixelSampleAtX:x andY:y withValue:[[NSDecimalNumber alloc] initWithFloat:pixelValue]];
     }
 }
 
-TIFFImage * tiffImage = [[TIFFImage alloc] init];
+TIFFImage *tiffImage = [[TIFFImage alloc] init];
 [tiffImage addFileDirectory:directory];
-NSData * data = [TIFFWriter writeTiffToDataWithImage:tiffImage];
+NSData *data = [TIFFWriter writeTiffToDataWithImage:tiffImage];
 // or
-NSString * file = ...;
-[TIFFWriter writeTiffWithFile:file andImage:tiffImage];
+// NSString *file = ...;
+// [TIFFWriter writeTiffWithFile:file andImage:tiffImage];
 
 ```
 
@@ -99,12 +99,12 @@ Include this repository by specifying it in a Podfile using a supported option.
 
 Pull from [CocoaPods](https://cocoapods.org/pods/tiff-ios):
 
-    pod 'tiff-ios', '~> 1.1.2'
+    pod 'tiff-ios', '~> 2.0.0'
 
 Pull from GitHub:
 
     pod 'tiff-ios', :git => 'https://github.com/ngageoint/tiff-ios.git', :branch => 'master'
-    pod 'tiff-ios', :git => 'https://github.com/ngageoint/tiff-ios.git', :tag => '1.1.2'
+    pod 'tiff-ios', :git => 'https://github.com/ngageoint/tiff-ios.git', :tag => '2.0.0'
 
 Include as local project:
 
