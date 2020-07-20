@@ -162,7 +162,7 @@
     return (int)_entries.count;
 }
 
--(TIFFFileDirectoryEntry *) getByFieldTagType: (enum TIFFFieldTagType) fieldTagType{
+-(TIFFFileDirectoryEntry *) entryByFieldTagType: (enum TIFFFieldTagType) fieldTagType{
     return [_fieldTagTypeMapping objectForKey:[NSNumber numberWithInt:[TIFFFieldTagTypes tagId:fieldTagType]]];
 }
 
@@ -333,6 +333,14 @@
 
 -(void) setResolutionUnit: (unsigned short) resolutionUnit{
     [self setUnsignedShortEntryValue:resolutionUnit withFieldTag:TIFF_TAG_RESOLUTION_UNIT];
+}
+
+-(NSArray<NSNumber *> *) modelPixelScale{
+    return [self numberListEntryValueWithFieldTag:TIFF_TAG_MODEL_PIXEL_SCALE];
+}
+
+-(NSArray<NSNumber *> *) modelTiepoint{
+    return [self numberListEntryValueWithFieldTag:TIFF_TAG_MODEL_TIEPOINT];
 }
 
 -(NSArray<NSNumber *> *) colorMap{

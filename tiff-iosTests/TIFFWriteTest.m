@@ -20,7 +20,7 @@
  */
 -(void) testWriteStrippedChunky{
 
-    NSString * strippedFile = [TIFFTestUtils getTestFileWithName:TIFF_TEST_FILE_STRIPPED];
+    NSString * strippedFile = [TIFFTestUtils testFileWithName:TIFF_TEST_FILE_STRIPPED];
     TIFFImage * strippedTiff = [TIFFReader readTiffFromFile:strippedFile];
     
     TIFFFileDirectory * fileDirectory = [strippedTiff fileDirectory];
@@ -49,7 +49,7 @@
  */
 -(void) testWriteStrippedPlanar{
 
-    NSString * strippedFile = [TIFFTestUtils getTestFileWithName:TIFF_TEST_FILE_STRIPPED];
+    NSString * strippedFile = [TIFFTestUtils testFileWithName:TIFF_TEST_FILE_STRIPPED];
     TIFFImage * strippedTiff = [TIFFReader readTiffFromFile:strippedFile];
     
     TIFFFileDirectory * fileDirectory = [strippedTiff fileDirectory];

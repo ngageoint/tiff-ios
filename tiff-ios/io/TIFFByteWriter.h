@@ -54,7 +54,7 @@
  *
  *  @return byte data
  */
--(NSData *) getData;
+-(NSData *) data;
 
 /**
  *  Get the current size in bytes written

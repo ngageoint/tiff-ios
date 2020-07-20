@@ -125,7 +125,7 @@
  *            field tag type
  * @return file directory entry
  */
--(TIFFFileDirectoryEntry *) getByFieldTagType: (enum TIFFFieldTagType) fieldTagType;
+-(TIFFFileDirectoryEntry *) entryByFieldTagType: (enum TIFFFieldTagType) fieldTagType;
 
 /**
  * Get the file directory entries
@@ -438,6 +438,20 @@
  *            resolution unit
  */
 -(void) setResolutionUnit: (unsigned short) resolutionUnit;
+
+/**
+ * Get the model pixel scale
+ *
+ * @return model pixel scale
+ */
+-(NSArray<NSNumber *> *) modelPixelScale;
+
+/**
+ * Get the model tiepoint
+ *
+ * @return model tiepoint
+ */
+-(NSArray<NSNumber *> *) modelTiepoint;
 
 /**
  * Get the color map

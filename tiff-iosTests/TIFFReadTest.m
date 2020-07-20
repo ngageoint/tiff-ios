@@ -18,10 +18,10 @@
  */
 -(void) testStrippedVsTiled{
     
-    NSString * strippedFile = [TIFFTestUtils getTestFileWithName:TIFF_TEST_FILE_STRIPPED];
+    NSString * strippedFile = [TIFFTestUtils testFileWithName:TIFF_TEST_FILE_STRIPPED];
     TIFFImage * strippedTiff = [TIFFReader readTiffFromFile:strippedFile];
     
-    NSString * tiledFile = [TIFFTestUtils getTestFileWithName:TIFF_TEST_FILE_TILED];
+    NSString * tiledFile = [TIFFTestUtils testFileWithName:TIFF_TEST_FILE_TILED];
     TIFFImage * tiledTiff = [TIFFReader readTiffFromFile:tiledFile];
     
     [TIFFTestUtils compareTIFFImagesWithImage1:strippedTiff andImage2:tiledTiff];
@@ -33,10 +33,10 @@
  */
 -(void) testStrippedVsInt32{
     
-    NSString * strippedFile = [TIFFTestUtils getTestFileWithName:TIFF_TEST_FILE_STRIPPED];
+    NSString * strippedFile = [TIFFTestUtils testFileWithName:TIFF_TEST_FILE_STRIPPED];
     TIFFImage * strippedTiff = [TIFFReader readTiffFromFile:strippedFile];
     
-    NSString * int32File = [TIFFTestUtils getTestFileWithName:TIFF_TEST_FILE_INT32];
+    NSString * int32File = [TIFFTestUtils testFileWithName:TIFF_TEST_FILE_INT32];
     TIFFImage * int32Tiff = [TIFFReader readTiffFromFile:int32File];
     
     [TIFFTestUtils compareTIFFImagesWithImage1:strippedTiff andImage2:int32Tiff andExactType:true andSameBitsPerSample:false];
@@ -48,10 +48,10 @@
  */
 -(void) testStrippedVsUInt32{
     
-    NSString * strippedFile = [TIFFTestUtils getTestFileWithName:TIFF_TEST_FILE_STRIPPED];
+    NSString * strippedFile = [TIFFTestUtils testFileWithName:TIFF_TEST_FILE_STRIPPED];
     TIFFImage * strippedTiff = [TIFFReader readTiffFromFile:strippedFile];
     
-    NSString * uint32File = [TIFFTestUtils getTestFileWithName:TIFF_TEST_FILE_UINT32];
+    NSString * uint32File = [TIFFTestUtils testFileWithName:TIFF_TEST_FILE_UINT32];
     TIFFImage * uint32Tiff = [TIFFReader readTiffFromFile:uint32File];
     
     [TIFFTestUtils compareTIFFImagesWithImage1:strippedTiff andImage2:uint32Tiff andExactType:false andSameBitsPerSample:false];
@@ -63,10 +63,10 @@
  */
 -(void) testStrippedVsFloat32{
     
-    NSString * strippedFile = [TIFFTestUtils getTestFileWithName:TIFF_TEST_FILE_STRIPPED];
+    NSString * strippedFile = [TIFFTestUtils testFileWithName:TIFF_TEST_FILE_STRIPPED];
     TIFFImage * strippedTiff = [TIFFReader readTiffFromFile:strippedFile];
     
-    NSString * float32File = [TIFFTestUtils getTestFileWithName:TIFF_TEST_FILE_FLOAT32];
+    NSString * float32File = [TIFFTestUtils testFileWithName:TIFF_TEST_FILE_FLOAT32];
     TIFFImage * float32Tiff = [TIFFReader readTiffFromFile:float32File];
     
     [TIFFTestUtils compareTIFFImagesWithImage1:strippedTiff andImage2:float32Tiff andExactType:false andSameBitsPerSample:false];
@@ -78,10 +78,10 @@
  */
 -(void) testStrippedVsFloat64{
     
-    NSString * strippedFile = [TIFFTestUtils getTestFileWithName:TIFF_TEST_FILE_STRIPPED];
+    NSString * strippedFile = [TIFFTestUtils testFileWithName:TIFF_TEST_FILE_STRIPPED];
     TIFFImage * strippedTiff = [TIFFReader readTiffFromFile:strippedFile];
     
-    NSString * float64File = [TIFFTestUtils getTestFileWithName:TIFF_TEST_FILE_FLOAT64];
+    NSString * float64File = [TIFFTestUtils testFileWithName:TIFF_TEST_FILE_FLOAT64];
     TIFFImage * float64Tiff = [TIFFReader readTiffFromFile:float64File];
     
     [TIFFTestUtils compareTIFFImagesWithImage1:strippedTiff andImage2:float64Tiff andExactType:false andSameBitsPerSample:false];
@@ -93,10 +93,10 @@
  */
 -(void) testStrippedVsLzw{
     
-    NSString * strippedFile = [TIFFTestUtils getTestFileWithName:TIFF_TEST_FILE_STRIPPED];
+    NSString * strippedFile = [TIFFTestUtils testFileWithName:TIFF_TEST_FILE_STRIPPED];
     TIFFImage * strippedTiff = [TIFFReader readTiffFromFile:strippedFile];
     
-    NSString * lzwFile = [TIFFTestUtils getTestFileWithName:TIFF_TEST_FILE_LZW];
+    NSString * lzwFile = [TIFFTestUtils testFileWithName:TIFF_TEST_FILE_LZW];
     TIFFImage * lzwTiff = [TIFFReader readTiffFromFile:lzwFile];
     
     [TIFFTestUtils compareTIFFImagesWithImage1:strippedTiff andImage2:lzwTiff];
@@ -108,10 +108,10 @@
  */
 -(void) testStrippedVsPackbits{
     
-    NSString * strippedFile = [TIFFTestUtils getTestFileWithName:TIFF_TEST_FILE_STRIPPED];
+    NSString * strippedFile = [TIFFTestUtils testFileWithName:TIFF_TEST_FILE_STRIPPED];
     TIFFImage * strippedTiff = [TIFFReader readTiffFromFile:strippedFile];
     
-    NSString * packbitsFile = [TIFFTestUtils getTestFileWithName:TIFF_TEST_FILE_PACKBITS];
+    NSString * packbitsFile = [TIFFTestUtils testFileWithName:TIFF_TEST_FILE_PACKBITS];
     TIFFImage * packbitsTiff = [TIFFReader readTiffFromFile:packbitsFile];
     
     [TIFFTestUtils compareTIFFImagesWithImage1:strippedTiff andImage2:packbitsTiff];
@@ -123,10 +123,10 @@
  */
 -(void) testStrippedVsInterleave{
     
-    NSString * strippedFile = [TIFFTestUtils getTestFileWithName:TIFF_TEST_FILE_STRIPPED];
+    NSString * strippedFile = [TIFFTestUtils testFileWithName:TIFF_TEST_FILE_STRIPPED];
     TIFFImage * strippedTiff = [TIFFReader readTiffFromFile:strippedFile];
     
-    NSString * interleaveFile = [TIFFTestUtils getTestFileWithName:TIFF_TEST_FILE_INTERLEAVE];
+    NSString * interleaveFile = [TIFFTestUtils testFileWithName:TIFF_TEST_FILE_INTERLEAVE];
     TIFFImage * interleaveTiff = [TIFFReader readTiffFromFile:interleaveFile];
     
     [TIFFTestUtils compareTIFFImagesWithImage1:strippedTiff andImage2:interleaveTiff];
@@ -138,10 +138,10 @@
  */
 -(void) testStrippedVsTiledPlanar{
     
-    NSString * strippedFile = [TIFFTestUtils getTestFileWithName:TIFF_TEST_FILE_STRIPPED];
+    NSString * strippedFile = [TIFFTestUtils testFileWithName:TIFF_TEST_FILE_STRIPPED];
     TIFFImage * strippedTiff = [TIFFReader readTiffFromFile:strippedFile];
     
-    NSString * tiledPlanarFile = [TIFFTestUtils getTestFileWithName:TIFF_TEST_FILE_TILED_PLANAR];
+    NSString * tiledPlanarFile = [TIFFTestUtils testFileWithName:TIFF_TEST_FILE_TILED_PLANAR];
     TIFFImage * tiledPlanarTiff = [TIFFReader readTiffFromFile:tiledPlanarFile];
     
     [TIFFTestUtils compareTIFFImagesWithImage1:strippedTiff andImage2:tiledPlanarTiff];
@@ -153,7 +153,7 @@
  */
 -(void) testJPEGHeader{
     
-    NSString * jpegFile = [TIFFTestUtils getTestFileWithName:TIFF_TEST_FILE_JPEG];
+    NSString * jpegFile = [TIFFTestUtils testFileWithName:TIFF_TEST_FILE_JPEG];
     TIFFImage * jpegTiff = [TIFFReader readTiffFromFile:jpegFile];
     
     [TIFFTestUtils assertNotNil:jpegTiff];

@@ -258,7 +258,7 @@
     }
 }
 
-+(NSString *) getTestFileWithName: (NSString *) fileName{
++(NSString *) testFileWithName: (NSString *) fileName{
     return [[[NSBundle bundleForClass:[TIFFTestUtils class]] resourcePath] stringByAppendingPathComponent:fileName];
 }
 

@@ -136,6 +136,6 @@
  *            file name
  * @return file
  */
-+(NSString *) getTestFileWithName: (NSString *) fileName;
++(NSString *) testFileWithName: (NSString *) fileName;
 
 @end

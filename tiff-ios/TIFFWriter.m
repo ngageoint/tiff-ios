@@ -39,7 +39,7 @@
 
 +(NSData *) writeTiffToDataWithWriter: (TIFFByteWriter *) writer andImage: (TIFFImage *) tiffImage{
     [self writeTiffWithWriter:writer andImage:tiffImage];
-    NSData * data = [writer getData];
+    NSData * data = [writer data];
     return data;
 }
 
@@ -238,7 +238,7 @@
     }
     
     // Return the rasters bytes
-    NSData * data = [writer getData];
+    NSData * data = [writer data];
     [writer close];
     
     return data;
@@ -313,7 +313,7 @@
             }
             
             // Get the row bytes and encode if needed
-            NSData * rowData = [rowWriter getData];
+            NSData * rowData = [rowWriter data];
             [rowWriter close];
             if ([encoder rowEncoding]) {
                 rowData = [encoder encodeData:rowData withByteOrder:writer.byteOrder];
@@ -324,7 +324,7 @@
         }
         
         // Get the strip bytes and encode if needed
-        NSData * stripData = [stripWriter getData];
+        NSData * stripData = [stripWriter data];
         [stripWriter close];
         if (![encoder rowEncoding]) {
             stripData = [encoder encodeData:stripData withByteOrder:writer.byteOrder];

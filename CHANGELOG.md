@@ -4,9 +4,10 @@ Adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## 1.1.3 (TBD)
+## 2.0.0 (TBD)
 
-* TBD
+* Model pixel scale and model tiepoint retrieval methods
+* Method renames to drop "get" prefix
 
 ## [1.1.2](https://github.com/ngageoint/tiff-ios/releases/tag/1.1.2) (04-03-2019)
 
