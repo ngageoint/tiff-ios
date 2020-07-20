@@ -4,6 +4,10 @@ Adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## 2.0.1 (TBD)
+
+* TBD
+
 ## [2.0.0](https://github.com/ngageoint/tiff-ios/releases/tag/2.0.0) (07-20-2020)
 
 * Model pixel scale and model tiepoint retrieval methods
