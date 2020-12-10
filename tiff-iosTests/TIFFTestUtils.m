@@ -259,7 +259,12 @@
 }
 
 +(NSString *) testFileWithName: (NSString *) fileName{
+#if SWIFT_PACKAGE
+//    return [[SWIFTPM_MODULE_BUNDLE resourcePath] stringByAppendingPathComponent:fileName]; Bug with dashes in the generated bundle name.
+    return [[[NSBundle bundleWithPath:[[[NSBundle bundleForClass:[TIFFTestUtils class]] resourcePath] stringByAppendingPathComponent:@"tiff-ios_tiff-iosTests.bundle"]] resourcePath] stringByAppendingPathComponent:fileName];
+#else
     return [[[NSBundle bundleForClass:[TIFFTestUtils class]] resourcePath] stringByAppendingPathComponent:fileName];
+#endif
 }
 
 @end

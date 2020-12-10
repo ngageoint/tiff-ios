@@ -303,7 +303,7 @@
 				04B23E9321C2ABD8004080AF /* TIFFUnsupportedCompression.h */,
 				04B23E9421C2ABD8004080AF /* TIFFUnsupportedCompression.m */,
 			);
-			path = compression;
+			name = compression;
 			sourceTree = "<group>";
 		};
 		04B60FAA1E37ABB200E73068 /* io */ = {
@@ -316,7 +316,7 @@
 				04B610081E37AD5600E73068 /* TIFFIOUtils.h */,
 				04B610091E37AD5600E73068 /* TIFFIOUtils.m */,
 			);
-			path = io;
+			name = io;
 			sourceTree = "<group>";
 		};
 		04B60FAB1E37ABBC00E73068 /* util */ = {
@@ -325,7 +325,7 @@
 				04B610101E37AD6E00E73068 /* TIFFConstants.h */,
 				04B610111E37AD6E00E73068 /* TIFFConstants.m */,
 			);
-			path = util;
+			name = util;
 			sourceTree = "<group>";
 		};
 		BF3CA5D617C2909C4DF1D765 /* Frameworks */ = {
