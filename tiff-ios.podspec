@@ -9,8 +9,8 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/ngageoint/tiff-ios.git', :tag => s.version }
   s.requires_arc     = true
 
-  s.platform         = :ios, '8.0'
-  s.ios.deployment_target = '8.0'
+  s.platform         = :ios, '12.0'
+  s.ios.deployment_target = '12.0'
 
   s.source_files = 'tiff-ios/**/*.{h,m}'
 
