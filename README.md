@@ -91,7 +91,7 @@ Open tiff-ios.xcworkspace in Xcode or build from command line:
 
 Run tests from Xcode or from command line:
 
-    xcodebuild test -workspace 'tiff-ios.xcworkspace' -scheme tiff-ios -destination 'platform=iOS Simulator,name=iPhone 6s'
+    xcodebuild test -workspace 'tiff-ios.xcworkspace' -scheme tiff-ios -destination 'platform=iOS Simulator,name=iPhone 12'
 
 ### Include Library ###
 
@@ -99,12 +99,12 @@ Include this repository by specifying it in a Podfile using a supported option.
 
 Pull from [CocoaPods](https://cocoapods.org/pods/tiff-ios):
 
-    pod 'tiff-ios', '~> 2.0.0'
+    pod 'tiff-ios', '~> 3.0.0'
 
 Pull from GitHub:
 
     pod 'tiff-ios', :git => 'https://github.com/ngageoint/tiff-ios.git', :branch => 'master'
-    pod 'tiff-ios', :git => 'https://github.com/ngageoint/tiff-ios.git', :tag => '2.0.0'
+    pod 'tiff-ios', :git => 'https://github.com/ngageoint/tiff-ios.git', :tag => '3.0.0'
 
 Include as local project:
 
