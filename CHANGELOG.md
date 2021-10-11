@@ -4,6 +4,10 @@ Adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## 3.0.2 (TBD)
+
+* TBD
+
 ## [3.0.1](https://github.com/ngageoint/tiff-ios/releases/tag/3.0.1) (10-11-2021)
 
 * FileDirectory setModelPixelScale and setModelTiepoint methods
