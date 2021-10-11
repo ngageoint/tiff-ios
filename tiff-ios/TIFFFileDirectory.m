@@ -339,8 +339,16 @@
     return [self numberListEntryValueWithFieldTag:TIFF_TAG_MODEL_PIXEL_SCALE];
 }
 
+-(void) setModelPixelScale: (NSArray<NSNumber *> *) modelPixelScale{
+    [self setNumberListEntryValue:modelPixelScale withFieldTag:TIFF_TAG_MODEL_PIXEL_SCALE];
+}
+
 -(NSArray<NSNumber *> *) modelTiepoint{
     return [self numberListEntryValueWithFieldTag:TIFF_TAG_MODEL_TIEPOINT];
+}
+
+-(void) setModelTiepoint: (NSArray<NSNumber *> *) modelTiepoint{
+    [self setNumberListEntryValue:modelTiepoint withFieldTag:TIFF_TAG_MODEL_TIEPOINT];
 }
 
 -(NSArray<NSNumber *> *) colorMap{
@@ -822,6 +830,10 @@
 
 -(NSArray<NSNumber *> *) numberListEntryValueWithFieldTag: (enum TIFFFieldTagType) fieldTagType{
     return (NSArray<NSNumber *> *)[self entryValueWithFieldTag:fieldTagType];
+}
+
+-(void) setNumberListEntryValue: (NSArray<NSNumber *> *) value withFieldTag: (enum TIFFFieldTagType) fieldTagType{
+    [self setEntryValue:value withFieldTag:fieldTagType andFieldType:TIFF_FIELD_DOUBLE andTypeCount:(int)value.count];
 }
 
 -(NSArray<NSNumber *> *) longListEntryValueWithFieldTag: (enum TIFFFieldTagType) fieldTagType{

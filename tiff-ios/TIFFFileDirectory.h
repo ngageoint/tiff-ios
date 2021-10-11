@@ -447,11 +447,27 @@
 -(NSArray<NSNumber *> *) modelPixelScale;
 
 /**
+ * Set the model pixel scale
+ *
+ * @param modelPixelScale
+ *            pixel scale
+ */
+-(void) setModelPixelScale: (NSArray<NSNumber *> *) modelPixelScale;
+
+/**
  * Get the model tiepoint
  *
  * @return model tiepoint
  */
 -(NSArray<NSNumber *> *) modelTiepoint;
+
+/**
+ * Set the model tiepoint
+ *
+ * @param modelTiepoint
+ *            model tiepoint
+ */
+-(void) setModelTiepoint: (NSArray<NSNumber *> *) modelTiepoint;
 
 /**
  * Get the color map
@@ -852,9 +868,19 @@
  *
  * @param fieldTagType
  *            field tag type
- * @return long list value
+ * @return number list value
  */
 -(NSArray<NSNumber *> *) numberListEntryValueWithFieldTag: (enum TIFFFieldTagType) fieldTagType;
+
+/**
+ * Set a number list of values for the field tag type
+ *
+ * @param value
+ *           number list
+ * @param fieldTagType
+ *           field tag type
+ */
+-(void) setNumberListEntryValue: (NSArray<NSNumber *> *) value withFieldTag: (enum TIFFFieldTagType) fieldTagType;
 
 /**
  * Get a long list entry value
