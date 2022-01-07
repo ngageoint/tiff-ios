@@ -71,6 +71,11 @@
 		04B6100F1E37AD5600E73068 /* TIFFIOUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B610091E37AD5600E73068 /* TIFFIOUtils.m */; };
 		04B610121E37AD6E00E73068 /* TIFFConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B610101E37AD6E00E73068 /* TIFFConstants.h */; };
 		04B610131E37AD6E00E73068 /* TIFFConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B610111E37AD6E00E73068 /* TIFFConstants.m */; };
+		04D500AB278882EF00592CBA /* lzw_predictor_floating.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04D500A5278882EE00592CBA /* lzw_predictor_floating.tiff */; };
+		04D500AC278882EF00592CBA /* tiledplanarlzw.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04D500A6278882EE00592CBA /* tiledplanarlzw.tiff */; };
+		04D500AD278882EF00592CBA /* lzw_predictor.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04D500A7278882EE00592CBA /* lzw_predictor.tiff */; };
+		04D500B22788892E00592CBA /* TIFFPredictor.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D500B02788892E00592CBA /* TIFFPredictor.h */; };
+		04D500B32788892E00592CBA /* TIFFPredictor.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D500B12788892E00592CBA /* TIFFPredictor.m */; };
 		2070766DA1441D591ED0B917 /* libPods-tiff-iosTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6C74346D60042A2C0D62889 /* libPods-tiff-iosTests.a */; };
 /* End PBXBuildFile section */
 
@@ -158,6 +163,11 @@
 		04B610091E37AD5600E73068 /* TIFFIOUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIFFIOUtils.m; sourceTree = "<group>"; };
 		04B610101E37AD6E00E73068 /* TIFFConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIFFConstants.h; sourceTree = "<group>"; };
 		04B610111E37AD6E00E73068 /* TIFFConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIFFConstants.m; sourceTree = "<group>"; };
+		04D500A5278882EE00592CBA /* lzw_predictor_floating.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = lzw_predictor_floating.tiff; sourceTree = "<group>"; };
+		04D500A6278882EE00592CBA /* tiledplanarlzw.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = tiledplanarlzw.tiff; sourceTree = "<group>"; };
+		04D500A7278882EE00592CBA /* lzw_predictor.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = lzw_predictor.tiff; sourceTree = "<group>"; };
+		04D500B02788892E00592CBA /* TIFFPredictor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TIFFPredictor.h; sourceTree = "<group>"; };
+		04D500B12788892E00592CBA /* TIFFPredictor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TIFFPredictor.m; sourceTree = "<group>"; };
 		73029AF16F858F06EBCEC53C /* Pods-tiff-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tiff-iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-tiff-iosTests/Pods-tiff-iosTests.release.xcconfig"; sourceTree = "<group>"; };
 		C6C74346D60042A2C0D62889 /* libPods-tiff-iosTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tiff-iosTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDCFC787E85937478095557C /* Pods-tiff-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tiff-iosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tiff-iosTests/Pods-tiff-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -275,6 +285,9 @@
 				04B60F941E37A9BB00E73068 /* tiledplanar.tiff */,
 				04B60F951E37A9BB00E73068 /* uint32.tiff */,
 				04B23E9721C2BBE6004080AF /* quad-jpeg.tif */,
+				04D500A5278882EE00592CBA /* lzw_predictor_floating.tiff */,
+				04D500A7278882EE00592CBA /* lzw_predictor.tiff */,
+				04D500A6278882EE00592CBA /* tiledplanarlzw.tiff */,
 			);
 			path = "tiff-iosTests";
 			sourceTree = "<group>";
@@ -298,6 +311,8 @@
 				04B60FF51E37AD1000E73068 /* TIFFLZWCompression.m */,
 				04B60FF61E37AD1000E73068 /* TIFFPackbitsCompression.h */,
 				04B60FF71E37AD1000E73068 /* TIFFPackbitsCompression.m */,
+				04D500B02788892E00592CBA /* TIFFPredictor.h */,
+				04D500B12788892E00592CBA /* TIFFPredictor.m */,
 				04B60FF81E37AD1000E73068 /* TIFFRawCompression.h */,
 				04B60FF91E37AD1000E73068 /* TIFFRawCompression.m */,
 				04B23E9321C2ABD8004080AF /* TIFFUnsupportedCompression.h */,
@@ -370,6 +385,7 @@
 				04B610021E37AD1000E73068 /* TIFFRawCompression.h in Headers */,
 				04B6100E1E37AD5600E73068 /* TIFFIOUtils.h in Headers */,
 				04B610001E37AD1000E73068 /* TIFFPackbitsCompression.h in Headers */,
+				04D500B22788892E00592CBA /* TIFFPredictor.h in Headers */,
 				04B60FCA1E37AC3100E73068 /* TIFFRasters.h in Headers */,
 				04B6100C1E37AD5600E73068 /* TIFFByteWriter.h in Headers */,
 				04B60FCC1E37AC3100E73068 /* TIFFReader.h in Headers */,
@@ -475,8 +491,11 @@
 				04B60FA01E37A9BC00E73068 /* rgb.tiff in Resources */,
 				04B60FA81E37A9BC00E73068 /* uint32.tiff in Resources */,
 				04B60F991E37A9BC00E73068 /* initial.tiff in Resources */,
+				04D500AD278882EF00592CBA /* lzw_predictor.tiff in Resources */,
+				04D500AB278882EF00592CBA /* lzw_predictor_floating.tiff in Resources */,
 				04B60F971E37A9BC00E73068 /* float32.tiff in Resources */,
 				04B60F9B1E37A9BC00E73068 /* interleave.tiff in Resources */,
+				04D500AC278882EF00592CBA /* tiledplanarlzw.tiff in Resources */,
 				04B60F961E37A9BC00E73068 /* deflate.tiff in Resources */,
 				04B60F9A1E37A9BC00E73068 /* int32.tiff in Resources */,
 				04B23E9821C2BBE6004080AF /* quad-jpeg.tif in Resources */,
@@ -523,6 +542,7 @@
 				04B60FBF1E37AC3100E73068 /* TIFFFieldTagTypes.m in Sources */,
 				04B60FCD1E37AC3100E73068 /* TIFFReader.m in Sources */,
 				04B60FC11E37AC3100E73068 /* TIFFFieldTypes.m in Sources */,
+				04D500B32788892E00592CBA /* TIFFPredictor.m in Sources */,
 				04B610131E37AD6E00E73068 /* TIFFConstants.m in Sources */,
 				04B60FC71E37AC3100E73068 /* TIFFImage.m in Sources */,
 				04B60FC91E37AC3100E73068 /* TIFFImageWindow.m in Sources */,

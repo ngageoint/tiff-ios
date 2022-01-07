@@ -631,6 +631,21 @@
 -(NSNumber *) maxSampleFormat;
 
 /**
+ * Get the predictor
+ *
+ * @return predictor
+ */
+-(NSNumber *) predictor;
+
+/**
+ * Set the predictor
+ *
+ * @param predictor
+ *            predictor
+ */
+-(void) setPredictor: (unsigned short) predictor;
+
+/**
  * Get the rasters for writing a TIFF file
  *
  * @return rasters image rasters

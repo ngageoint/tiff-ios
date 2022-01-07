@@ -30,5 +30,6 @@
 #import "TIFFByteWriter.h"
 #import "TIFFIOUtils.h"
 #import "TIFFConstants.h"
+#import "TIFFPredictor.h"
 
 #endif /* tiff_ios_Bridging_Header_h */

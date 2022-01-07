@@ -15,18 +15,20 @@
 #import "TIFFDeflateCompression.h"
 #import "TIFFPackbitsCompression.h"
 #import "TIFFUnsupportedCompression.h"
+#import "TIFFPredictor.h"
 
 @interface TIFFFileDirectory()
 
-@property (nonatomic, strong) NSMutableOrderedSet<TIFFFileDirectoryEntry *> * entries;
-@property (nonatomic, strong) NSMutableDictionary<NSNumber *, TIFFFileDirectoryEntry *> * fieldTagTypeMapping;
-@property (nonatomic, strong) TIFFByteReader * reader;
+@property (nonatomic, strong) NSMutableOrderedSet<TIFFFileDirectoryEntry *> *entries;
+@property (nonatomic, strong) NSMutableDictionary<NSNumber *, TIFFFileDirectoryEntry *> *fieldTagTypeMapping;
+@property (nonatomic, strong) TIFFByteReader *reader;
 @property (nonatomic) BOOL tiled;
 @property (nonatomic) int planarConfig;
-@property (nonatomic, strong) NSObject<TIFFCompressionDecoder> * decoder;
-@property (nonatomic, strong) NSMutableDictionary<NSNumber *, NSData *> * cache;
+@property (nonatomic, strong) NSNumber *predict;
+@property (nonatomic, strong) NSObject<TIFFCompressionDecoder> *decoder;
+@property (nonatomic, strong) NSMutableDictionary<NSNumber *, NSData *> *cache;
 @property (nonatomic) int lastBlockIndex;
-@property (nonatomic, strong) NSData * lastBlock;
+@property (nonatomic, strong) NSData *lastBlock;
 
 @end
 
@@ -89,6 +91,9 @@
         }else{
             self.decoder = [[TIFFUnsupportedCompression alloc] initWithMessage:[NSString stringWithFormat:@"Unknown compression method identifier: %@", compression]];
         }
+        
+        // Determine the differencing predictor
+        self.predict = [self predictor];
     }
     return self;
 }
@@ -435,6 +440,14 @@
     return [self maxShortEntryValueWithFieldTag:TIFF_TAG_SAMPLE_FORMAT];
 }
 
+-(NSNumber *) predictor{
+    return [self shortEntryValueWithFieldTag:TIFF_TAG_PREDICTOR];
+}
+
+-(void) setPredictor: (unsigned short) predictor{
+    [self setUnsignedShortEntryValue:predictor withFieldTag:TIFF_TAG_PREDICTOR];
+}
+
 -(TIFFRasters *) readRasters{
     TIFFImageWindow * window = [[TIFFImageWindow alloc] initWithFileDirectory:self];
     return [self readRastersWithWindow:window];
@@ -726,6 +739,10 @@
         [self.reader setNextByte:offset];
         NSData * bytes = [self.reader readBytesWithCount:byteCount];
         tileOrStrip = [self.decoder decodeData:bytes withByteOrder:self.reader.byteOrder];
+        
+        if (_predict != nil) {
+            tileOrStrip = [TIFFPredictor decodeData:tileOrStrip withPredictor:[_predict intValue] andWidth:tileWidth andHeight:tileHeight andBitsPerSample:[self bitsPerSample] andPlanarConfiguration:self.planarConfig];
+        }
         
         // Cache the data
         if (self.cache != nil) {
