@@ -13,9 +13,9 @@
 
 -(NSData *) decodeData: (NSData *) data withByteOrder: (CFByteOrder) byteOrder{
     
-    TIFFByteReader * reader = [[TIFFByteReader alloc] initWithData:data andByteOrder:byteOrder];
+    TIFFByteReader *reader = [[TIFFByteReader alloc] initWithData:data andByteOrder:byteOrder];
     
-    NSOutputStream * decodedStream = [NSOutputStream outputStreamToMemory];
+    NSOutputStream *decodedStream = [NSOutputStream outputStreamToMemory];
     [decodedStream open];
     
     while ([reader hasByte]) {

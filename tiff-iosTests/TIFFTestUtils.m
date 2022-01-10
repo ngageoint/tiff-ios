@@ -99,18 +99,18 @@
     [self assertNotNil:tiffImage2];
     [self assertEqualIntWithValue:(int)[tiffImage1 fileDirectories].count andValue2:(int)[tiffImage2 fileDirectories].count];
     for (int i = 0; i < [tiffImage1 fileDirectories].count; i++) {
-        TIFFFileDirectory * fileDirectory1 = [tiffImage1 fileDirectoryAtIndex:i];
-        TIFFFileDirectory * fileDirectory2 = [tiffImage2 fileDirectoryAtIndex:i];
+        TIFFFileDirectory *fileDirectory1 = [tiffImage1 fileDirectoryAtIndex:i];
+        TIFFFileDirectory *fileDirectory2 = [tiffImage2 fileDirectoryAtIndex:i];
         
-        TIFFRasters * sampleRasters1 = [fileDirectory1 readRasters];
+        TIFFRasters *sampleRasters1 = [fileDirectory1 readRasters];
         [self compareFileDirectory:fileDirectory1 andRastersMetadata:sampleRasters1];
-        TIFFRasters * sampleRasters2 = [fileDirectory2 readRasters];
+        TIFFRasters *sampleRasters2 = [fileDirectory2 readRasters];
         [self compareFileDirectory:fileDirectory2 andRastersMetadata:sampleRasters2];
         [self compareRastersSampleValuesWithRasters1:sampleRasters1 andRasters2:sampleRasters2 andExactType:exactType andSameBitsPerSample:sameBitsPerSample];
         
-        TIFFRasters * interleaveRasters1 = [fileDirectory1 readInterleavedRasters];
+        TIFFRasters *interleaveRasters1 = [fileDirectory1 readInterleavedRasters];
         [self compareFileDirectory:fileDirectory1 andRastersMetadata:interleaveRasters1];
-        TIFFRasters * interleaveRasters2 = [fileDirectory2 readInterleavedRasters];
+        TIFFRasters *interleaveRasters2 = [fileDirectory2 readInterleavedRasters];
         [self compareFileDirectory:fileDirectory2 andRastersMetadata:interleaveRasters2];
         [self compareRastersInterleaveValuesWithRasters1:interleaveRasters1 andRasters2:interleaveRasters2 andExactType:exactType andSameBitsPerSample:sameBitsPerSample];
         
@@ -185,13 +185,13 @@
     for (int x = 0; x < [rasters1 width]; x++) {
         for (int y = 0; y < [rasters1 height]; y++) {
             
-            NSArray<NSNumber *> * pixel1 = [rasters1 pixelAtX:x andY:y];
-            NSArray<NSNumber *> * pixel2 = [rasters2 pixelAtX:x andY:y];
+            NSArray<NSNumber *> *pixel1 = [rasters1 pixelAtX:x andY:y];
+            NSArray<NSNumber *> *pixel2 = [rasters2 pixelAtX:x andY:y];
             
-            TIFFRasters * rasters3 = nil;
-            TIFFRasters * rasters4 = nil;
+            TIFFRasters *rasters3 = nil;
+            TIFFRasters *rasters4 = nil;
             if ((x == 0 && y == 0) || (x == [rasters1 width] - 1 && y == [rasters1 height] - 1) || (x == randomX && y == randomY)) {
-                TIFFImageWindow * window = [[TIFFImageWindow alloc] initWithX:x andY:y];
+                TIFFImageWindow *window = [[TIFFImageWindow alloc] initWithX:x andY:y];
                 rasters3 = [fileDirectory1 readRastersWithWindow:window];
                 [self assertEqualIntWithValue:1 andValue2:[rasters3 numPixels]];
                 rasters4 = [fileDirectory2 readInterleavedRastersWithWindow:window];
@@ -199,15 +199,15 @@
             }
             
             for (int sample = 0; sample < [rasters1 samplesPerPixel]; sample++) {
-                NSNumber * sample1 = [rasters1 pixelSampleAtSample:sample andX:x andY:y];
-                NSNumber * sample2 = [rasters2 pixelSampleAtSample:sample andX:x andY:y];
+                NSNumber *sample1 = [rasters1 pixelSampleAtSample:sample andX:x andY:y];
+                NSNumber *sample2 = [rasters2 pixelSampleAtSample:sample andX:x andY:y];
                 [self compareNumbersWithNumber1:sample1 andNumber2:sample2 andExactType:exactType];
                 [self compareNumbersWithNumber1:[pixel1 objectAtIndex:sample] andNumber2:sample1 andExactType:exactType];
                 [self compareNumbersWithNumber1:[pixel1 objectAtIndex:sample] andNumber2:[pixel2 objectAtIndex:sample] andExactType:exactType];
                 
                 if (rasters3 != nil) {
-                    NSNumber * sample3 = [rasters3 pixelSampleAtSample:sample andX:0 andY:0];
-                    NSNumber * sample4 = [rasters4 pixelSampleAtSample:sample andX:0 andY:0];
+                    NSNumber *sample3 = [rasters3 pixelSampleAtSample:sample andX:0 andY:0];
+                    NSNumber *sample4 = [rasters4 pixelSampleAtSample:sample andX:0 andY:0];
                     [self compareNumbersWithNumber1:[pixel1 objectAtIndex:sample] andNumber2:sample3 andExactType:exactType];
                     [self compareNumbersWithNumber1:[pixel1 objectAtIndex:sample] andNumber2:sample4 andExactType:exactType];
                 }

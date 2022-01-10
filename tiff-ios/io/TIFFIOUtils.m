@@ -12,8 +12,8 @@
 
 +(void) copyFile: (NSString *) copyFrom toFile: (NSString *) copyTo{
     
-    NSInputStream * from = [NSInputStream inputStreamWithFileAtPath:copyFrom];
-    NSOutputStream * to = [NSOutputStream outputStreamToFileAtPath:copyTo append:false];
+    NSInputStream *from = [NSInputStream inputStreamWithFileAtPath:copyFrom];
+    NSOutputStream *to = [NSOutputStream outputStreamToFileAtPath:copyTo append:false];
     
     [from open];
     [to open];
@@ -25,7 +25,7 @@
 
 +(void) copyInputStream: (NSInputStream *) copyFrom toFile: (NSString *) copyTo{
     
-    NSOutputStream * outputStream = [NSOutputStream outputStreamToFileAtPath:copyTo append:false];
+    NSOutputStream *outputStream = [NSOutputStream outputStreamToFileAtPath:copyTo append:false];
     [outputStream open];
     
     [self copyInputStream:copyFrom toOutputStream:outputStream];
@@ -35,7 +35,7 @@
 
 +(NSData *) fileData: (NSString *) file{
     
-    NSInputStream * inputStream = [NSInputStream inputStreamWithFileAtPath:file];
+    NSInputStream *inputStream = [NSInputStream inputStreamWithFileAtPath:file];
     [inputStream open];
     
     return [self streamData:inputStream];
@@ -43,7 +43,7 @@
 
 +(NSData *) streamData: (NSInputStream *) stream{
     
-    NSOutputStream * outputStream = [NSOutputStream outputStreamToMemory];
+    NSOutputStream *outputStream = [NSOutputStream outputStreamToMemory];
     [outputStream open];
     
     [self copyInputStream:stream toOutputStream:outputStream];

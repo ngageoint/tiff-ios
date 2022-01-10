@@ -18,35 +18,35 @@
 @implementation TIFFWriter
 
 +(void) writeTiffWithFile: (NSString *) file andImage: (TIFFImage *) tiffImage{
-    TIFFByteWriter * writer = [[TIFFByteWriter alloc] init];
+    TIFFByteWriter *writer = [[TIFFByteWriter alloc] init];
     [self writeTiffWithFile:file andWriter:writer andImage:tiffImage];
     [writer close];
 }
 
 +(void) writeTiffWithFile: (NSString *) file andWriter: (TIFFByteWriter *) writer andImage: (TIFFImage *) tiffImage{
-    NSData * data = [self writeTiffToDataWithWriter:writer andImage:tiffImage];
-    NSInputStream * inputStream = [NSInputStream inputStreamWithData:data];
+    NSData *data = [self writeTiffToDataWithWriter:writer andImage:tiffImage];
+    NSInputStream *inputStream = [NSInputStream inputStreamWithData:data];
     [inputStream open];
     [TIFFIOUtils copyInputStream:inputStream toFile:file];
 }
 
 +(NSData *) writeTiffToDataWithImage: (TIFFImage *) tiffImage{
-    TIFFByteWriter * writer = [[TIFFByteWriter alloc] init];
-    NSData * data = [self writeTiffToDataWithWriter:writer andImage:tiffImage];
+    TIFFByteWriter *writer = [[TIFFByteWriter alloc] init];
+    NSData *data = [self writeTiffToDataWithWriter:writer andImage:tiffImage];
     [writer close];
     return data;
 }
 
 +(NSData *) writeTiffToDataWithWriter: (TIFFByteWriter *) writer andImage: (TIFFImage *) tiffImage{
     [self writeTiffWithWriter:writer andImage:tiffImage];
-    NSData * data = [writer data];
+    NSData *data = [writer data];
     return data;
 }
 
 +(void) writeTiffWithWriter: (TIFFByteWriter *) writer andImage: (TIFFImage *) tiffImage{
 
     // Write the byte order (bytes 0-1)
-    NSString * byteOrder = writer.byteOrder == CFByteOrderBigEndian ? TIFF_BYTE_ORDER_BIG_ENDIAN : TIFF_BYTE_ORDER_LITTLE_ENDIAN;
+    NSString *byteOrder = writer.byteOrder == CFByteOrderBigEndian ? TIFF_BYTE_ORDER_BIG_ENDIAN : TIFF_BYTE_ORDER_LITTLE_ENDIAN;
     [writer writeString:byteOrder];
     
     // Write the TIFF file identifier (bytes 2-3)
@@ -72,7 +72,7 @@
 
     // Write each file directory
     for (int i = 0; i < [tiffImage fileDirectories].count; i++) {
-        TIFFFileDirectory * fileDirectory = [tiffImage fileDirectoryAtIndex:i];
+        TIFFFileDirectory *fileDirectory = [tiffImage fileDirectoryAtIndex:i];
         
         // Populate strip entries with placeholder values so the sizes come
         // out correctly
@@ -86,12 +86,12 @@
         // Write the number of directory entries
         [writer writeUnsignedShort:[fileDirectory numEntries]];
         
-        NSMutableArray<TIFFFileDirectoryEntry *> * entryValues = [[NSMutableArray alloc] init];
+        NSMutableArray<TIFFFileDirectoryEntry *> *entryValues = [[NSMutableArray alloc] init];
         
         // Byte to write the next values
         int nextByte = afterDirectory;
         
-        NSMutableArray<NSNumber *> * valueBytesCheck = [[NSMutableArray alloc] init];
+        NSMutableArray<NSNumber *> *valueBytesCheck = [[NSMutableArray alloc] init];
         
         // Write the raster bytes to temporary storage
         if ([fileDirectory isTiled]){
@@ -99,10 +99,10 @@
         }
         
         // Create the raster bytes, written to the stream later
-        NSData * rastersBytes = [self writeRastersWithByteOrder:writer.byteOrder andFileDirectory:fileDirectory andOffset:afterValues];
+        NSData *rastersBytes = [self writeRastersWithByteOrder:writer.byteOrder andFileDirectory:fileDirectory andOffset:afterValues];
         
         // Write each entry
-        for (TIFFFileDirectoryEntry * entry in [fileDirectory entries]) {
+        for (TIFFFileDirectoryEntry *entry in [fileDirectory entries]) {
             [writer writeUnsignedShort:[TIFFFieldTagTypes tagId:[entry fieldTag]]];
             [writer writeUnsignedShort:[TIFFFieldTypes value:[entry fieldType]]];
             [writer writeUnsignedInt:[entry typeCount]];
@@ -134,7 +134,7 @@
         
         // Write the external entry values
         for (int entryIndex = 0; entryIndex < entryValues.count; entryIndex++) {
-            TIFFFileDirectoryEntry * entry = [entryValues objectAtIndex:entryIndex];
+            TIFFFileDirectoryEntry *entry = [entryValues objectAtIndex:entryIndex];
             int entryValuesByte = [[valueBytesCheck objectAtIndex:entryIndex] intValue];
             if (entryValuesByte != [writer size]) {
                 [NSException raise:@"Byte Mismatch" format:@"Entry values byte does not match the write location. Entry Values Byte: %d, Current Byte: %d", entryValuesByte, [writer size]];
@@ -161,7 +161,7 @@
  */
 +(void) populateRasterEntriesWithFileDirectory: (TIFFFileDirectory *) fileDirectory{
 
-    TIFFRasters * rasters = [fileDirectory writeRasters];
+    TIFFRasters *rasters = [fileDirectory writeRasters];
     if (rasters == nil) {
         [NSException raise:@"Rasters Required" format:@"File Directory Writer Rasters is required to create a TIFF"];
     }
@@ -213,22 +213,22 @@
  */
 +(NSData *) writeRastersWithByteOrder: (CFByteOrder) byteOrder andFileDirectory: (TIFFFileDirectory *) fileDirectory andOffset: (int) offset{
     
-    TIFFRasters * rasters = [fileDirectory writeRasters];
+    TIFFRasters *rasters = [fileDirectory writeRasters];
     if (rasters == nil) {
         [NSException raise:@"Writer Rasters Required" format:@"File Directory Writer Rasters is required to create a TIFF"];
     }
     
     // Get the sample field types
-    NSMutableArray<NSNumber *> * sampleFieldTypes = [[NSMutableArray alloc] initWithCapacity:[rasters samplesPerPixel]];
+    NSMutableArray<NSNumber *> *sampleFieldTypes = [[NSMutableArray alloc] initWithCapacity:[rasters samplesPerPixel]];
     for (int sample = 0; sample < [rasters samplesPerPixel]; sample++) {
         [sampleFieldTypes addObject:[NSNumber numberWithInt:[fileDirectory fieldTypeForSample:sample]]];
     }
     
     // Get the compression encoder
-    NSObject<TIFFCompressionEncoder> * encoder = [self encoderWithFileDirectory:fileDirectory];
+    NSObject<TIFFCompressionEncoder> *encoder = [self encoderWithFileDirectory:fileDirectory];
     
     // Byte writer to write the raster
-    TIFFByteWriter * writer = [[TIFFByteWriter alloc] initWithByteOrder:byteOrder];
+    TIFFByteWriter *writer = [[TIFFByteWriter alloc] initWithByteOrder:byteOrder];
     
     // Write the rasters
     if (![fileDirectory isTiled]) {
@@ -238,7 +238,7 @@
     }
     
     // Return the rasters bytes
-    NSData * data = [writer data];
+    NSData *data = [writer data];
     [writer close];
     
     return data;
@@ -260,7 +260,7 @@
  */
 +(void) writeStripRastersWithWriter: (TIFFByteWriter *) writer andFileDirectory: (TIFFFileDirectory *) fileDirectory andOffset: (int) offset andFieldTypes: (NSArray<NSNumber *> *) sampleFieldTypes andEncoder: (NSObject<TIFFCompressionEncoder> *) encoder{
     
-    TIFFRasters * rasters = [fileDirectory writeRasters];
+    TIFFRasters *rasters = [fileDirectory writeRasters];
     
     // Get the row and strip counts
     int rowsPerStrip = [[fileDirectory rowsPerStrip] intValue];
@@ -273,14 +273,14 @@
     }
     
     // Build the strip offsets and byte counts
-    NSMutableArray<NSNumber *> * stripOffsets = [[NSMutableArray alloc] init];
-    NSMutableArray<NSNumber *> * stripByteCounts = [[NSMutableArray alloc] init];
+    NSMutableArray<NSNumber *> *stripOffsets = [[NSMutableArray alloc] init];
+    NSMutableArray<NSNumber *> *stripByteCounts = [[NSMutableArray alloc] init];
     
     // Write each strip
     for (int strip = 0; strip < strips; strip++) {
         
         int startingY;
-        NSNumber * sample = nil;
+        NSNumber *sample = nil;
         if ([[fileDirectory planarConfiguration] intValue] == TIFF_PLANAR_CONFIGURATION_PLANAR) {
             sample = [NSNumber numberWithInt:strip / stripsPerSample];
             startingY = (strip % stripsPerSample) * rowsPerStrip;
@@ -289,23 +289,23 @@
         }
         
         // Write the strip of bytes
-        TIFFByteWriter * stripWriter = [[TIFFByteWriter alloc] initWithByteOrder:writer.byteOrder];
+        TIFFByteWriter *stripWriter = [[TIFFByteWriter alloc] initWithByteOrder:writer.byteOrder];
         
         int endingY = MIN(startingY + rowsPerStrip, maxY);
         for (int y = startingY; y < endingY; y++) {
             
-            TIFFByteWriter * rowWriter = [[TIFFByteWriter alloc] initWithByteOrder:writer.byteOrder];
+            TIFFByteWriter *rowWriter = [[TIFFByteWriter alloc] initWithByteOrder:writer.byteOrder];
             
             for (int x = 0; x < [[fileDirectory imageWidth] intValue]; x++) {
                 
                 if (sample != nil) {
-                    NSNumber * value = [rasters pixelSampleAtSample:[sample intValue] andX:x andY:y];
+                    NSNumber *value = [rasters pixelSampleAtSample:[sample intValue] andX:x andY:y];
                     enum TIFFFieldType fieldType = [[sampleFieldTypes objectAtIndex:[sample intValue]] intValue];
                     [self writeValueWithWriter:rowWriter andFieldType:fieldType andValue:value];
                 } else {
-                    NSArray<NSNumber *> * values = [rasters pixelAtX:x andY:y];
+                    NSArray<NSNumber *> *values = [rasters pixelAtX:x andY:y];
                     for (int sampleIndex = 0; sampleIndex < values.count; sampleIndex++) {
-                        NSNumber * value = [values objectAtIndex:sampleIndex];
+                        NSNumber *value = [values objectAtIndex:sampleIndex];
                         enum TIFFFieldType fieldType = [[sampleFieldTypes objectAtIndex:sampleIndex] intValue];
                         [self writeValueWithWriter:rowWriter andFieldType:fieldType andValue:value];
                     }
@@ -313,7 +313,7 @@
             }
             
             // Get the row bytes and encode if needed
-            NSData * rowData = [rowWriter data];
+            NSData *rowData = [rowWriter data];
             [rowWriter close];
             if ([encoder rowEncoding]) {
                 rowData = [encoder encodeData:rowData withByteOrder:writer.byteOrder];
@@ -324,7 +324,7 @@
         }
         
         // Get the strip bytes and encode if needed
-        NSData * stripData = [stripWriter data];
+        NSData *stripData = [stripWriter data];
         [stripWriter close];
         if (![encoder rowEncoding]) {
             stripData = [encoder encodeData:stripData withByteOrder:writer.byteOrder];
@@ -358,10 +358,10 @@
  */
 +(NSObject<TIFFCompressionEncoder> *) encoderWithFileDirectory: (TIFFFileDirectory *) fileDirectory{
     
-    NSObject<TIFFCompressionEncoder> * encoder = nil;
+    NSObject<TIFFCompressionEncoder> *encoder = nil;
     
     // Determine the encoder based upon the compression
-    NSNumber * compression = [fileDirectory compression];
+    NSNumber *compression = [fileDirectory compression];
     if (compression == nil) {
         compression = [NSNumber numberWithInteger:TIFF_COMPRESSION_NO];
     }
@@ -456,7 +456,7 @@
  */
 +(int) writeValuesWithWriter: (TIFFByteWriter *) writer andFileDirectoryEntry: (TIFFFileDirectoryEntry *) entry{
     
-    NSArray * valuesList = nil;
+    NSArray *valuesList = nil;
     if([entry typeCount] == 1
        && ![TIFFFieldTagTypes isArray:[entry fieldTag]]
        && !([entry fieldType] == TIFF_FIELD_RATIONAL || [entry fieldType] == TIFF_FIELD_SRATIONAL)){
@@ -467,7 +467,7 @@
     
     int bytesWritten = 0;
     
-    for (NSObject * value in valuesList) {
+    for (NSObject *value in valuesList) {
         
         switch ([entry fieldType]) {
             case TIFF_FIELD_ASCII:

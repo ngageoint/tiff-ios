@@ -26,7 +26,7 @@
 /**
  * Rasters to write to the TIFF file
  */
-@property (nonatomic, strong) TIFFRasters * writeRasters;
+@property (nonatomic, strong) TIFFRasters *writeRasters;
 
 /**
  * Initialize, for reading TIFF files

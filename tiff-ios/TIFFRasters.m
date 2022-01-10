@@ -61,7 +61,7 @@
         self.sampleValues = sampleValues;
         self.interleaveValues = interleaveValues;
         [self validateValues];
-        for (NSNumber * bits in bitsPerSample) {
+        for (NSNumber *bits in bitsPerSample) {
             if (([bits intValue] % 8) != 0) {
                 [NSException raise:@"Not Supported" format:@"Sample bit-width of %d is not supported", [bits intValue]];
             }
@@ -148,9 +148,9 @@
  * @return value
  */
 -(NSNumber *) sampleValueAtSample: (int) sample andIndex: (int) index{
-    NSArray * singleSampleValues = [self.sampleValues objectAtIndex:sample];
-    NSObject * objectValue = [singleSampleValues objectAtIndex:index];
-    NSNumber * value = [self numberValue: objectValue];
+    NSArray *singleSampleValues = [self.sampleValues objectAtIndex:sample];
+    NSObject *objectValue = [singleSampleValues objectAtIndex:index];
+    NSNumber *value = [self numberValue: objectValue];
     return value;
 }
 
@@ -162,8 +162,8 @@
  * @return value
  */
 -(NSNumber *) interleaveValueAtIndex: (int) index{
-    NSObject * objectValue = [self.interleaveValues objectAtIndex:index];
-    NSNumber * value = [self numberValue: objectValue];
+    NSObject *objectValue = [self.interleaveValues objectAtIndex:index];
+    NSNumber *value = [self numberValue: objectValue];
     return value;
 }
 
@@ -175,7 +175,7 @@
  * @return value
  */
 -(NSNumber *) numberValue: (NSObject *) objectValue{
-    NSNumber * value = nil;
+    NSNumber *value = nil;
     if(objectValue != nil && ![objectValue isEqual:[NSNull null]]){
         value = (NSNumber *) objectValue;
     }
@@ -187,7 +187,7 @@
     [self validateCoordinatesAtX:x andY:y];
     
     // Pixel with each sample value
-    NSMutableArray * pixel = [[NSMutableArray alloc] initWithCapacity:self.samplesPerPixel];
+    NSMutableArray *pixel = [[NSMutableArray alloc] initWithCapacity:self.samplesPerPixel];
     
     // Get the pixel values from each sample
     if (self.sampleValues != nil) {
@@ -214,7 +214,7 @@
     if (self.sampleValues != nil) {
         int sampleIndex = [self sampleIndexAtX:x andY:y];
         for (int i = 0; i < self.samplesPerPixel; i++) {
-            NSMutableArray * singleSampleValues = [_sampleValues objectAtIndex:i];
+            NSMutableArray *singleSampleValues = [_sampleValues objectAtIndex:i];
             [singleSampleValues replaceObjectAtIndex:sampleIndex withObject:[values objectAtIndex: i]];
         }
     } else {
@@ -231,7 +231,7 @@
     [self validateSample:sample];
     
     // Pixel sample value
-    NSNumber * pixelSample = nil;
+    NSNumber *pixelSample = nil;
     
     // Get the pixel sample
     if (self.sampleValues != nil) {
@@ -253,7 +253,7 @@
     // Set the pixel sample
     if (self.sampleValues != nil) {
         int sampleIndex = [self sampleIndexAtX:x andY:y];
-        NSMutableArray * singleSampleValues = [_sampleValues objectAtIndex:sample];
+        NSMutableArray *singleSampleValues = [_sampleValues objectAtIndex:sample];
         [singleSampleValues replaceObjectAtIndex:sampleIndex withObject:value];
     }
     if (self.interleaveValues != nil) {
@@ -326,17 +326,17 @@
 
 -(int) calculateRowsPerStripWithPlanarConfiguration: (int) planarConfiguration andMaxBytesPerStrip: (int) maxBytesPerStrip{
     
-    NSNumber * rowsPerStrip = nil;
+    NSNumber *rowsPerStrip = nil;
     
     if (planarConfiguration == TIFF_PLANAR_CONFIGURATION_CHUNKY) {
         int bitsPerPixel = 0;
-        for (NSNumber * sampleBits in self.bitsPerSample) {
+        for (NSNumber *sampleBits in self.bitsPerSample) {
             bitsPerPixel += [sampleBits intValue];
         }
         rowsPerStrip = [NSNumber numberWithInt:[self rowsPerStripWithBitsPerPixel:bitsPerPixel andMaxBytesPerStrip:maxBytesPerStrip]];
     } else {
         
-        for (NSNumber * sampleBits in self.bitsPerSample) {
+        for (NSNumber *sampleBits in self.bitsPerSample) {
             int rowsPerStripForSample = [self rowsPerStripWithBitsPerPixel:[sampleBits intValue] andMaxBytesPerStrip:maxBytesPerStrip];
             if (rowsPerStrip == nil || rowsPerStripForSample < [rowsPerStrip intValue]) {
                 rowsPerStrip = [NSNumber numberWithInt:rowsPerStripForSample];
@@ -352,9 +352,9 @@
 }
 
 +(NSMutableArray<NSMutableArray *> *) createEmptySampleValuesWithSamplesPerPixel: (int) samplesPerPixel andPixels: (int) pixels{
-    NSMutableArray<NSMutableArray *> * sampleValues = [[NSMutableArray alloc] initWithCapacity:samplesPerPixel];
+    NSMutableArray<NSMutableArray *> *sampleValues = [[NSMutableArray alloc] initWithCapacity:samplesPerPixel];
     for(int i = 0; i < samplesPerPixel; i++){
-        NSMutableArray * samplePixels = [[NSMutableArray alloc] initWithCapacity:pixels];
+        NSMutableArray *samplePixels = [[NSMutableArray alloc] initWithCapacity:pixels];
         for(int j = 0; j < pixels; j++){
             [samplePixels addObject:[NSNull null]];
         }
@@ -369,7 +369,7 @@
 
 +(NSMutableArray *) createEmptyInterleaveValuesWithSamplesPerPixel: (int) samplesPerPixel andPixels: (int) pixels{
     int count = samplesPerPixel * pixels;
-    NSMutableArray * interleaveValues = [[NSMutableArray alloc] initWithCapacity:count];
+    NSMutableArray *interleaveValues = [[NSMutableArray alloc] initWithCapacity:count];
     for(int i = 0; i < count; i++){
         [interleaveValues addObject:[NSNull null]];
     }

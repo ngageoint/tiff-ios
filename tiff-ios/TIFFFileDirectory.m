@@ -44,8 +44,8 @@
         // Set the entries and the field tag type mapping
         self.entries = entries;
         _fieldTagTypeMapping = [[NSMutableDictionary alloc] init];
-        for(TIFFFileDirectoryEntry * entry in entries){
-            NSNumber * fieldTagKey = [NSNumber numberWithInt:[TIFFFieldTagTypes tagId:[entry fieldTag]]];
+        for(TIFFFileDirectoryEntry *entry in entries){
+            NSNumber *fieldTagKey = [NSNumber numberWithInt:[TIFFFieldTagTypes tagId:[entry fieldTag]]];
             [_fieldTagTypeMapping setObject:entry forKey:fieldTagKey];
         }
         
@@ -58,7 +58,7 @@
         self.tiled = [self rowsPerStrip] == nil;
         
         // Determine and validate the planar configuration
-        NSNumber * pc = [self planarConfiguration];
+        NSNumber *pc = [self planarConfiguration];
         self.planarConfig = pc != nil ? [pc intValue] : (int)TIFF_PLANAR_CONFIGURATION_CHUNKY;
         if (self.planarConfig != TIFF_PLANAR_CONFIGURATION_CHUNKY
             && self.planarConfig != (int)TIFF_PLANAR_CONFIGURATION_PLANAR) {
@@ -66,7 +66,7 @@
         }
         
         // Determine the decoder based upon the compression
-        NSNumber * compression = [self compression];
+        NSNumber *compression = [self compression];
         if (compression == nil) {
             compression = [NSNumber numberWithInteger:TIFF_COMPRESSION_NO];
         }
@@ -111,8 +111,8 @@
     if(self){
         self.entries = entries;
         _fieldTagTypeMapping = [[NSMutableDictionary alloc] init];
-        for(TIFFFileDirectoryEntry * entry in entries){
-            NSNumber * fieldTagKey = [NSNumber numberWithInt:[TIFFFieldTagTypes tagId:[entry fieldTag]]];
+        for(TIFFFileDirectoryEntry *entry in entries){
+            NSNumber *fieldTagKey = [NSNumber numberWithInt:[TIFFFieldTagTypes tagId:[entry fieldTag]]];
             [_fieldTagTypeMapping setObject:entry forKey:fieldTagKey];
         }
         self.writeRasters = rasters;
@@ -121,7 +121,7 @@
 }
 
 -(void) addEntry: (TIFFFileDirectoryEntry *) entry{
-    NSUInteger insertLocation = [_entries indexOfObject:entry inSortedRange:NSMakeRange(0, _entries.count) options:NSBinarySearchingInsertionIndex usingComparator:^NSComparisonResult(TIFFFileDirectoryEntry * obj1, TIFFFileDirectoryEntry * obj2){
+    NSUInteger insertLocation = [_entries indexOfObject:entry inSortedRange:NSMakeRange(0, _entries.count) options:NSBinarySearchingInsertionIndex usingComparator:^NSComparisonResult(TIFFFileDirectoryEntry *obj1, TIFFFileDirectoryEntry *obj2){
         NSComparisonResult result = NSOrderedSame;
         int id = [TIFFFieldTagTypes tagId:[obj1 fieldTag]];
         int otherId = [TIFFFieldTagTypes tagId:[obj2 fieldTag]];
@@ -132,7 +132,7 @@
         }
         return result;
     }];
-    NSNumber * fieldTagKey = [NSNumber numberWithInt:[TIFFFieldTagTypes tagId:[entry fieldTag]]];
+    NSNumber *fieldTagKey = [NSNumber numberWithInt:[TIFFFieldTagTypes tagId:[entry fieldTag]]];
     if([_fieldTagTypeMapping objectForKey:fieldTagKey] != nil){
         [_entries replaceObjectAtIndex:insertLocation withObject:entry];
     }else{
@@ -449,12 +449,12 @@
 }
 
 -(TIFFRasters *) readRasters{
-    TIFFImageWindow * window = [[TIFFImageWindow alloc] initWithFileDirectory:self];
+    TIFFImageWindow *window = [[TIFFImageWindow alloc] initWithFileDirectory:self];
     return [self readRastersWithWindow:window];
 }
 
 -(TIFFRasters *) readInterleavedRasters{
-    TIFFImageWindow * window = [[TIFFImageWindow alloc] initWithFileDirectory:self];
+    TIFFImageWindow *window = [[TIFFImageWindow alloc] initWithFileDirectory:self];
     return [self readInterleavedRastersWithWindow:window];
 }
 
@@ -467,12 +467,12 @@
 }
 
 -(TIFFRasters *) readRastersWithSamples: (NSArray<NSNumber *> *) samples{
-    TIFFImageWindow * window = [[TIFFImageWindow alloc] initWithFileDirectory:self];
+    TIFFImageWindow *window = [[TIFFImageWindow alloc] initWithFileDirectory:self];
     return [self readRastersWithWindow:window andSamples:samples];
 }
 
 -(TIFFRasters *) readInterleavedRastersWithSamples: (NSArray<NSNumber *> *) samples{
-    TIFFImageWindow * window = [[TIFFImageWindow alloc] initWithFileDirectory:self];
+    TIFFImageWindow *window = [[TIFFImageWindow alloc] initWithFileDirectory:self];
     return [self readInterleavedRastersWithWindow:window andSamples:samples];
 }
 
@@ -485,7 +485,7 @@
 }
 
 -(TIFFRasters *) readRastersWithSampleValues: (BOOL) sampleValues andInterleaveValues: (BOOL) interleaveValues{
-    TIFFImageWindow * window = [[TIFFImageWindow alloc] initWithFileDirectory:self];
+    TIFFImageWindow *window = [[TIFFImageWindow alloc] initWithFileDirectory:self];
     return [self readRastersWithWindow:window andSampleValues:sampleValues andInterleaveValues:interleaveValues];
 }
 
@@ -494,7 +494,7 @@
 }
 
 -(TIFFRasters *) readRastersWithSamples: (NSArray<NSNumber *> *) samples andSampleValues: (BOOL) sampleValues andInterleaveValues: (BOOL) interleaveValues{
-    TIFFImageWindow * window = [[TIFFImageWindow alloc] initWithFileDirectory:self];
+    TIFFImageWindow *window = [[TIFFImageWindow alloc] initWithFileDirectory:self];
     return [self readRastersWithWindow:window andSamples:samples andSampleValues:sampleValues andInterleaveValues:interleaveValues];
 }
 
@@ -517,7 +517,7 @@
     // Set or validate the samples
     int samplesPerPixel = [self samplesPerPixel];
     if (samples == nil || samples.count == 0) {
-        NSMutableArray<NSNumber *> * allSamples = [[NSMutableArray alloc] initWithCapacity:samplesPerPixel];
+        NSMutableArray<NSNumber *> *allSamples = [[NSMutableArray alloc] initWithCapacity:samplesPerPixel];
         for (int i = 0; i < samplesPerPixel; i++) {
             [allSamples addObject:[NSNumber numberWithInt:i]];
         }
@@ -531,19 +531,19 @@
     }
     
     // Create the interleaved result array
-    NSMutableArray * interleave = nil;
+    NSMutableArray *interleave = nil;
     if (interleaveValues) {
         interleave = [TIFFRasters createEmptyInterleaveValuesWithSamplesPerPixel:(int)samples.count andPixels:numPixels];
     }
     
     // Create the sample indexed result double array
-    NSMutableArray<NSMutableArray *> * sample = nil;
+    NSMutableArray<NSMutableArray *> *sample = nil;
     if (sampleValues) {
         sample = [TIFFRasters createEmptySampleValuesWithSamplesPerPixel:(int)samples.count andPixels:numPixels];
     }
     
     // Create the rasters results
-    TIFFRasters * rasters = [[TIFFRasters alloc] initWithWidth:windowWidth andHeight:windowHeight andSamplesPerPixel:samplesPerPixel andBitsPerSample:[self bitsPerSample] andSampleValues:sample andInterleaveValues:interleave];
+    TIFFRasters *rasters = [[TIFFRasters alloc] initWithWidth:windowWidth andHeight:windowHeight andSamplesPerPixel:samplesPerPixel andBitsPerSample:[self bitsPerSample] andSampleValues:sample andInterleaveValues:interleave];
     
     // Read the rasters
     [self readRastersWithWindow:window andSamples:samples andRasters:rasters];
@@ -575,8 +575,8 @@
     
     int bytesPerPixel = [self bytesPerPixel];
     
-    NSMutableArray<NSNumber *> * srcSampleOffsets = [[NSMutableArray alloc] initWithCapacity:samples.count];
-    NSMutableArray<NSNumber *> * sampleFieldTypes = [[NSMutableArray alloc] initWithCapacity:samples.count];
+    NSMutableArray<NSNumber *> *srcSampleOffsets = [[NSMutableArray alloc] initWithCapacity:samples.count];
+    NSMutableArray<NSNumber *> *sampleFieldTypes = [[NSMutableArray alloc] initWithCapacity:samples.count];
     for (int i = 0; i < samples.count; i++) {
         int sampleOffset = 0;
         if (self.planarConfig == TIFF_PLANAR_CONFIGURATION_CHUNKY) {
@@ -600,8 +600,8 @@
                     bytesPerPixel = [self sampleByteSizeOfSampleIndex:sample];
                 }
                 
-                NSData * block = [self tileOrStripWithX:xTile andY:yTile andSample:sample];
-                TIFFByteReader * blockReader = [[TIFFByteReader alloc] initWithData:block andByteOrder:self.reader.byteOrder];
+                NSData *block = [self tileOrStripWithX:xTile andY:yTile andSample:sample];
+                TIFFByteReader *blockReader = [[TIFFByteReader alloc] initWithData:block andByteOrder:self.reader.byteOrder];
                 
                 for (int y = MAX(0, window.minY - firstLine); y < MIN(tileHeight, tileHeight - (lastLine - window.maxY)); y++) {
                          
@@ -642,7 +642,7 @@
  */
 -(NSNumber *) readValueWithByteReader: (TIFFByteReader *) reader andFieldType: (enum TIFFFieldType) fieldType{
     
-    NSNumber * value = nil;
+    NSNumber *value = nil;
     
     switch(fieldType){
         case TIFF_FIELD_BYTE:
@@ -678,7 +678,7 @@
 
 -(enum TIFFFieldType) fieldTypeForSample: (int) sampleIndex{
 
-    NSArray<NSNumber *> * sampleFormatArray = [self sampleFormat];
+    NSArray<NSNumber *> *sampleFormatArray = [self sampleFormat];
     int sampleFormat = sampleFormatArray == nil ? (int)TIFF_SAMPLE_FORMAT_UNSIGNED_INT
         : [[sampleFormatArray objectAtIndex: (sampleIndex < sampleFormatArray.count ? sampleIndex : 0)] intValue];
     int bitsPerSample = [[[self bitsPerSample] objectAtIndex:sampleIndex] intValue];
@@ -701,7 +701,7 @@
  */
 -(NSData *) tileOrStripWithX: (int) x andY: (int) y andSample: (int) sample{
     
-    NSData * tileOrStrip = nil;
+    NSData *tileOrStrip = nil;
     
     int imageWidth = [[self imageWidth] intValue];
     int imageHeight = [[self imageHeight] intValue];
@@ -737,7 +737,7 @@
         }
         
         [self.reader setNextByte:offset];
-        NSData * bytes = [self.reader readBytesWithCount:byteCount];
+        NSData *bytes = [self.reader readBytesWithCount:byteCount];
         tileOrStrip = [self.decoder decodeData:bytes withByteOrder:self.reader.byteOrder];
         
         if (_predict != nil) {
@@ -764,7 +764,7 @@
  * @return byte size
  */
 -(int) sampleByteSizeOfSampleIndex: (int) sampleIndex{
-    NSArray<NSNumber *> * bitsPerSample = [self bitsPerSample];
+    NSArray<NSNumber *> *bitsPerSample = [self bitsPerSample];
     if (sampleIndex >= bitsPerSample.count) {
         [NSException raise:@"Out of Range" format:@"Sample index %d is out of range", sampleIndex];
     }
@@ -784,7 +784,7 @@
  */
 -(int) bytesPerPixel{
     int bitsPerSample = 0;
-    NSArray<NSNumber *> * bitsPerSamples = [self bitsPerSample];
+    NSArray<NSNumber *> *bitsPerSamples = [self bitsPerSample];
     for (int i = 0; i < bitsPerSamples.count; i++) {
         int bits = [[bitsPerSamples objectAtIndex:i] intValue];
         if ((bits % 8) != 0) {
@@ -837,8 +837,8 @@
 }
 
 -(NSNumber *) maxShortEntryValueWithFieldTag: (enum TIFFFieldTagType) fieldTagType{
-    NSNumber * maxValue = nil;
-    NSArray<NSNumber *> * values = [self shortListEntryValueWithFieldTag:fieldTagType];
+    NSNumber *maxValue = nil;
+    NSArray<NSNumber *> *values = [self shortListEntryValueWithFieldTag:fieldTagType];
     if (values != nil) {
         maxValue = [values valueForKeyPath:@"@max.intValue"];
     }
@@ -876,8 +876,8 @@
  * @return value
  */
 -(NSObject *) entryValueWithFieldTag: (enum TIFFFieldTagType) fieldTagType{
-    NSObject * value = nil;
-    TIFFFileDirectoryEntry * entry = [self.fieldTagTypeMapping objectForKey:[NSNumber numberWithInt:[TIFFFieldTagTypes tagId:fieldTagType]]];
+    NSObject *value = nil;
+    TIFFFileDirectoryEntry *entry = [self.fieldTagTypeMapping objectForKey:[NSNumber numberWithInt:[TIFFFieldTagTypes tagId:fieldTagType]]];
     if(entry != nil){
         value = [entry values];
     }
@@ -897,7 +897,7 @@
  *            type count
  */
 -(void) setEntryValue: (NSObject *) values withFieldTag: (enum TIFFFieldTagType) fieldTagType andFieldType: (enum TIFFFieldType) fieldType andTypeCount: (int) typeCount{
-    TIFFFileDirectoryEntry * entry = [[TIFFFileDirectoryEntry alloc] initWithFieldTag:fieldTagType andFieldType:fieldType andTypeCount:typeCount andValues:values];
+    TIFFFileDirectoryEntry *entry = [[TIFFFileDirectoryEntry alloc] initWithFieldTag:fieldTagType andFieldType:fieldType andTypeCount:typeCount andValues:values];
     [self addEntry:entry];
 }
 
@@ -959,7 +959,7 @@
 
 -(int) sizeWithValues{
     int size = (int)(TIFF_IFD_HEADER_BYTES + TIFF_IFD_OFFSET_BYTES);
-    for (TIFFFileDirectoryEntry * entry in self.entries) {
+    for (TIFFFileDirectoryEntry *entry in self.entries) {
         size += [entry sizeWithValues];
     }
     return size;

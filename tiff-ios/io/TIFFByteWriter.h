@@ -21,7 +21,7 @@
 /**
  *  Output stream to write bytes to
  */
-@property (nonatomic, strong) NSOutputStream * os;
+@property (nonatomic, strong) NSOutputStream *os;
 
 /**
  *  Byte order used to write, little or big endian
