@@ -4,7 +4,7 @@ Adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## 4.0.0 (TBD)
+## [4.0.0](https://github.com/ngageoint/tiff-ios/releases/tag/4.0.0) (01-10-2022)
 
 * Differencing Predictor decoding implementation
 

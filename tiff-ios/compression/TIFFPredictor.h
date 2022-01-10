@@ -16,8 +16,8 @@
 /**
  * Decode the predictor encoded bytes
  *
- * @param bytes
- *            bytes to decode
+ * @param data
+ *            data to decode
  * @param predictor
  *            predictor value
  * @param width
