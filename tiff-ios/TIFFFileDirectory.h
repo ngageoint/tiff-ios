@@ -6,11 +6,8 @@
 //  Copyright © 2017 NGA. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "TIFFFileDirectoryEntry.h"
-#import "TIFFFieldTagTypes.h"
 #import "TIFFByteReader.h"
-#import "TIFFRasters.h"
 #import "TIFFCompressionDecoder.h"
 #import "TIFFRasters.h"
 #import "TIFFImageWindow.h"

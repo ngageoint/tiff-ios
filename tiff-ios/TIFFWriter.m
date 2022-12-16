@@ -7,7 +7,6 @@
 //
 
 #import "TIFFWriter.h"
-#import "TIFFCompressionEncoder.h"
 #import "TIFFIOUtils.h"
 #import "TIFFConstants.h"
 #import "TIFFRawCompression.h"
