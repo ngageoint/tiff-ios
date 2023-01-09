@@ -4,6 +4,10 @@ Adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## 4.0.2 (TBD)
+
+* TBD
+
 ## [4.0.1](https://github.com/ngageoint/tiff-ios/releases/tag/4.0.1) (01-09-2023)
 
 * Imports cleanup and simplification
