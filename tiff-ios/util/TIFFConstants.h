@@ -118,6 +118,11 @@ extern NSInteger const TIFF_THRESHHOLDING_NO;
 extern NSInteger const TIFF_THRESHHOLDING_ORDERED;
 extern NSInteger const TIFF_THRESHHOLDING_RANDOM;
 
+// Differencing Predictor constants
+extern NSInteger const TIFF_PREDICTOR_NO;
+extern NSInteger const TIFF_PREDICTOR_HORIZONTAL;
+extern NSInteger const TIFF_PREDICTOR_FLOATINGPOINT;
+
 @interface TIFFConstants : NSObject
 
 @end

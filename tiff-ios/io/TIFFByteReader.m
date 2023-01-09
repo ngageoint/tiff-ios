@@ -41,7 +41,7 @@
 }
 
 -(NSString *) readStringWithCount: (int) num{
-    NSString * value = [self readStringWithCount:num andOffset:self.nextByte];
+    NSString *value = [self readStringWithCount:num andOffset:self.nextByte];
     self.nextByte += num;
     return value;
 }
@@ -52,7 +52,7 @@
     char *buffer = (char *)malloc(sizeof(char) * (num +1));
     [self.bytes getBytes:buffer range:NSMakeRange(offset, num)];
     buffer[num] = '\0';
-    NSString * value = [NSString stringWithUTF8String:buffer];
+    NSString *value = [NSString stringWithUTF8String:buffer];
 
     free(buffer);
     
@@ -60,7 +60,7 @@
 }
 
 -(NSNumber *) readByte{
-    NSNumber * value = [self readByteWithOffset:self.nextByte];
+    NSNumber *value = [self readByteWithOffset:self.nextByte];
     self.nextByte++;
     return value;
 }
@@ -71,7 +71,7 @@
 }
 
 -(NSNumber *) readUnsignedByte{
-    NSNumber * value = [self readUnsignedByteWithOffset:self.nextByte];
+    NSNumber *value = [self readUnsignedByteWithOffset:self.nextByte];
     self.nextByte++;
     return value;
 }
@@ -91,19 +91,19 @@
 }
 
 -(NSData *) readBytesWithCount: (int) num{
-    NSData * readBytes = [self readBytesWithCount:num andOffset:self.nextByte];
+    NSData *readBytes = [self readBytesWithCount:num andOffset:self.nextByte];
     self.nextByte += num;
     return readBytes;
 }
 
 -(NSData *) readBytesWithCount: (int) num andOffset: (int) offset{
     [self verifyRemainingBytesWithOffset:offset andBytesToRead:num];
-    NSData * readBytes = [self.bytes subdataWithRange:NSMakeRange(offset, num)];
+    NSData *readBytes = [self.bytes subdataWithRange:NSMakeRange(offset, num)];
     return readBytes;
 }
 
 -(NSNumber *) readShort{
-    NSNumber * value = [self readShortWithOffset:self.nextByte];
+    NSNumber *value = [self readShortWithOffset:self.nextByte];
     self.nextByte += 2;
     return value;
 }
@@ -114,7 +114,7 @@
 }
 
 -(NSNumber *) readUnsignedShort{
-    NSNumber * value = [self readUnsignedShortWithOffset:self.nextByte];
+    NSNumber *value = [self readUnsignedShortWithOffset:self.nextByte];
     self.nextByte += 2;
     return value;
 }
@@ -140,7 +140,7 @@
 }
 
 -(NSNumber *) readInt{
-    NSNumber * value = [self readIntWithOffset:self.nextByte];
+    NSNumber *value = [self readIntWithOffset:self.nextByte];
     self.nextByte += 4;
     return value;
 }
@@ -151,7 +151,7 @@
 }
 
 -(NSNumber *) readUnsignedInt{
-    NSNumber * value = [self readUnsignedIntWithOffset:self.nextByte];
+    NSNumber *value = [self readUnsignedIntWithOffset:self.nextByte];
     self.nextByte += 4;
     return value;
 }
@@ -177,7 +177,7 @@
 }
 
 -(NSDecimalNumber *) readFloat{
-    NSDecimalNumber * value = [self readFloatWithOffset:self.nextByte];
+    NSDecimalNumber *value = [self readFloatWithOffset:self.nextByte];
     self.nextByte += 4;
     return value;
 }
@@ -204,7 +204,7 @@
 }
 
 -(NSDecimalNumber *) readDouble{
-    NSDecimalNumber * value = [self readDoubleWithOffset:self.nextByte];
+    NSDecimalNumber *value = [self readDoubleWithOffset:self.nextByte];
     self.nextByte += 8;
     return value;
 }

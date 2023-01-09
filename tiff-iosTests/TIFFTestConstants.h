@@ -63,6 +63,21 @@ extern NSString * const TIFF_TEST_FILE_TILED_PLANAR;
  */
 extern NSString * const TIFF_TEST_FILE_JPEG;
 
+/**
+ * LZW Predictor TIFF test file
+ */
+extern NSString * const TIFF_TEST_FILE_LZW_PREDICTOR;
+
+/**
+ * Tiled Planar LZW TIFF test file
+ */
+extern NSString * const TIFF_TEST_FILE_TILED_PLANAR_LZW;
+
+/**
+ * LZW Predictor Floating Point TIFF test file
+ */
+extern NSString * const TIFF_TEST_FILE_LZW_PREDICTOR_FLOATING;
+
 @interface TIFFTestConstants : NSObject
 
 @end

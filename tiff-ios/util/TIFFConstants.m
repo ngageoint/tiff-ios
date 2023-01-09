@@ -76,6 +76,10 @@ NSInteger const TIFF_THRESHHOLDING_NO = 1;
 NSInteger const TIFF_THRESHHOLDING_ORDERED = 2;
 NSInteger const TIFF_THRESHHOLDING_RANDOM = 3;
 
+NSInteger const TIFF_PREDICTOR_NO = 1;
+NSInteger const TIFF_PREDICTOR_HORIZONTAL = 2;
+NSInteger const TIFF_PREDICTOR_FLOATINGPOINT = 3;
+
 @implementation TIFFConstants
 
 @end

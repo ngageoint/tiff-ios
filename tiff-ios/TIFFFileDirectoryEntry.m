@@ -14,7 +14,7 @@
 @property (nonatomic) enum TIFFFieldTagType fieldTag;
 @property (nonatomic) enum TIFFFieldType fieldType;
 @property (nonatomic) int typeCount;
-@property (nonatomic, strong) NSObject * values;
+@property (nonatomic, strong) NSObject *values;
 
 @end
 

@@ -14,7 +14,7 @@
 /**
  * File directories
  */
-@property (nonatomic, strong) NSMutableArray<TIFFFileDirectory *> * fileDirectories;
+@property (nonatomic, strong) NSMutableArray<TIFFFileDirectory *> *fileDirectories;
 
 @end
 
@@ -62,7 +62,7 @@
 
 -(int) sizeHeaderAndDirectories{
     int size = (int)TIFF_HEADER_BYTES;
-    for (TIFFFileDirectory * directory in _fileDirectories) {
+    for (TIFFFileDirectory *directory in _fileDirectories) {
         size += [directory size];
     }
     return size;
@@ -70,7 +70,7 @@
 
 -(int) sizeHeaderAndDirectoriesWithValues{
     int size = (int)TIFF_HEADER_BYTES;
-    for (TIFFFileDirectory * directory in _fileDirectories) {
+    for (TIFFFileDirectory *directory in _fileDirectories) {
         size += [directory sizeWithValues];
     }
     return size;

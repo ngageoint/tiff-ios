@@ -4,9 +4,21 @@ Adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## 3.0.1 (TBD)
+## 4.0.2 (TBD)
 
 * TBD
+
+## [4.0.1](https://github.com/ngageoint/tiff-ios/releases/tag/4.0.1) (01-09-2023)
+
+* Imports cleanup and simplification
+
+## [4.0.0](https://github.com/ngageoint/tiff-ios/releases/tag/4.0.0) (01-10-2022)
+
+* Differencing Predictor decoding implementation
+
+## [3.0.1](https://github.com/ngageoint/tiff-ios/releases/tag/3.0.1) (10-11-2021)
+
+* FileDirectory setModelPixelScale and setModelTiepoint methods
 
 ## [3.0.0](https://github.com/ngageoint/tiff-ios/releases/tag/3.0.0) (03-01-2021)
 

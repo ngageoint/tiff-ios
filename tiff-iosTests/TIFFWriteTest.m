@@ -20,24 +20,24 @@
  */
 -(void) testWriteStrippedChunky{
 
-    NSString * strippedFile = [TIFFTestUtils testFileWithName:TIFF_TEST_FILE_STRIPPED];
-    TIFFImage * strippedTiff = [TIFFReader readTiffFromFile:strippedFile];
+    NSString *strippedFile = [TIFFTestUtils testFileWithName:TIFF_TEST_FILE_STRIPPED];
+    TIFFImage *strippedTiff = [TIFFReader readTiffFromFile:strippedFile];
     
-    TIFFFileDirectory * fileDirectory = [strippedTiff fileDirectory];
-    TIFFRasters * rasters = [fileDirectory readRasters];
-    TIFFRasters * rastersInterleaved = [fileDirectory readInterleavedRasters];
+    TIFFFileDirectory *fileDirectory = [strippedTiff fileDirectory];
+    TIFFRasters *rasters = [fileDirectory readRasters];
+    TIFFRasters *rastersInterleaved = [fileDirectory readInterleavedRasters];
 
     [fileDirectory setWriteRasters:rasters];
     [fileDirectory setCompression:TIFF_COMPRESSION_NO];
     [fileDirectory setPlanarConfiguration:TIFF_PLANAR_CONFIGURATION_CHUNKY];
     int rowsPerStrip = [rasters calculateRowsPerStripWithPlanarConfiguration:[[fileDirectory planarConfiguration] intValue]];
     [fileDirectory setRowsPerStrip:rowsPerStrip];
-    NSData * tiffBytes = [TIFFWriter writeTiffToDataWithImage:strippedTiff];
+    NSData *tiffBytes = [TIFFWriter writeTiffToDataWithImage:strippedTiff];
     
-    TIFFImage * readTiffImage = [TIFFReader readTiffFromData:tiffBytes];
-    TIFFFileDirectory * fileDirectory2 = [readTiffImage fileDirectory];
-    TIFFRasters * rasters2 = [fileDirectory2 readRasters];
-    TIFFRasters * rasters2Interleaved = [fileDirectory2 readInterleavedRasters];
+    TIFFImage *readTiffImage = [TIFFReader readTiffFromData:tiffBytes];
+    TIFFFileDirectory *fileDirectory2 = [readTiffImage fileDirectory];
+    TIFFRasters *rasters2 = [fileDirectory2 readRasters];
+    TIFFRasters *rasters2Interleaved = [fileDirectory2 readInterleavedRasters];
     
     [TIFFTestUtils compareRastersSampleValuesWithRasters1:rasters andRasters2:rasters2];
     [TIFFTestUtils compareRastersInterleaveValuesWithRasters1:rastersInterleaved andRasters2:rasters2Interleaved];
@@ -49,24 +49,24 @@
  */
 -(void) testWriteStrippedPlanar{
 
-    NSString * strippedFile = [TIFFTestUtils testFileWithName:TIFF_TEST_FILE_STRIPPED];
-    TIFFImage * strippedTiff = [TIFFReader readTiffFromFile:strippedFile];
+    NSString *strippedFile = [TIFFTestUtils testFileWithName:TIFF_TEST_FILE_STRIPPED];
+    TIFFImage *strippedTiff = [TIFFReader readTiffFromFile:strippedFile];
     
-    TIFFFileDirectory * fileDirectory = [strippedTiff fileDirectory];
-    TIFFRasters * rasters = [fileDirectory readRasters];
-    TIFFRasters * rastersInterleaved = [fileDirectory readInterleavedRasters];
+    TIFFFileDirectory *fileDirectory = [strippedTiff fileDirectory];
+    TIFFRasters *rasters = [fileDirectory readRasters];
+    TIFFRasters *rastersInterleaved = [fileDirectory readInterleavedRasters];
     
     [fileDirectory setWriteRasters:rasters];
     [fileDirectory setCompression:TIFF_COMPRESSION_NO];
     [fileDirectory setPlanarConfiguration:TIFF_PLANAR_CONFIGURATION_PLANAR];
     int rowsPerStrip = [rasters calculateRowsPerStripWithPlanarConfiguration:[[fileDirectory planarConfiguration] intValue]];
     [fileDirectory setRowsPerStrip:rowsPerStrip];
-    NSData * tiffBytes = [TIFFWriter writeTiffToDataWithImage:strippedTiff];
+    NSData *tiffBytes = [TIFFWriter writeTiffToDataWithImage:strippedTiff];
     
-    TIFFImage * readTiffImage = [TIFFReader readTiffFromData:tiffBytes];
-    TIFFFileDirectory * fileDirectory2 = [readTiffImage fileDirectory];
-    TIFFRasters * rasters2 = [fileDirectory2 readRasters];
-    TIFFRasters * rasters2Interleaved = [fileDirectory2 readInterleavedRasters];
+    TIFFImage *readTiffImage = [TIFFReader readTiffFromData:tiffBytes];
+    TIFFFileDirectory *fileDirectory2 = [readTiffImage fileDirectory];
+    TIFFRasters *rasters2 = [fileDirectory2 readRasters];
+    TIFFRasters *rasters2Interleaved = [fileDirectory2 readInterleavedRasters];
     
     [TIFFTestUtils compareRastersSampleValuesWithRasters1:rasters andRasters2:rasters2];
     [TIFFTestUtils compareRastersInterleaveValuesWithRasters1:rastersInterleaved andRasters2:rasters2Interleaved];

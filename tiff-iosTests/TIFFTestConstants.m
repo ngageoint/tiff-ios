@@ -19,6 +19,9 @@ NSString * const TIFF_TEST_FILE_UINT32 = @"uint32.tiff";
 NSString * const TIFF_TEST_FILE_INTERLEAVE = @"interleave.tiff";
 NSString * const TIFF_TEST_FILE_TILED_PLANAR = @"tiledplanar.tiff";
 NSString * const TIFF_TEST_FILE_JPEG = @"quad-jpeg.tif";
+NSString * const TIFF_TEST_FILE_LZW_PREDICTOR = @"lzw_predictor.tiff";
+NSString * const TIFF_TEST_FILE_TILED_PLANAR_LZW = @"tiledplanarlzw.tiff";
+NSString * const TIFF_TEST_FILE_LZW_PREDICTOR_FLOATING = @"lzw_predictor_floating.tiff";
 
 @implementation TIFFTestConstants
 

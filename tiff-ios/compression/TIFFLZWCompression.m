@@ -26,7 +26,7 @@ NSInteger const TIFF_LZW_MIN_BITS = 9;
 
 @interface TIFFLZWCompression()
 
-@property (nonatomic, strong) NSMutableDictionary<NSNumber *, NSMutableArray<NSNumber *> *> * table;
+@property (nonatomic, strong) NSMutableDictionary<NSNumber *, NSMutableArray<NSNumber *> *> *table;
 @property (nonatomic) int maxCode;
 @property (nonatomic) int byteLength;
 @property (nonatomic) int position;
@@ -38,8 +38,8 @@ NSInteger const TIFF_LZW_MIN_BITS = 9;
 -(NSData *) decodeData: (NSData *) data withByteOrder: (CFByteOrder) byteOrder{
     
     // Create the byte reader and decoded stream to write to
-    TIFFByteReader * reader = [[TIFFByteReader alloc] initWithData:data andByteOrder:byteOrder];
-    NSOutputStream * decodedStream = [NSOutputStream outputStreamToMemory];
+    TIFFByteReader *reader = [[TIFFByteReader alloc] initWithData:data andByteOrder:byteOrder];
+    NSOutputStream *decodedStream = [NSOutputStream outputStreamToMemory];
     [decodedStream open];
     
     // Initialize the table, starting position, and old code
@@ -70,29 +70,29 @@ NSInteger const TIFF_LZW_MIN_BITS = 9;
             }
             
             // Write the code value
-            NSMutableArray<NSNumber *> * value = [self.table objectForKey:[NSNumber numberWithInt:code]];
+            NSMutableArray<NSNumber *> *value = [self.table objectForKey:[NSNumber numberWithInt:code]];
             [self writeValue:value toStream:decodedStream];
             oldCode = code;
             
         } else {
             
             // If already in the table
-            NSArray<NSNumber *> * value = [self.table objectForKey:[NSNumber numberWithInt:code]];
+            NSArray<NSNumber *> *value = [self.table objectForKey:[NSNumber numberWithInt:code]];
             if (value != nil) {
                 
                 // Write the code value
                 [self writeValue:value toStream:decodedStream];
                 
                 // Create new value and add to table
-                NSMutableArray<NSNumber *> * newValue = [self concatArray:[self.table objectForKey:[NSNumber numberWithInt:oldCode]] withNumber:[[self.table objectForKey:[NSNumber numberWithInt:code]] objectAtIndex:0]];
+                NSMutableArray<NSNumber *> *newValue = [self concatArray:[self.table objectForKey:[NSNumber numberWithInt:oldCode]] withNumber:[[self.table objectForKey:[NSNumber numberWithInt:code]] objectAtIndex:0]];
                 [self addToTableWithValue:newValue];
                 oldCode = code;
                 
             } else {
                 
                 // Create and write new value from old value
-                NSArray<NSNumber *> * oldValue = [self.table objectForKey:[NSNumber numberWithInt:oldCode]];
-                NSMutableArray<NSNumber *> * newValue = [self concatArray:oldValue withNumber:[oldValue objectAtIndex:0]];
+                NSArray<NSNumber *> *oldValue = [self.table objectForKey:[NSNumber numberWithInt:oldCode]];
+                NSMutableArray<NSNumber *> *newValue = [self concatArray:oldValue withNumber:[oldValue objectAtIndex:0]];
                 [self writeValue:newValue toStream:decodedStream];
                 
                 // Write value to the table
@@ -180,7 +180,7 @@ NSInteger const TIFF_LZW_MIN_BITS = 9;
  * @return concatenated value
  */
 -(NSMutableArray<NSNumber *> *) concatArray: (NSArray<NSNumber *> *) first withArray: (NSArray<NSNumber *> *) second{
-    NSMutableArray<NSNumber *> * combined = [[NSMutableArray alloc] initWithArray:first];
+    NSMutableArray<NSNumber *> *combined = [[NSMutableArray alloc] initWithArray:first];
     [combined addObjectsFromArray:second];
     return combined;
 }

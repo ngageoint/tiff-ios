@@ -1192,7 +1192,28 @@
     },
     {
       "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
-      "line": 121,
+      "line": 122,
+      "symbol": "TIFF_PREDICTOR_NO",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 123,
+      "symbol": "TIFF_PREDICTOR_HORIZONTAL",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 124,
+      "symbol": "TIFF_PREDICTOR_FLOATINGPOINT",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/osbornb/git/tiff-ios/tiff-ios/util/TIFFConstants.h",
+      "line": 126,
       "symbol": "TIFFConstants",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
