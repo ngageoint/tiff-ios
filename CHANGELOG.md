@@ -4,6 +4,10 @@ Adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## 4.0.3 (TBD)
+
+* TBD
+
 ## [4.0.2](https://github.com/ngageoint/tiff-ios/releases/tag/4.0.2) (11-06-2023)
 
 * Module definition
