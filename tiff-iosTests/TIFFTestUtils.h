@@ -6,7 +6,8 @@
 //  Copyright © 2017 NGA. All rights reserved.
 //
 
-#import "TIFFImage.h"
+#import <Foundation/Foundation.h>
+#import <TIFF/TIFF.h>
 
 @interface TIFFTestUtils : NSObject
 

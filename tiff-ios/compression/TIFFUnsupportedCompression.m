@@ -6,7 +6,7 @@
 //  Copyright © 2018 NGA. All rights reserved.
 //
 
-#import "TIFFUnsupportedCompression.h"
+#import <TIFF/TIFFUnsupportedCompression.h>
 
 @interface TIFFUnsupportedCompression()
 

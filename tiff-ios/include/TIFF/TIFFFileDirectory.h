@@ -6,11 +6,11 @@
 //  Copyright © 2017 NGA. All rights reserved.
 //
 
-#import "TIFFFileDirectoryEntry.h"
-#import "TIFFByteReader.h"
-#import "TIFFCompressionDecoder.h"
-#import "TIFFRasters.h"
-#import "TIFFImageWindow.h"
+#import <TIFF/TIFFFileDirectoryEntry.h>
+#import <TIFF/TIFFByteReader.h>
+#import <TIFF/TIFFCompressionDecoder.h>
+#import <TIFF/TIFFRasters.h>
+#import <TIFF/TIFFImageWindow.h>
 
 @class TIFFImageWindow;
 

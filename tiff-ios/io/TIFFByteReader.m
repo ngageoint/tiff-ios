@@ -6,7 +6,7 @@
 //  Copyright © 2017 NGA. All rights reserved.
 //
 
-#import "TIFFByteReader.h"
+#import <TIFF/TIFFByteReader.h>
 
 @implementation TIFFByteReader
 

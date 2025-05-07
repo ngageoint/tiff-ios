@@ -6,10 +6,10 @@
 //  Copyright © 2022 NGA. All rights reserved.
 //
 
-#import "TIFFPredictor.h"
-#import "TIFFByteReader.h"
-#import "TIFFByteWriter.h"
-#import "TIFFConstants.h"
+#import <TIFF/TIFFPredictor.h>
+#import <TIFF/TIFFByteReader.h>
+#import <TIFF/TIFFByteWriter.h>
+#import <TIFF/TIFFConstants.h>
 
 @implementation TIFFPredictor
 

@@ -6,7 +6,7 @@
 //  Copyright © 2017 NGA. All rights reserved.
 //
 
-#import "TIFFRawCompression.h"
+#import <TIFF/TIFFRawCompression.h>
 
 @implementation TIFFRawCompression
 

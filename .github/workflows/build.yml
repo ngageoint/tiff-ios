@@ -13,8 +13,8 @@ jobs:
 
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v3
-    - name: Install
-      run: pod install
+      uses: actions/checkout@v4
     - name: Build
-      run: xcodebuild build-for-testing -workspace tiff-ios.xcworkspace -scheme tiff-ios -destination 'platform=iOS Simulator,OS=latest,name=iPhone 14'
+      run: swift build
+    - name: Test
+      run: swift test

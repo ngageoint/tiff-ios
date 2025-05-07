@@ -5,3 +5,5 @@ Pods
 xcuserdata/
 *.swp
 Carthage/
+.build/
+.swiftpm/

@@ -6,7 +6,7 @@
 //  Copyright © 2017 NGA. All rights reserved.
 //
 
-#import "TIFFIOUtils.h"
+#import <TIFF/TIFFIOUtils.h>
 
 @implementation TIFFIOUtils
 

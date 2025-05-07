@@ -6,9 +6,9 @@
 //  Copyright © 2017 NGA. All rights reserved.
 //
 
-#import "TIFFReader.h"
-#import "TIFFIOUtils.h"
-#import "TIFFConstants.h"
+#import <TIFF/TIFFReader.h>
+#import <TIFF/TIFFIOUtils.h>
+#import <TIFF/TIFFConstants.h>
 
 @implementation TIFFReader
 

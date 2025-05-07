@@ -259,7 +259,8 @@
 }
 
 +(NSString *) testFileWithName: (NSString *) fileName{
-    return [[[NSBundle bundleForClass:[TIFFTestUtils class]] resourcePath] stringByAppendingPathComponent:fileName];
+//    return [[[NSBundle bundleForClass:[TIFFTestUtils class]] resourcePath] stringByAppendingPathComponent:fileName];
+    return [[SWIFTPM_MODULE_BUNDLE resourcePath] stringByAppendingPathComponent: fileName];
 }
 
 @end

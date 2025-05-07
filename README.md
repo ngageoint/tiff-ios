@@ -20,6 +20,7 @@ View the latest [Appledoc](http://ngageoint.github.io/tiff-ios/docs/api/)
 #### Read ####
 
 ```objectivec
+@import TIFF;
 
 // NSData *data = ...;
 // NSString *file = ...;
@@ -79,42 +80,48 @@ NSData *data = [TIFFWriter writeTiffToDataWithImage:tiffImage];
 
 ### Build ###
 
-[![Build & Test](https://github.com/ngageoint/tiff-ios/workflows/Build%20&%20Test/badge.svg)](https://github.com/ngageoint/tiff-ios/actions/workflows/build-test.yml)
+[![Build](https://github.com/ngageoint/tiff-ios/workflows/Build/badge.svg)](https://github.com/ngageoint/tiff-ios/actions/workflows/build.yml)
 
-Build this repository using Xcode and/or CocoaPods:
+Build this repository using Swift Package Manager:
 
-    pod install
-
-Open tiff-ios.xcworkspace in Xcode or build from command line:
-
-    xcodebuild -workspace 'tiff-ios.xcworkspace' -scheme tiff-ios build
+    swift build
 
 Run tests from Xcode or from command line:
 
-    xcodebuild test -workspace 'tiff-ios.xcworkspace' -scheme tiff-ios -destination 'platform=iOS Simulator,name=iPhone 15'
+    swift test
+
+Open the Swift Package in Xcode from command line:
+
+    open Package.swift
 
 ### Include Library ###
 
-Include this repository by specifying it in a Podfile using a supported option.
+Use this library via SPM in your Package.swift:
 
-Pull from [CocoaPods](https://cocoapods.org/pods/tiff-ios):
+    dependencies: [
+        .package(url: "https://github.com/ngageoint/tiff-ios.git", branch: "release/5.0.0"),
+    ]
+    
+Or as a tagged release:
 
-    pod 'tiff-ios', '~> 4.0.2'
+    dependencies: [
+        .package(url: "https://github.com/ngageoint/tiff-ios.git", from: "5.0.0"),
+    ]
 
-Pull from GitHub:
+Reference it in your Package.swift target:
 
-    pod 'tiff-ios', :git => 'https://github.com/ngageoint/tiff-ios.git', :branch => 'master'
-    pod 'tiff-ios', :git => 'https://github.com/ngageoint/tiff-ios.git', :tag => '4.0.2'
-
-Include as local project:
-
-    pod 'tiff-ios', :path => '../tiff-ios'
+    .target(
+        name: "MyApp",
+        dependencies: [
+            .product(name: "TIFF", package: "tiff-ios"),
+        ],
+    ),
 
 ### Swift ###
 
-To use from Swift, import the tiff-ios bridging header from the Swift project's bridging header
+To use from Swift:
 
-    #import "tiff-ios-Bridging-Header.h"
+    import TIFF
 
 #### Read ####
 

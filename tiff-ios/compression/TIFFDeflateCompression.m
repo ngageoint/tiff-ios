@@ -6,7 +6,7 @@
 //  Copyright © 2017 NGA. All rights reserved.
 //
 
-#import "TIFFDeflateCompression.h"
+#import <TIFF/TIFFDeflateCompression.h>
 
 @implementation TIFFDeflateCompression
 

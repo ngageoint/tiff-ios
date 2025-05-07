@@ -6,8 +6,8 @@
 //  Copyright © 2017 NGA. All rights reserved.
 //
 
-#import "TIFFImage.h"
-#import "TIFFByteWriter.h"
+#import <TIFF/TIFFImage.h>
+#import <TIFF/TIFFByteWriter.h>
 
 /**
  * TIFF Writer.

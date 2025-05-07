@@ -6,14 +6,14 @@
 //  Copyright © 2017 NGA. All rights reserved.
 //
 
-#import "TIFFFileDirectory.h"
-#import "TIFFConstants.h"
-#import "TIFFRawCompression.h"
-#import "TIFFLZWCompression.h"
-#import "TIFFDeflateCompression.h"
-#import "TIFFPackbitsCompression.h"
-#import "TIFFUnsupportedCompression.h"
-#import "TIFFPredictor.h"
+#import <TIFF/TIFFFileDirectory.h>
+#import <TIFF/TIFFConstants.h>
+#import <TIFF/TIFFRawCompression.h>
+#import <TIFF/TIFFLZWCompression.h>
+#import <TIFF/TIFFDeflateCompression.h>
+#import <TIFF/TIFFPackbitsCompression.h>
+#import <TIFF/TIFFUnsupportedCompression.h>
+#import <TIFF/TIFFPredictor.h>
 
 @interface TIFFFileDirectory()
 

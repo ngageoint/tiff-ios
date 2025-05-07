@@ -6,8 +6,8 @@
 //  Copyright © 2017 NGA. All rights reserved.
 //
 
-#import "TIFFFieldTagTypes.h"
-#import "TIFFFieldTypes.h"
+#import <TIFF/TIFFFieldTagTypes.h>
+#import <TIFF/TIFFFieldTypes.h>
 
 /**
  * TIFF File Directory Entry
