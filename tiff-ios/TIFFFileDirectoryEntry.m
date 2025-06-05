@@ -6,8 +6,8 @@
 //  Copyright © 2017 NGA. All rights reserved.
 //
 
-#import "TIFFFileDirectoryEntry.h"
-#import "TIFFConstants.h"
+#import <TIFF/TIFFFileDirectoryEntry.h>
+#import <TIFF/TIFFConstants.h>
 
 @interface TIFFFileDirectoryEntry()
 

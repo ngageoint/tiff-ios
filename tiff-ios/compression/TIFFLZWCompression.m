@@ -6,8 +6,8 @@
 //  Copyright © 2017 NGA. All rights reserved.
 //
 
-#import "TIFFLZWCompression.h"
-#import "TIFFByteReader.h"
+#import <TIFF/TIFFLZWCompression.h>
+#import <TIFF/TIFFByteReader.h>
 
 /**
  * Clear code

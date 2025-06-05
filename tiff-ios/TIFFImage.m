@@ -6,8 +6,8 @@
 //  Copyright © 2017 NGA. All rights reserved.
 //
 
-#import "TIFFImage.h"
-#import "TIFFConstants.h"
+#import <TIFF/TIFFImage.h>
+#import <TIFF/TIFFConstants.h>
 
 @interface TIFFImage()
 

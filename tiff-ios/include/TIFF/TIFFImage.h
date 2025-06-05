@@ -6,7 +6,7 @@
 //  Copyright © 2017 NGA. All rights reserved.
 //
 
-#import "TIFFFileDirectory.h"
+#import <TIFF/TIFFFileDirectory.h>
 
 /**
  * TIFF Image containing the File Directories

@@ -6,8 +6,8 @@
 //  Copyright © 2017 NGA. All rights reserved.
 //
 
-#import "TIFFFieldTypes.h"
-#import "TIFFConstants.h"
+#import <TIFF/TIFFFieldTypes.h>
+#import <TIFF/TIFFConstants.h>
 
 @implementation TIFFFieldTypes
 

@@ -9,7 +9,8 @@
 #import "TIFFReadTest.h"
 #import "TIFFTestUtils.h"
 #import "TIFFTestConstants.h"
-#import "TIFFReader.h"
+
+@import TIFF;
 
 @implementation TIFFReadTest
 

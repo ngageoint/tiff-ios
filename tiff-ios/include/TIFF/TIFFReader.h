@@ -6,7 +6,7 @@
 //  Copyright © 2017 NGA. All rights reserved.
 //
 
-#import "TIFFImage.h"
+#import <TIFF/TIFFImage.h>
 
 /**
  * TIFF reader

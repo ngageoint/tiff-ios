@@ -6,8 +6,8 @@
 //  Copyright © 2017 NGA. All rights reserved.
 //
 
-#import "TIFFCompressionDecoder.h"
-#import "TIFFCompressionEncoder.h"
+#import <TIFF/TIFFCompressionDecoder.h>
+#import <TIFF/TIFFCompressionEncoder.h>
 
 /**
  * Deflate Compression

@@ -6,13 +6,13 @@
 //  Copyright © 2017 NGA. All rights reserved.
 //
 
-#import "TIFFWriter.h"
-#import "TIFFIOUtils.h"
-#import "TIFFConstants.h"
-#import "TIFFRawCompression.h"
-#import "TIFFLZWCompression.h"
-#import "TIFFDeflateCompression.h"
-#import "TIFFPackbitsCompression.h"
+#import <TIFF/TIFFWriter.h>
+#import <TIFF/TIFFIOUtils.h>
+#import <TIFF/TIFFConstants.h>
+#import <TIFF/TIFFRawCompression.h>
+#import <TIFF/TIFFLZWCompression.h>
+#import <TIFF/TIFFDeflateCompression.h>
+#import <TIFF/TIFFPackbitsCompression.h>
 
 @implementation TIFFWriter
 

@@ -6,8 +6,8 @@
 //  Copyright © 2017 NGA. All rights reserved.
 //
 
-#import "TIFFPackbitsCompression.h"
-#import "TIFFByteReader.h"
+#import <TIFF/TIFFPackbitsCompression.h>
+#import <TIFF/TIFFByteReader.h>
 
 @implementation TIFFPackbitsCompression
 

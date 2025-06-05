@@ -6,7 +6,7 @@
 //  Copyright © 2017 NGA. All rights reserved.
 //
 
-#import "TIFFConstants.h"
+#import <TIFF/TIFFConstants.h>
 
 NSString * const TIFF_BYTE_ORDER_LITTLE_ENDIAN = @"II";
 NSString * const TIFF_BYTE_ORDER_BIG_ENDIAN = @"MM";

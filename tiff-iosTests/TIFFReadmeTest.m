@@ -7,9 +7,8 @@
 //
 
 #import "TIFFReadmeTest.h"
-#import "TIFFConstants.h"
-#import "TIFFReader.h"
-#import "TIFFWriter.h"
+
+@import TIFF;
 
 @implementation TIFFReadmeTest
 

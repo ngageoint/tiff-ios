@@ -6,7 +6,7 @@
 //  Copyright © 2017 NGA. All rights reserved.
 //
 
-#import "TIFFImageWindow.h"
+#import <TIFF/TIFFImageWindow.h>
 
 @implementation TIFFImageWindow
 

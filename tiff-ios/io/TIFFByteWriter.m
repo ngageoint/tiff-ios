@@ -6,7 +6,7 @@
 //  Copyright © 2017 NGA. All rights reserved.
 //
 
-#import "TIFFByteWriter.h"
+#import <TIFF/TIFFByteWriter.h>
 
 @implementation TIFFByteWriter
 
